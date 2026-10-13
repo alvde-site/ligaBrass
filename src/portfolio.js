@@ -9,7 +9,7 @@ const settings = {
 const seo = {
   title: "Брасс-квинтет НФОР: музыка от классики до джаза",
   description:
-    "Официальная страница Брасс-квинтета НФОР. Знакомьтесь с репертуаром знаменитого ансамбля: от строгой классики до легкого джаза. Слушайте живое исполнение!",
+    "Профессиональный брасс-квинтет. Живая музыка на концерты, фестивали и культурные события: от классики до джаза",
   og: {
     title: "Брасс-квинтет НФОР | От классики до джаза",
     type: "website",
@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "NFORBrassQuintet",
   nickname: "brass_quintet",
   subTitle:
-    "Виртуозный ансамбль солистов Национального филармонического оркестра России. Исполняем многогранные музыкальные программы — от строгих классических шедевров до легких, драйвовых джазовых стандартов.",
+    "Яркий и виртуозный брасс-квинтет, меняющий представление о возможностях медных духовых. В наших программах — элегантная классика, культовые джазовые стандарты и современные хиты в эксклюзивных аранжировках",
   resumeLink: "https://google.com", // Ссылка на PDF-презентацию или репертуарный лист
 };
 
@@ -84,7 +84,7 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "Data Science & AI",
+      title: "Наш состав и инструменты",
       fileName: "DataScienceImg",
       skills: [
         "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
@@ -375,6 +375,7 @@ const competitiveSites = {
 };
 
 const degrees = {
+  // Заполните массив вашими ключевыми программами или записями
   degrees: [
     {
       title: "Indian Institute of Information Technology Kurnool",
@@ -681,9 +682,9 @@ const experience = {
 
 // Projects Page
 const projectsHeader = {
-  title: "Projects",
+  title: "Наше творчество и программы",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create Data Science projects and deploy them to web applications using cloud infrastructure.",
+    "Мы играем музыку любых жанров: от строгой классики Баха до зажигательного джаза и современных каверов.",
   avatar_image_path: "projects_image.svg",
 };
 
