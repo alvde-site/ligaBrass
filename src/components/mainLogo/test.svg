@@ -1,0 +1,67 @@
+   <svg 
+      xmlns="http://w3.org" 
+      viewBox="140 32 162 178" 
+      width={props.size || "45px"}  
+      height={props.size || "45px"}
+      fill="none"
+      style={{ ...props.style }}
+      className={props.className}
+    >
+      <defs>
+        {/* Градиент полированной меди/латуни */}
+        <linearGradient id="brassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#F9D076" />   {/* Блик */}
+          <stop offset="50%" stopColor={brassColor} /> {/* Основное золото */}
+          <stop offset="100%" stopColor="#B77F1E" /> {/* Тень */}
+        </linearGradient>
+      </defs>
+
+      {/* 1. ВНУТРЕННИЙ КРУГ (Заменил серый шестиугольник) */}
+      {/* Имитирует тонкие внутренние трубки валторны, подстраивается под тему */}
+      <circle 
+        cx="221" 
+        cy="121" 
+        r="54" 
+        stroke={props.color || "currentColor"} 
+        strokeWidth="1.5" 
+        opacity="0.25" 
+      />
+
+      {/* 2. ОСНОВНОЙ КРУГ ВАЛТОРНЫ (Спиральный раструб) */}
+      {/* Плавная закрученная линия, переходящая в расширение духового инструмента */}
+      <path
+        d="M165 130 
+           C160 80, 200 45, 250 50 
+           C295 55, 325 100, 320 150 
+           C315 195, 270 225, 221 220 
+           C175 215, 145 175, 148 130
+           C150 95, 180 70, 215 72"
+        stroke="url(#brassGradient)"
+        strokeWidth="4.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Небольшой изящный завиток на конце, подчеркивающий форму раструба */}
+      <path 
+        d="M215 72 C225 73, 230 68, 228 60"
+        stroke="url(#brassGradient)"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+
+      {/* 3. БУКВЫ НБ ВНУТРИ (Идеально вписаны по центру круга валторны) */}
+      {/* Буква Н */}
+      <path
+        d="M174.5 148V139.968H180.5V100.456H174.5V92.424H197.5V100.456H191.5V114.5H208.5V100.456H202.5V92.424H225.5V100.456H219.5V139.968H225.5V148H202.5V139.968H208.5V122.5H191.5V139.968H197.5V148H174.5Z"
+        stroke="url(#brassGradient)"
+        strokeWidth="3.5"
+      />
+      
+      {/* Буква Б */}
+      <path
+        d="M235 148V139.968H240.5V100.456H235V92.424H266V107.5H249.5V114.5C258 114.5 266 119 266 131.5C266 143.5 257 148 246 148H235ZM249.5 122.5V139.968H247.5C252.5 139.968 256.5 137.5 256.5 131.5C256.5 125.5 252.5 122.5 247.5 122.5H249.5Z"
+        stroke="url(#brassGradient)"
+        strokeWidth="3.5"
+      />
+    </svg>
