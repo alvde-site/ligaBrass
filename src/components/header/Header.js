@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import "./Header.css";
 import { Fade } from "react-reveal";
 import { NavLink, Link } from "react-router-dom";
-import { greeting, settings } from "../../portfolio.js";
+import { settings } from "../../portfolio.js";
 import SeoHeader from "../seoHeader/SeoHeader";
+import MainLogo from "../mainLogo/MainLogo.jsx";
 
 const onMouseEnter = (event, color) => {
   const el = event.target;
@@ -25,11 +26,21 @@ class Header extends Component {
         <div>
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
-              <span style={{ color: theme.text }}> &lt;</span>
+              <MainLogo
+                size="45px" /* Желаемый размер логотипа в шапке */
+                color={
+                  theme.text
+                } /* Динамический цвет из вашей темы (будет подставляться вместо currentColor) */
+                style={{
+                  transition: "color 0.2s ease-in-out",
+                }} /* Плавная смена цвета при переключении темы */
+              />
+
+              {/* <span style={{ color: theme.text }}> &lt;</span>
               <span className="logo-name" style={{ color: theme.text }}>
                 {greeting.logo_name}
               </span>
-              <span style={{ color: theme.text }}>/&gt;</span>
+              <span style={{ color: theme.text }}>/&gt;</span> */}
             </NavLink>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">

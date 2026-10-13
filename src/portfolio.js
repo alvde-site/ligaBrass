@@ -7,27 +7,24 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Ashutosh's Portfolio",
+  title: "Брасс-квинтет НФОР: музыка от классики до джаза",
   description:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "Официальная страница Брасс-квинтета НФОР. Знакомьтесь с репертуаром знаменитого ансамбля: от строгой классики до легкого джаза. Слушайте живое исполнение!",
   og: {
-    title: "Ashutosh Hathidara Portfolio",
+    title: "Брасс-квинтет НФОР | От классики до джаза",
     type: "website",
-    url: "http://ashutoshhathidara.com/",
+    url: "https://google.com", // Замените на реальный адрес вашего сайта
   },
 };
 
 //Home Page
 const greeting = {
-  title: "Ashutosh Hathidara",
-  logo_name: "AshutoshHathidara",
-  nickname: "layman_brother",
+  title: "Брасс-квинтет НФОР",
+  logo_name: "NFORBrassQuintet",
+  nickname: "brass_quintet",
   subTitle:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
-  resumeLink:
-    "https://drive.google.com/file/d/1bXRknv_h-XI_3CQ3SGPteGODtvEb7YvI/view?usp=sharing",
-  portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
-  githubProfile: "https://github.com/ashutosh1919",
+    "Виртуозный ансамбль солистов Национального филармонического оркестра России. Исполняем многогранные музыкальные программы — от строгих классических шедевров до легких, драйвовых джазовых стандартов.",
+  resumeLink: "https://google.com", // Ссылка на PDF-презентацию или репертуарный лист
 };
 
 const socialMediaLinks = [
