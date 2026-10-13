@@ -21,63 +21,35 @@ const seo = {
 const greeting = {
   title: "Брасс-квинтет НФОР",
   logo_name: "NFORBrassQuintet",
-  nickname: "brass_quintet",
   subTitle:
     "Яркий и виртуозный брасс-квинтет, меняющий представление о возможностях медных духовых. В наших программах — элегантная классика, культовые джазовые стандарты и современные хиты в эксклюзивных аранжировках",
   resumeLink: "https://google.com", // Ссылка на PDF-презентацию или репертуарный лист
 };
 
 const socialMediaLinks = [
-  /* Your Social Media Link */
-  // github: "https://github.com/ashutosh1919",
-  // linkedin: "https://www.linkedin.com/in/ashutosh-hathidara-88710b138/",
-  // gmail: "ashutoshhathidara98@gmail.com",
-  // gitlab: "https://gitlab.com/ashutoshhathidara98",
-  // facebook: "https://www.facebook.com/laymanbrother.19/",
-  // twitter: "https://twitter.com/ashutosh_1919",
-  // instagram: "https://www.instagram.com/layman_brother/"
-
   {
-    name: "Github",
-    link: "https://github.com/ashutosh1919",
-    fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
-    backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    name: "VK",
+    link: "https://vk.com", // Ссылка на ваше сообщество ВК
+    fontAwesomeIcon: "fa-vk",
+    backgroundColor: "#0077FF",
   },
   {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/ashutosh1919/",
-    fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
-    backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    name: "Telegram",
+    link: "https://t.me", // Ссылка на ваш канал или контакт администратора
+    fontAwesomeIcon: "fa-telegram",
+    backgroundColor: "#24A1DE",
   },
   {
     name: "YouTube",
-    link: "https://youtube.com/c/DevSense19",
-    fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-    backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
+    link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
+    fontAwesomeIcon: "fa-youtube",
+    backgroundColor: "#FF0000",
   },
   {
     name: "Gmail",
-    link: "mailto:ashutoshhathidara98@gmail.com",
-    fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
-  },
-  {
-    name: "X-Twitter",
-    link: "https://twitter.com/ashutosh_1919",
-    fontAwesomeIcon: "fa-x-twitter", // Reference https://fontawesome.com/icons/x-twitter?f=brands&s=solid
-    backgroundColor: "#000000", // Reference https://simpleicons.org/?q=x
-  },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/laymanbrother.19/",
-    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/layman_brother/",
-    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
+    link: "mailto:yourbrassquintet@gmail.com", // Почта для коммерческих предложений и заказов
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
   },
 ];
 
@@ -85,235 +57,144 @@ const skills = {
   data: [
     {
       title: "Наш состав и инструменты",
-      fileName: "DataScienceImg",
+      fileName: "DataScienceImg", // Можете заменить на свое промо-фото в компоненте
       skills: [
-        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and NLP projects",
-        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "🎺 Две трубы — яркие, парящие высокие партии, виртуозные пассажи и торжественные фанфары.",
+        "📯 Валторна — мягкий, глубокий и бархатистый романтический тембр, связывающий весь ансамбль.",
+        "🎼 Тромбон — мощный, пронзительный звук, добавляющий драйва и эффектных глиссандо.",
+        "🔊 Туба — надежный, массивный фундамент, заменяющий квинтету целый бас и ударные инструменты.",
       ],
       softwareSkills: [
         {
-          skillName: "Tensorflow",
-          fontAwesomeClassname: "logos-tensorflow",
-          style: {
-            backgroundColor: "transparent",
-          },
+          skillName: "Труба I",
+          fontAwesomeClassname: "🎤",
+          style: { color: "#FFD700" },
         },
         {
-          skillName: "Keras",
-          fontAwesomeClassname: "simple-icons:keras",
-          style: {
-            backgroundColor: "white",
-            color: "#D00000",
-          },
+          skillName: "Труба II",
+          fontAwesomeClassname: "🎺",
+          style: { color: "#FFD700" },
         },
         {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
-          style: {
-            backgroundColor: "transparent",
-          },
+          skillName: "Валторна",
+          fontAwesomeClassname: "📯",
+          style: { color: "#FFD700" },
         },
         {
-          skillName: "Python",
-          fontAwesomeClassname: "ion-logo-python",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
-          },
+          skillName: "Тромбон",
+          fontAwesomeClassname: "🎵",
+          style: { color: "#FFD700" },
         },
         {
-          skillName: "Deeplearning",
-          imageSrc: "deeplearning_ai_logo.png",
+          skillName: "Туба",
+          fontAwesomeClassname: "🔊",
+          style: { color: "#FFD700" },
         },
       ],
     },
     {
-      title: "Full Stack Development",
+      title: "Форматы мероприятий",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+        "⚡ Торжественные церемонии — встреча гостей (Welcome-зона), фанфары на награждениях и деловых форумах.",
+        "⚡ Городские праздники и фестивали — мощное живое звучание на открытых площадках без подключения к сети.",
+        "⚡ Корпоративы и свадьбы — яркие танцевальные поп-сеты, интерактивы с гостями и музыкальные сюрпризы.",
+        "⚡ Концертные программы — полноценные выступления в филармониях, музеях и на арт-площадках.",
       ],
       softwareSkills: [
         {
-          skillName: "HTML5",
-          fontAwesomeClassname: "simple-icons:html5",
-          style: {
-            color: "#E34F26",
-          },
+          skillName: "Свадьбы",
+          fontAwesomeClassname: "💍",
+          style: { color: "#FF69B4" },
         },
         {
-          skillName: "CSS3",
-          fontAwesomeClassname: "fa-css3",
-          style: {
-            color: "#1572B6",
-          },
+          skillName: "Корпоративы",
+          fontAwesomeClassname: "🎉",
+          style: { color: "#FF8C00" },
         },
         {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
+          skillName: "Welcome",
+          fontAwesomeClassname: "🥂",
+          style: { color: "#4682B4" },
         },
         {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
+          skillName: "Городские Дни",
+          fontAwesomeClassname: "🏛️",
+          style: { color: "#32CD32" },
         },
         {
-          skillName: "ReactJS",
-          fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
-        },
-        {
-          skillName: "NodeJS",
-          fontAwesomeClassname: "devicon-plain:nodejs-wordmark",
-          style: {
-            color: "#339933",
-          },
-        },
-        {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
-        },
-        {
-          skillName: "Yarn",
-          fontAwesomeClassname: "simple-icons:yarn",
-          style: {
-            color: "#2C8EBB",
-          },
-        },
-        {
-          skillName: "Gatsby",
-          fontAwesomeClassname: "simple-icons:gatsby",
-          style: {
-            color: "#663399",
-          },
-        },
-        {
-          skillName: "Flutter",
-          fontAwesomeClassname: "simple-icons:flutter",
-          style: {
-            color: "#02569B",
-          },
+          skillName: "Юбилеи",
+          fontAwesomeClassname: "🎂",
+          style: { color: "#BA55D3" },
         },
       ],
     },
     {
-      title: "Cloud Infra-Architecture",
+      title: "Жанровое разнообразие",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on multiple cloud platforms",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Deploying deep learning models on cloud to use on mobile devices",
-        "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
+        "⚡ Строгая классика — величественные произведения Баха, Моцарта, Верди и Чайковского.",
+        "⚡ Джаз и Диксиленд — зажигательные хиты Луи Армстронга, Синатры и эпохи свинга.",
+        "⚡ Поп и Рок каверы — современные радио-хиты и классика рока в уникальной медной аранжировке.",
+        "⚡ Марши и Военная музыка — торжественный репертуар для патриотических и официальных дат.",
       ],
       softwareSkills: [
         {
-          skillName: "GCP",
-          fontAwesomeClassname: "simple-icons:googlecloud",
-          style: {
-            color: "#4285F4",
-          },
+          skillName: "Классика",
+          fontAwesomeClassname: "🎼",
+          style: { color: "#000" },
         },
         {
-          skillName: "AWS",
-          fontAwesomeClassname: "simple-icons:amazonaws",
-          style: {
-            color: "#FF9900",
-          },
+          skillName: "Джаз",
+          fontAwesomeClassname: "🎷",
+          style: { color: "#000" },
         },
         {
-          skillName: "Azure",
-          fontAwesomeClassname: "simple-icons:microsoftazure",
-          style: {
-            color: "#0089D6",
-          },
+          skillName: "Каверы",
+          fontAwesomeClassname: "🎸",
+          style: { color: "#000" },
         },
         {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
+          skillName: "Ретро",
+          fontAwesomeClassname: "📻",
+          style: { color: "#000" },
         },
         {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
-          style: {
-            color: "#336791",
-          },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#47A248",
-          },
-        },
-        {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
-          style: {
-            color: "#1488C6",
-          },
-        },
-        {
-          skillName: "Kubernetes",
-          fontAwesomeClassname: "simple-icons:kubernetes",
-          style: {
-            color: "#326CE5",
-          },
+          skillName: "Марши",
+          fontAwesomeClassname: "🥁",
+          style: { color: "#000" },
         },
       ],
     },
     {
-      title: "UI/UX Design",
+      title: "Комфорт для организаторов",
       fileName: "DesignImg",
       skills: [
-        "⚡ Designing highly attractive user interface for mobile and web applications",
-        "⚡ Customizing logo designs and building logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
+        "⚡ 100% Живой звук — выступаем полностью вживую, без фонограмм, плейбеков и «минусовок».",
+        "⚡ Мобильность — можем играть в движении, на теплоходах, в парках и там, где вообще нет электричества.",
+        "⚡ Дресс-код под формат — в арсенале строгие смокинги, классические костюмы или яркие сценические образы.",
+        "⚡ Минимальный райдер — нам не требуются сложные звуковые системы, только 5 стульев и комната для переодевания.",
       ],
       softwareSkills: [
         {
-          skillName: "Adobe XD",
-          fontAwesomeClassname: "simple-icons:adobexd",
-          style: {
-            color: "#FF2BC2",
-          },
+          skillName: "Live Звук",
+          fontAwesomeClassname: "🔌",
+          style: { color: "#FF0000" },
         },
         {
-          skillName: "Figma",
-          fontAwesomeClassname: "simple-icons:figma",
-          style: {
-            color: "#F24E1E",
-          },
+          skillName: "Без сети",
+          fontAwesomeClassname: "🔋",
+          style: { color: "#00FF00" },
         },
         {
-          skillName: "Adobe Illustrator",
-          fontAwesomeClassname: "simple-icons:adobeillustrator",
-          style: {
-            color: "#FF7C00",
-          },
+          skillName: "Смокинги",
+          fontAwesomeClassname: "🤵",
+          style: { color: "#000000" },
         },
         {
-          skillName: "Inkscape",
-          fontAwesomeClassname: "simple-icons:inkscape",
-          style: {
-            color: "#000000",
-          },
+          skillName: "Легкий райдер",
+          fontAwesomeClassname: "📋",
+          style: { color: "#0000FF" },
         },
       ],
     },
