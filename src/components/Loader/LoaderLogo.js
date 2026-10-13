@@ -25,7 +25,7 @@ class LogoLoader extends React.Component {
           stroke={theme.body}
           stroke-width="4"
         />
-        <path
+        {/* <path
           class="letter"
           d="M217.945 123.968V132H194.566V123.968H200.65L198.395 115.799H186.056L183.526 123.968H189.884V132H168.829V123.968H174.708L183.971 92.4883H177.647V84.4561H208.683V92.4883H202.291L212.271 123.968H217.945ZM196.446 108.826L192.481 94.5049L188.209 108.826H196.446Z"
           stroke={theme.body}
@@ -36,8 +36,22 @@ class LogoLoader extends React.Component {
           d="M217.153 158V149.968H223.101V118.488H217.153V110.456H240.122V118.488H235.132V128.913H248.086V118.488H243.267V110.456H266.099V118.488H260.117V149.968H266.099V158H243.267V149.968H248.086V136.979H235.132V149.968H240.122V158H217.153Z"
           stroke={theme.body}
           stroke-width="3"
+        /> */}
+        {/* Буква Н */}
+        <path
+          class="letter"
+          d="M174.5 158V149.968H180.5V110.456H174.5V102.424H197.5V110.456H191.5V124.5H208.5V110.456H202.5V102.424H225.5V110.456H219.5V149.968H225.5V158H202.5V149.968H208.5V132.5H191.5V149.968H197.5V158H174.5Z"
+          stroke={theme.body}
+          stroke-width="3"
         />
-        <mask id="path-5-inside-1" fill={theme.body}>
+        {/* Буква Б */}
+        <path
+          class="letter"
+          d="M235 158V149.968H240.5V110.456H235V102.424H266V117.5H249.5V124.5C258 124.5 266 129 266 141.5C266 153.5 257 158 246 158H235ZM249.5 132.5V149.968H247.5C252.5 149.968 256.5 147.5 256.5 141.5C256.5 135.5 252.5 132.5 247.5 132.5H249.5Z"
+          stroke={theme.body}
+          stroke-width="3"
+        />
+        {/* <mask id="path-5-inside-1" fill={theme.body}>
           <path d="M32.5195 293.502C32.2917 293.73 32.015 293.844 31.6895 293.844C31.3965 293.844 31.1361 293.73 30.9082 293.502C30.7129 293.274 30.6152 292.997 30.6152 292.672C30.6152 292.379 30.7292 292.118 30.957 291.891C33.9844 288.896 39.3066 283.85 46.9238 276.754C44.7428 277.014 42.4154 277.356 39.9414 277.779C25.2279 280.351 12.5 284.632 1.75782 290.621C1.4974 290.784 1.20443 290.816 0.878911 290.719C0.585942 290.654 0.358077 290.475 0.195317 290.182C0.0651085 289.921 0.0488325 289.645 0.146489 289.352C0.244145 289.059 0.423181 288.831 0.683598 288.668C11.6211 282.548 24.5931 278.186 39.5996 275.582C42.8223 275.029 46.1914 274.557 49.707 274.166C73.0794 252.486 88.1348 240.377 94.8731 237.838C97.2819 236.926 98.8119 237.317 99.4629 239.01C99.821 239.954 99.7721 241.386 99.3164 243.307C98.8607 245.195 97.933 247.669 96.5332 250.729C95.166 253.756 93.9616 256.295 92.9199 258.346C91.9108 260.396 90.4297 263.294 88.4766 267.037C86.7839 270.292 85.6934 272.408 85.2051 273.385C85.8561 273.417 86.735 273.482 87.8418 273.58C90.2832 273.775 92.041 274.101 93.1152 274.557C94.1895 275.012 94.694 275.598 94.6289 276.314C94.5964 276.673 94.401 277.031 94.043 277.389C93.7175 277.747 93.1641 278.121 92.3828 278.512C91.6016 278.902 90.918 279.212 90.332 279.439C89.7461 279.7 88.8672 280.058 87.6953 280.514C84.9935 281.555 83.0892 282.337 81.9824 282.857C80.8757 283.411 80.1107 283.248 79.6875 282.369C79.2643 281.555 79.9479 279.228 81.7383 275.387C71.224 274.866 60.8561 275.159 50.6348 276.266C42.1387 284.176 36.1003 289.921 32.5195 293.502ZM95.6543 239.889C89.3718 242.298 75.2767 253.593 53.3691 273.775C63.1348 272.864 72.9492 272.669 82.8125 273.189C83.4635 271.92 84.7005 269.527 86.5234 266.012C87.7604 263.635 88.7044 261.813 89.3555 260.543C90.0065 259.273 90.8691 257.548 91.9434 255.367C93.0501 253.154 93.8965 251.38 94.4824 250.045C95.0684 248.71 95.6543 247.278 96.2402 245.748C96.8587 244.218 97.2494 242.981 97.4121 242.037C97.5749 241.061 97.5586 240.328 97.3633 239.84C97.2331 239.482 96.6634 239.498 95.6543 239.889ZM84.082 275.533C82.8776 277.975 82.1289 279.635 81.8359 280.514C82.8776 280.025 84.554 279.326 86.8652 278.414C90.5436 277.014 92.3828 276.266 92.3828 276.168C92.3828 276.135 92.2526 276.119 91.9922 276.119C91.7318 276.087 91.1784 276.054 90.332 276.021C89.5182 275.956 88.6231 275.875 87.6465 275.777C86.6374 275.68 85.4492 275.598 84.082 275.533Z" />
           <path d="M106.006 271.822C105.843 272.05 105.632 272.197 105.371 272.262C105.111 272.294 104.867 272.229 104.639 272.066C104.411 271.904 104.264 271.692 104.199 271.432C104.134 271.171 104.183 270.927 104.346 270.699C105.322 269.234 105.762 268.258 105.664 267.77C105.632 267.672 105.404 267.672 104.98 267.77C104.102 267.9 103.19 268.323 102.246 269.039C101.497 269.592 100.928 270.195 100.537 270.846C100.146 271.497 100.081 272.115 100.342 272.701C100.602 273.385 101.367 274.573 102.637 276.266L102.881 276.51C103.988 276.054 105.127 275.598 106.299 275.143C107.503 274.654 108.545 274.247 109.424 273.922C110.335 273.564 111.165 273.255 111.914 272.994C112.695 272.701 113.281 272.49 113.672 272.359C114.063 272.197 114.274 272.115 114.307 272.115C114.469 272.05 114.632 272.034 114.795 272.066C114.958 272.099 115.104 272.18 115.234 272.311C115.397 272.408 115.511 272.555 115.576 272.75C115.674 273.01 115.658 273.271 115.527 273.531C115.397 273.759 115.202 273.922 114.941 274.02C114.941 274.02 114.876 274.052 114.746 274.117C114.616 274.15 114.421 274.215 114.16 274.312C113.932 274.378 113.656 274.475 113.33 274.605C113.005 274.736 112.63 274.882 112.207 275.045C111.784 275.175 111.328 275.338 110.84 275.533C110.352 275.696 109.831 275.891 109.277 276.119C108.724 276.314 108.171 276.526 107.617 276.754C107.064 276.949 106.478 277.177 105.859 277.438C105.241 277.665 104.639 277.91 104.053 278.17C105.16 279.765 105.713 281.1 105.713 282.174C105.745 283.574 104.948 284.664 103.32 285.445C101.725 286.259 99.0072 286.715 95.166 286.812C89.5996 286.943 87.2721 286.227 88.1836 284.664C89.0951 283.036 93.3594 280.595 100.977 277.34C99.6419 275.582 98.7956 274.28 98.4375 273.434C98.0469 272.359 98.112 271.301 98.6328 270.26C99.1537 269.186 99.9675 268.242 101.074 267.428C102.279 266.516 103.467 265.963 104.639 265.768C106.331 265.475 107.324 265.995 107.617 267.33C107.845 268.404 107.308 269.902 106.006 271.822ZM103.711 282.223C103.711 281.474 103.19 280.383 102.148 278.951C95.1172 281.881 91.9922 283.72 92.7734 284.469C93.0339 284.729 93.8151 284.843 95.1172 284.811C100.879 284.68 103.743 283.818 103.711 282.223Z" />
           <path d="M140.234 272.018C140.495 271.952 140.739 271.985 140.967 272.115C141.227 272.245 141.39 272.457 141.455 272.75C141.52 273.01 141.471 273.255 141.309 273.482C141.178 273.71 140.983 273.857 140.723 273.922C140.625 273.954 140.186 274.068 139.404 274.264C138.623 274.459 137.549 274.752 136.182 275.143C134.814 275.501 133.447 275.891 132.08 276.314C130.713 276.705 129.378 277.145 128.076 277.633C126.774 278.121 125.798 278.561 125.146 278.951C123.747 279.798 122.835 279.863 122.412 279.146C122.184 278.788 122.233 278.137 122.559 277.193C123.275 275.11 123.372 273.434 122.852 272.164C122.624 271.578 121.973 271.806 120.898 272.848C119.824 273.857 118.571 275.37 117.139 277.389C115.706 279.374 114.632 280.872 113.916 281.881C113.232 282.89 112.646 283.769 112.158 284.518V284.566C112.028 284.794 111.816 284.924 111.523 284.957C111.263 285.022 111.019 284.99 110.791 284.859C110.368 284.566 110.238 284.176 110.4 283.688H110.352C114.355 271.09 117.887 261.015 120.947 253.463C124.04 245.911 126.595 240.654 128.613 237.691C129.362 236.585 130.062 235.771 130.713 235.25C131.396 234.729 131.982 234.501 132.471 234.566C132.959 234.632 133.382 234.957 133.74 235.543C134.456 236.682 134.456 239.026 133.74 242.574C133.285 244.853 132.568 247.294 131.592 249.898C130.648 252.503 129.443 255.237 127.979 258.102C126.546 260.934 124.756 263.733 122.607 266.5C120.492 269.234 118.213 271.578 115.771 273.531C115.446 274.475 114.941 276.005 114.258 278.121C116.602 275.029 118.75 272.717 120.703 271.188C122.656 269.625 123.991 269.706 124.707 271.432C125.358 273.027 125.374 274.85 124.756 276.9C126.025 276.249 127.979 275.517 130.615 274.703C133.285 273.857 135.482 273.206 137.207 272.75C138.932 272.294 139.941 272.05 140.234 272.018ZM130.225 238.814C126.839 243.795 122.461 254.098 117.09 269.723C119.661 267.184 122.021 264.173 124.17 260.689C126.318 257.174 127.979 253.886 129.15 250.826C130.355 247.766 131.234 244.885 131.787 242.184C132.406 239.189 132.487 237.317 132.031 236.568C131.934 236.438 131.331 237.187 130.225 238.814Z" />
@@ -158,176 +172,235 @@ class LogoLoader extends React.Component {
           stroke={theme.body}
           stroke-width="6"
           mask="url(#path-5-inside-1)"
-        />
+        /> */}
+        {/* Анимированная надпись НФОР БРАСС с идеальными расстояниями */}
+        <g
+          stroke={theme.body}
+          strokeWidth="4"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Слово: НФОР (координаты X выровнены с шагом 36px) */}
+          {/* Н */}{" "}
+          <path className="signature1" d="M26 250V286 M26 268H48 M48 250V286" />
+          {/* Ф */}{" "}
+          <path
+            className="signature2"
+            d="M77 250V286 M63 256H91C96 256 96 280 91 280H63C58 280 58 256 63 256Z"
+          />
+          {/* О */}{" "}
+          <path
+            className="signature3"
+            d="M111 250H125C135 250 135 286 125 286H111C101 286 101 250 111 250Z"
+          />
+          {/* Р */}{" "}
+          <path
+            className="signature4"
+            d="M151 286V250H166C176 250 176 268 166 268H151"
+          />
+          {/* Большой пробел между словами: 56px */}
+          {/* Слово: БРАСС (координаты X также идут с шагом 36px) */}
+          {/* Б */}{" "}
+          <path
+            className="signature5"
+            d="M222 250H239 M222 250V286H237C246 286 246 268 237 268H222"
+          />
+          {/* Р */}{" "}
+          <path
+            className="signature6"
+            d="M262 286V250H277C287 250 287 268 277 268H262"
+          />
+          {/* А */}{" "}
+          <path
+            className="signature7"
+            d="M298 286L310 250L322 286 M302 274H318"
+          />
+          {/* С (Увеличенная) */}{" "}
+          <path
+            className="signature8"
+            d="M358 252C350 248 340 252 340 268C340 284 350 288 358 284"
+          />
+          {/* С (Увеличенная) */}{" "}
+          <path
+            className="signature9"
+            d="M394 252C386 248 376 252 376 268C376 284 386 288 394 284"
+          />
+        </g>
         <defs>
           <style
             dangerouslySetInnerHTML={{
               __html: `
 
-      .signature1{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 0.5s;
-			-o-animation: dash 1s linear forwards 0.5s;
-			-moz-animation: dash 1s linear forwards 0.5s;
-			animation: dash 1s linear forwards 0.5s;
-		}
-		.signature2{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 0.7s;
-			-o-animation: dash 1s linear forwards 0.7s;
-			-moz-animation: dash 1s linear forwards 0.7s;
-			animation: dash 1s linear forwards 0.7s;
-		}
-		.signature3{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 0.9s;
-			-o-animation: dash 1s linear forwards 0.9s;
-			-moz-animation: dash 1s linear forwards 0.9s;
-			animation: dash 1s linear forwards 0.9s;
-		}
-		.signature4{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 1.1s;
-			-o-animation: dash 1s linear forwards 1.1s;
-			-moz-animation: dash 1s linear forwards 1.1s;
-			animation: dash 1s linear forwards 1.1s;
-		}
-		.signature5{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 1.3s;
-			-o-animation: dash 1s linear forwards 1.3s;
-			-moz-animation: dash 1s linear forwards 1.3s;
-			animation: dash 1s linear forwards 1.3s;
-		}
-		.signature6{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 1.5s;
-			-o-animation: dash 1s linear forwards 1.5s;
-			-moz-animation: dash 1s linear forwards 1.5s;
-			animation: dash 1s linear forwards 1.5s;
-		}
-		.signature7{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 1.7s;
-			-o-animation: dash 1s linear forwards 1.7s;
-			-moz-animation: dash 1s linear forwards 1.7s;
-			animation: dash 1s linear forwards 1.7s;
-		}
-		.signature8{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 1.9s;
-			-o-animation: dash 1s linear forwards 1.9s;
-			-moz-animation: dash 1s linear forwards 1.9s;
-			animation: dash 1s linear forwards 1.9s;
-		}
-		.signature9{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 2.1s;
-			-o-animation: dash 1s linear forwards 2.1s;
-			-moz-animation: dash 1s linear forwards 2.1s;
-			animation: dash 1s linear forwards 2.1s;
-		}
-		.signature10{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 2.3s;
-			-o-animation: dash 1s linear forwards 2.3s;
-			-moz-animation: dash 1s linear forwards 2.3s;
-			animation: dash 1s linear forwards 2.3s;
-		}
-		.signature11{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 2.5s;
-			-o-animation: dash 1s linear forwards 2.5s;
-			-moz-animation: dash 1s linear forwards 2.5s;
-			animation: dash 1s linear forwards 2.5s;
-		}
-		.signature12{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 2.7s;
-			-o-animation: dash 1s linear forwards 2.7s;
-			-moz-animation: dash 1s linear forwards 2.7s;
-			animation: dash 1s linear forwards 2.7s;
-		}
-		.signature13{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 2.9s;
-			-o-animation: dash 1s linear forwards 2.9s;
-			-moz-animation: dash 1s linear forwards 2.9s;
-			animation: dash 1s linear forwards 2.9s;
-		}
-		.signature14{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 3.1s;
-			-o-animation: dash 1s linear forwards 3.1s;
-			-moz-animation: dash 1s linear forwards 3.1s;
-			animation: dash 1s linear forwards 3.1s;
-		}
-		.signature15{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 1s linear forwards 3.3s;
-			-o-animation: dash 1s linear forwards 3.3s;
-			-moz-animation: dash 1s linear forwards 3.3s;
-			animation: dash 1s linear forwards 3.3s;
-		}
+    //   .signature1{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 0.5s;
+		// 	-o-animation: dash 1s linear forwards 0.5s;
+		// 	-moz-animation: dash 1s linear forwards 0.5s;
+		// 	animation: dash 1s linear forwards 0.5s;
+		// }
+		// .signature2{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 0.7s;
+		// 	-o-animation: dash 1s linear forwards 0.7s;
+		// 	-moz-animation: dash 1s linear forwards 0.7s;
+		// 	animation: dash 1s linear forwards 0.7s;
+		// }
+		// .signature3{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 0.9s;
+		// 	-o-animation: dash 1s linear forwards 0.9s;
+		// 	-moz-animation: dash 1s linear forwards 0.9s;
+		// 	animation: dash 1s linear forwards 0.9s;
+		// }
+		// .signature4{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 1.1s;
+		// 	-o-animation: dash 1s linear forwards 1.1s;
+		// 	-moz-animation: dash 1s linear forwards 1.1s;
+		// 	animation: dash 1s linear forwards 1.1s;
+		// }
+		// .signature5{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 1.3s;
+		// 	-o-animation: dash 1s linear forwards 1.3s;
+		// 	-moz-animation: dash 1s linear forwards 1.3s;
+		// 	animation: dash 1s linear forwards 1.3s;
+		// }
+		// .signature6{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 1.5s;
+		// 	-o-animation: dash 1s linear forwards 1.5s;
+		// 	-moz-animation: dash 1s linear forwards 1.5s;
+		// 	animation: dash 1s linear forwards 1.5s;
+		// }
+		// .signature7{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 1.7s;
+		// 	-o-animation: dash 1s linear forwards 1.7s;
+		// 	-moz-animation: dash 1s linear forwards 1.7s;
+		// 	animation: dash 1s linear forwards 1.7s;
+		// }
+		// .signature8{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 1.9s;
+		// 	-o-animation: dash 1s linear forwards 1.9s;
+		// 	-moz-animation: dash 1s linear forwards 1.9s;
+		// 	animation: dash 1s linear forwards 1.9s;
+		// }
+		// .signature9{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 2.1s;
+		// 	-o-animation: dash 1s linear forwards 2.1s;
+		// 	-moz-animation: dash 1s linear forwards 2.1s;
+		// 	animation: dash 1s linear forwards 2.1s;
+		// }
+		// .signature10{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 2.3s;
+		// 	-o-animation: dash 1s linear forwards 2.3s;
+		// 	-moz-animation: dash 1s linear forwards 2.3s;
+		// 	animation: dash 1s linear forwards 2.3s;
+		// }
+		// .signature11{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 2.5s;
+		// 	-o-animation: dash 1s linear forwards 2.5s;
+		// 	-moz-animation: dash 1s linear forwards 2.5s;
+		// 	animation: dash 1s linear forwards 2.5s;
+		// }
+		// .signature12{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 2.7s;
+		// 	-o-animation: dash 1s linear forwards 2.7s;
+		// 	-moz-animation: dash 1s linear forwards 2.7s;
+		// 	animation: dash 1s linear forwards 2.7s;
+		// }
+		// .signature13{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 2.9s;
+		// 	-o-animation: dash 1s linear forwards 2.9s;
+		// 	-moz-animation: dash 1s linear forwards 2.9s;
+		// 	animation: dash 1s linear forwards 2.9s;
+		// }
+		// .signature14{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 3.1s;
+		// 	-o-animation: dash 1s linear forwards 3.1s;
+		// 	-moz-animation: dash 1s linear forwards 3.1s;
+		// 	animation: dash 1s linear forwards 3.1s;
+		// }
+		// .signature15{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 1s linear forwards 3.3s;
+		// 	-o-animation: dash 1s linear forwards 3.3s;
+		// 	-moz-animation: dash 1s linear forwards 3.3s;
+		// 	animation: dash 1s linear forwards 3.3s;
+		// }
 
-		.signature{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 6s linear forwards 0.5s;
-			-o-animation: dash 6s linear forwards 0.5s;
-			-moz-animation: dash 6s linear forwards 0.5s;
-			animation: dash 6s linear forwards 0.5s;
-		}
+		// .signature{
+		// 	stroke-dasharray: 800;
+		// 	stroke-dashoffset: 800;
+		// 	-webkit-animation: dash 6s linear forwards 0.5s;
+		// 	-o-animation: dash 6s linear forwards 0.5s;
+		// 	-moz-animation: dash 6s linear forwards 0.5s;
+		// 	animation: dash 6s linear forwards 0.5s;
+		// }
 
-		.letter{
-			opacity: 0;
-			-webkit-animation: fadein 2s linear forwards 2.5s;
-			-o-animation: fadein 2s linear forwards 2.5s;
-			-moz-animation: fadein 2s linear forwards 2.5s;
-			animation: fadein 2s linear forwards 2.5s;
-		}
 
-		@-webkit-keyframes fadein{
-			from{
-				opacity: 0;
-			}
-			to{
-				opacity: 1;
-			}
-		}
+.signature1 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 0.5s; }
+.signature2 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 0.7s; }
+.signature3 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 0.9s; }
+.signature4 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 1.1s; }
+.signature5 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 1.3s; }
+.signature6 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 1.5s; }
+.signature7 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 1.7s; }
+.signature8 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 1.9s; }
+.signature9 { stroke-dasharray: 150; stroke-dashoffset: 150; animation: dash-text 0.8s linear forwards 2.1s; }
 
-      .myHexagon{
-			stroke-dasharray: 800;
-			stroke-dashoffset: 800;
-			-webkit-animation: dash 4s linear forwards 0.5s;
-			-o-animation: dash 4s linear forwards 0.5s;
-			-moz-animation: dash 4s linear forwards 0.5s;
-			animation: dash 4s linear forwards 0.5s;
-		}
+.myHexagon {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: dash-hexagon 4s linear forwards 0.5s; /* Разделили анимации */
+}
 
-		@-webkit-keyframes dash{
-			from{
-				stroke-dashoffset: 800;
-			}
-			to{
-				stroke-dashoffset: 0;
-			}
-		}
+.letter {
+  opacity: 0;
+  animation: fadein 2s linear forwards 2.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Новая анимация отдельно для текста: плавно сводит отступ линии к нулю */
+@keyframes dash-text {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Старая анимация специально для шестигранников */
+@keyframes dash-hexagon {
+  from { stroke-dashoffset: 800; }
+  to { stroke-dashoffset: 0; }
+}
     `,
             }}
           />

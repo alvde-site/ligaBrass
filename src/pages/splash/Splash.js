@@ -21,9 +21,9 @@ class Splash extends Component {
     };
   }
 
-  componentDidMount() {
-    this.id = setTimeout(() => this.setState({ redirect: true }), 5500);
-  }
+  // componentDidMount() {
+  //   this.id = setTimeout(() => this.setState({ redirect: true }), 5500);
+  // }
 
   componentWillMount() {
     clearTimeout(this.id);
