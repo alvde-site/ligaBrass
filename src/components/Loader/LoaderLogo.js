@@ -9,12 +9,11 @@ class LogoLoader extends React.Component {
         className="raw_logo"
         width="60%"
         height="40%"
-        viewBox="0 0 400 305"
+        viewBox="40 170 290 95"
         fill="none"
         xmlns="http://w3.org"
       >
         <defs>
-          {/* Насыщенный латунный градиент духовых инструментов */}
           <linearGradient
             id="brassGradient"
             x1="0%"
@@ -22,59 +21,47 @@ class LogoLoader extends React.Component {
             x2="100%"
             y2="100%"
           >
-            <stop offset="0%" stopColor="#F9D076" /> {/* Блик */}
-            <stop offset="50%" stopColor={brassColor} /> {/* Латунь */}
-            <stop offset="100%" stopColor="#B77F1E" /> {/* Тень */}
+            <stop offset="0%" stopColor="#F9D076" />
+            <stop offset="50%" stopColor={brassColor} />
+            <stop offset="100%" stopColor="#B77F1E" />
           </linearGradient>
 
-          {/* Стили анимации для всех элементов заставки ЛИГА БРАСС */}
           <style
             dangerouslySetInnerHTML={{
               __html: `
-                /* 1. ОБЩАЯ МУЗЫКАЛЬНАЯ ЛИГА НАД СЛОВАМИ */
                 .music-slur {
                   stroke-dasharray: 400;
                   stroke-dashoffset: 400;
                   animation: draw-line 1.2s ease-out forwards 0.2s;
                 }
 
-                /* 2. СТРОГИЙ ГЕОМЕТРИЧЕСКИЙ КОРПУС БУКВ */
                 .sig-letter {
                   stroke-dasharray: 150;
                   stroke-dashoffset: 150;
                   animation: draw-line 0.6s linear forwards;
                 }
 
-                /* 3. КРУПНЫЕ МУЗЫКАЛЬНЫЕ НОТЫ (Выпрыгивают с упругим эффектом pop) */
                 .sig-dot {
                   transform-origin: center;
                   transform: scale(0);
                   animation: pop-dot 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
                 }
 
-                /* Посимвольный музыкальный таймлайн (Слева направо) */
                 .sig-l  { animation-delay: 0.8s; }  
                 .dot-l  { animation-delay: 1.3s; }  
-                
                 .sig-i  { animation-delay: 1.1s; }  
-                
                 .sig-g  { animation-delay: 1.4s; }  
-                
                 .sig-a1 { animation-delay: 1.7s; }  
                 .dot-a1 { animation-delay: 2.2s; }  
 
                 .sig-b  { animation-delay: 2.1s; }  
                 .sig-r  { animation-delay: 2.4s; }  
-                
                 .sig-a2 { animation-delay: 2.7s; }  
                 .dot-a2 { animation-delay: 3.2s; }  
-                
                 .sig-s1 { animation-delay: 3.0s; }  
                 .sig-s2 { animation-delay: 3.3s; }  
 
-                /* КЛЮЧЕВЫЕ КАДРЫ */
                 @keyframes draw-line { to { stroke-dashoffset: 0; } }
-                
                 @keyframes pop-dot {
                   to {
                     transform: scale(1);
@@ -86,9 +73,7 @@ class LogoLoader extends React.Component {
           />
         </defs>
 
-        {/* transform="translate(10, 0)" гарантирует безопасность отступов */}
         <g
-          transform="translate(10, 0)"
           stroke="url(#brassGradient)"
           strokeWidth="3.5"
           strokeLinecap="round"
@@ -102,12 +87,11 @@ class LogoLoader extends React.Component {
             fill="none"
           />
 
-          {/* --- СЛОВО: ЛИГА --- */}
-          {/* Л (Полная печатная буква) + Крупная нота слева */}
+          {/* Л + Вливающаяся нота */}
           <path className="sig-letter sig-l" d="M68 252 L76 220 L84 252" />
           <circle
             className="sig-dot dot-l"
-            cx="61.0"
+            cx="62.5"
             cy="252"
             r="7.5"
             stroke="none"
@@ -119,23 +103,22 @@ class LogoLoader extends React.Component {
             d="M96 220V252 M96 242L112 220 M112 220V252"
           />
 
-          {/* Г — Одинарная чистая линия */}
+          {/* Г */}
           <path className="sig-letter sig-g" d="M124 252V220H140" />
 
-          {/* А1 + Крупная нота строго у левой ножки */}
+          {/* А1 + Вливающаяся нота */}
           <path
             className="sig-letter sig-a1"
             d="M152 252L161 220L170 252 M155 242H167"
           />
           <circle
             className="sig-dot dot-a1"
-            cx="145.0"
+            cx="146.5"
             cy="252"
             r="7.5"
             stroke="none"
           />
 
-          {/* --- СЛОВО: БРАСС --- */}
           {/* Б */}
           <path
             className="sig-letter sig-b"
@@ -148,20 +131,20 @@ class LogoLoader extends React.Component {
             d="M221 252V220H233C240 220 240 236 233 236H221"
           />
 
-          {/* А2 + Крупная нота строго у левой ножки */}
+          {/* А2 + Вливающаяся нота */}
           <path
             className="sig-letter sig-a2"
             d="M245 252L254 220L263 252 M248 242H260"
           />
           <circle
             className="sig-dot dot-a2"
-            cx="238.0"
+            cx="239.5"
             cy="252"
             r="7.5"
             stroke="none"
           />
 
-          {/* С1 — ИСПРАВЛЕНО: теперь имеет те же точные вертикальные координаты, что и С2 */}
+          {/* С1 */}
           <path
             className="sig-letter sig-s1"
             d="M289 222C283 219 275 222 275 236C275 250 283 253 289 250"

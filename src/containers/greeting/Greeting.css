@@ -31,7 +31,7 @@
 }
 
 .greeting-text {
-  margin-top: 80px;
+  margin-top: 0;
   font-size: 70px;
   line-height: 1.1;
   font-family: "Google Sans Bold";
@@ -44,7 +44,7 @@
 }
 
 .greeting-text-p {
-  font-size: 40px;
+  font-size: 20px;
   line-height: 40px;
   margin-right: 40px;
   font-family: "Google Sans Medium";
@@ -60,9 +60,6 @@
   .greeting-text {
     font-size: 50px;
   }
-  .greeting-text-p {
-    font-size: 20px;
-  }
 }
 @media (max-width: 768px) {
   .button-greeting-div {
@@ -70,7 +67,6 @@
   }
   .greeting-text {
     font-size: 30px;
-    margin-top: 0px;
     text-align: center;
   }
   .greeting-nickname {

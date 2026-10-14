@@ -27,7 +27,7 @@ class Header extends Component {
           <header className="header">
             <NavLink to={link} tag={Link} className="logo">
               <MainLogo
-                size="130px" /* Желаемый размер логотипа в шапке */
+                size="100px" /* Желаемый размер логотипа в шапке */
                 color={
                   theme.text
                 } /* Динамический цвет из вашей темы (будет подставляться вместо currentColor) */

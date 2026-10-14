@@ -6,14 +6,15 @@ function MainLogo(props) {
   return (
     <svg 
       xmlns="http://w3.org" 
-      viewBox="40 170 290 95" /* Расширили viewBox влево (с 60 до 40), чтобы нота Л не обрезалась */
-      width={props.size || "130px"}  
+      viewBox="40 170 290 95" 
+      width={props.size || "120px"}  
       height={props.size ? "auto" : "45px"}
       fill="none"
       style={{ ...props.style }}
       className={props.className}
     >
       <defs>
+        {/* Латунный градиент духовых инструментов */}
         <linearGradient id="brassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#F9D076" />   
           <stop offset="50%" stopColor={brassColor} /> 
@@ -26,9 +27,9 @@ function MainLogo(props) {
         <path d="M 68 198 C 110 180, 280 180, 322 198" strokeWidth="4" fill="none" />
 
         {/* --- СЛОВО: ЛИГА --- */}
-        {/* Л + Крупная нота слева (теперь в полной безопасности внутри viewBox) */}
+        {/* Л + Нота плавно вливается в левую ножку (сдвиг X: 61.0 -> 62.5) */}
         <path d="M68 252 L76 220 L84 252" />
-        <circle cx="61.0" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
+        <circle cx="62.5" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
         
         {/* И */} 
         <path d="M96 220V252 M96 242L112 220 M112 220V252" />
@@ -36,9 +37,9 @@ function MainLogo(props) {
         {/* Г */} 
         <path d="M124 252V220H140" />
         
-        {/* А (в слове ЛИГА) */}
+        {/* А (в слове ЛИГА) + Нота плавно вливается в левую ножку (сдвиг X: 145.0 -> 146.5) */}
         <path d="M152 252L161 220L170 252 M155 242H167" />
-        <circle cx="145.0" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
+        <circle cx="146.5" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
 
         {/* --- СЛОВО: БРАСС --- */}
         {/* Б */} 
@@ -47,9 +48,9 @@ function MainLogo(props) {
         {/* Р */} 
         <path d="M221 252V220H233C240 220 240 236 233 236H221" />
         
-        {/* А (в слове БРАСС) */}
+        {/* А (в слове БРАСС) + Нота плавно вливается в левую ножку (сдвиг X: 238.0 -> 239.5) */}
         <path d="M245 252L254 220L263 252 M248 242H260" />
-        <circle cx="238.0" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
+        <circle cx="239.5" cy="252" r="7.5" fill="url(#brassGradient)" stroke="none" />
         
         {/* С */} 
         <path d="M289 222C283 219 275 222 275 236C275 250 283 253 289 250" />
