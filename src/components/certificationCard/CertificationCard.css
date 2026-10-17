@@ -19,6 +19,7 @@
   text-decoration: none;
   font-family: "Google Sans Regular";
   color: rgb(0, 28, 85);
+  line-height: 1;
 }
 
 .cert-header__date {

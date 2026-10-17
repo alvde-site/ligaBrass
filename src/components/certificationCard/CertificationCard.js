@@ -26,7 +26,7 @@ class CertificationCard extends Component {
                   </time>
 
                   <div class="cert-header__time-wrapper">
-                    суббота <span> </span>
+                    <span>суббота</span>
                     <time class="cert-header__time" datetime="19:00">
                       19:00
                     </time>
