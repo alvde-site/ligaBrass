@@ -11,9 +11,43 @@
   flex: 0 0 30%;
 }
 
+.cert-card .content {
+  border-bottom: 1px solid #d9dbdf;
+}
+
+.cert-card .content a {
+  text-decoration: none;
+  font-family: "Google Sans Regular";
+  color: rgb(0, 28, 85);
+}
+
+.cert-header__date {
+  font-size: 40px;
+}
+
+.cert-header__time-wrapper {
+  font-size: 28px;
+}
+
 .cert-header {
   margin: 0px;
+  padding: 20px;
   border-radius: 5px 5px 0px 0px;
+}
+
+.cert-header__toolbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cert-header__date {
+  text-align: left;
+}
+
+.cert-header__time-wrapper {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo_img {
