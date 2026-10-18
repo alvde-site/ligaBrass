@@ -9,7 +9,7 @@ class CertificationCard extends Component {
     return (
       <Fade bottom duration={2000} distance="20px">
         <div className="cert-card">
-          <div className="content">
+          <div className="cert-card__content content">
             {/* <div className="content-overlay"></div> */}
             <div
               className="cert-header"
@@ -39,6 +39,38 @@ class CertificationCard extends Component {
                 Certificate
               </h3>
             </div> */}
+          </div>
+          <div className="cert-card__concert concert">
+            <div class="concert__content">
+              {certificate.concert_info ? (
+                <p className="concert__info">{certificate.concert_info}</p>
+              ) : null}
+              {certificate.concert_workslist ? (
+                <div class="concert__workslist-wrap">
+                  <h3 class="concert__title">Программа концерта:</h3>
+                  <ul class="concert__worklist">
+                    {certificate.concert_workslist.map((work) => {
+                      return <li>{work}</li>;
+                    })}
+                  </ul>
+                </div>
+              ) : null}
+              {certificate.concert_artists ? (
+                <div class="concert__workslist-wrap">
+                  <h3 class="concert__title">Участники:</h3>
+                  <ul class="concert__worklist">
+                    {certificate.concert_artists.map((work) => {
+                      return <li>{work}</li>;
+                    })}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+            <img
+              class="description__poster"
+              alt="asdfas"
+              src={require("../../assets/images/feelingProud.svg")}
+            ></img>
           </div>
           <div className="cert-body">
             <h2 className="cert-body-title" style={{ color: theme.text }}>

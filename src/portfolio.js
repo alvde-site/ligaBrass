@@ -290,22 +290,25 @@ const degrees = {
 const certifications = {
   certifications: [
     {
-      title: "Machine Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "concerts/tutta_forca.jpg",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "Stanford University",
-      color_code: "#8C151599",
-      city: "Тюмень",
+      title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
+      // subtitle: "- Andrew Ng",
+      // logo_path: "concerts/tutta_forca.jpg",
+      // certificate_link:
+      //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
+      alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
+      // color_code: "#8C151599",
+      concert_city: "Пермь",
+      concert_hall: "Концертный зал ЦМШ",
       concert_time: "13:00",
-      concert_date: "20.10",
-      concert_day: "вторник",
-      concert_place: "Колледж искусств",
-      concert_poster: "concerts/tutta_forca.jpg",
+      concert_date: "25.10",
+      concert_day: "воскресенье",
+      concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
+      concert_info: "Приглашаем на наш замечательный концерт!",
       concert_workslist: [
-        "Гершвин:'Вестсайдская история'",
-        "Э.Мариконе:'Сюита'",
+        "Л.Бернстайн: Вестсайдская история",
+        "Э.Мариконе: Сюита",
+        "Ж.Родриго",
+        "Р.Роджерс и др.",
       ],
       concert_artists: [
         "Александр Бахарев",
@@ -314,10 +317,10 @@ const certifications = {
         "Александр Демиденко",
         "Вильнур Самигуллин",
       ],
-      concert_info: "Приглашаем на замечательный концерт!",
       more_button: "https://www.google.com/",
       buy_button:
         "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/tutta_forca.jpg",
     },
     {
       title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
@@ -335,7 +338,7 @@ const certifications = {
       concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
       concert_poster: "concerts/tutta_forca.jpg",
       concert_workslist: [
-        "л.Бернстайн:'Вестсайдская история'",
+        "Л.Бернстайн:'Вестсайдская история'",
         "Э.Мариконе:'Сюита'",
         "Ж.Родриго",
         "Р.Роджерс и др.",
