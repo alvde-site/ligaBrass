@@ -292,11 +292,29 @@ const certifications = {
     {
       title: "Machine Learning",
       subtitle: "- Andrew Ng",
-      logo_path: "conects/tutta_forca.jpg",
+      logo_path: "concerts/tutta_forca.jpg",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
       alt_name: "Stanford University",
       color_code: "#8C151599",
+      city: "Тюмень",
+      concert_time: "13:00",
+      concert_date: "20.10",
+      concert_day: "вторник",
+      concert_place: "Колледж искусств",
+      concert_poster: "concerts/tutta_forca.jpg",
+      concert_workslist: [
+        "Гершвин:'Вестсайдская история'",
+        "Э.Мариконе:'Сюита'",
+      ],
+      concert_artists: [
+        "Александр Бахарев",
+        "Георгий Гринимайер",
+        "Дмитрий Береговский",
+        "Александр Демиденко",
+        "Вильнур Самигуллин",
+      ],
+      concert_info: "Приглашаем на замечательный концерт!",
     },
     {
       title: "Deep Learning",
