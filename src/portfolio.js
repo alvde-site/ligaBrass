@@ -320,7 +320,7 @@ const certifications = {
       more_button: "https://www.google.com/",
       buy_button:
         "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
-      concert_poster: "concerts/tutta_forca.jpg",
+      concert_poster: "concerts/25.10perm.jpg",
     },
     {
       title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
@@ -336,10 +336,10 @@ const certifications = {
       concert_date: "25.10",
       concert_day: "воскресенье",
       concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
-      concert_poster: "concerts/tutta_forca.jpg",
+      concert_info: "Приглашаем на наш замечательный концерт!",
       concert_workslist: [
-        "Л.Бернстайн:'Вестсайдская история'",
-        "Э.Мариконе:'Сюита'",
+        "Л.Бернстайн: Вестсайдская история",
+        "Э.Мариконе: Сюита",
         "Ж.Родриго",
         "Р.Роджерс и др.",
       ],
@@ -350,10 +350,10 @@ const certifications = {
         "Александр Демиденко",
         "Вильнур Самигуллин",
       ],
-      concert_info: "Приглашаем на замечательный концерт!",
       more_button: "https://www.google.com/",
       buy_button:
         "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/25.10perm.jpg",
     },
     // {
     //   title: "Deep Learning",

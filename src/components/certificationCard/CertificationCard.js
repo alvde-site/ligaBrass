@@ -65,12 +65,34 @@ class CertificationCard extends Component {
                   </ul>
                 </div>
               ) : null}
+              {certificate.more_button || certificate.buy_button ? (
+                <div className="concert__buttons">
+                  {certificate.more_button ? (
+                    <a
+                      className="concert__button"
+                      href={certificate.more_button}
+                    >
+                      Подробнее
+                    </a>
+                  ) : null}
+                  {certificate.buy_button ? (
+                    <a
+                      className="concert__button"
+                      href={certificate.buy_button}
+                    >
+                      Купить билет
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
             </div>
-            <img
-              class="description__poster"
-              alt="asdfas"
-              src={require("../../assets/images/feelingProud.svg")}
-            ></img>
+            {certificate.concert_poster ? (
+              <img
+                className="description__poster"
+                alt="asdfas"
+                src={require(`../../assets/images/${certificate.concert_poster}`)}
+              />
+            ) : null}
           </div>
           <div className="cert-body">
             <h2 className="cert-body-title" style={{ color: theme.text }}>
