@@ -6,18 +6,14 @@
   border: 1px solid #d9dbdf;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #d9dbdf;
-  margin-bottom: 30px;
 }
 
 .cert-card .content {
-  border-bottom: 1px solid #d9dbdf;
-}
-
-.cert-card .content a {
   text-decoration: none;
   font-family: "Google Sans Regular";
   color: rgb(0, 28, 85);
   line-height: 1;
+  border-bottom: 1px solid #d9dbdf;
 }
 
 .cert-header__date {
@@ -79,7 +75,7 @@
   overflow: hidden;
 }
 
-.content .content-overlay {
+/* .content .content-overlay {
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
   height: 99%;
@@ -96,9 +92,9 @@
 
 .content:hover .content-overlay {
   opacity: 1;
-}
+} */
 
-.content-details {
+/* .content-details {
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -132,7 +128,7 @@
 
 .fadeIn-top {
   top: 20%;
-}
+} */
 
 @media (max-width: 1380px) {
 }

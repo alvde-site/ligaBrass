@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+.certs-body-div .cert-card:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1380px) {
   .certs-header {
     font-size: 35px;
