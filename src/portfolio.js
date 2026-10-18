@@ -290,14 +290,13 @@ const degrees = {
 const certifications = {
   certifications: [
     {
+      concert_date: "25.10",
+      concert_day: "воскресенье",
+      concert_time: "13:00",
       title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
       alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
       concert_city: "Пермь",
-      concert_hall: "Концертный зал ЦМШ",
-      concert_time: "13:00",
-      concert_date: "25.10",
-      concert_day: "воскресенье",
-      concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
+      concert_hall: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
       concert_info: "Приглашаем на наш замечательный концерт!",
       concert_workslist: [
         "Л.Бернстайн: Вестсайдская история",
@@ -312,6 +311,7 @@ const certifications = {
         "Александр Демиденко",
         "Вильнур Самигуллин",
       ],
+      concert_address: 'ул. Газеты "Звезда", д. 18',
       more_button: "https://www.google.com/",
       buy_button:
         "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",

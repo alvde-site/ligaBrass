@@ -13,7 +13,7 @@ class CertificationCard extends Component {
             <div className="cert-header">
               <div class="cert-header__toolbar">
                 <time class="cert-header__date" datetime="2026-10-17">
-                  17.10
+                  {certificate.concert_date}
                 </time>
 
                 <div class="cert-header__time-wrapper">
@@ -70,6 +70,9 @@ class CertificationCard extends Component {
                   ) : null}
                 </div>
               ) : null}
+              {certificate.concert_address ? (
+                <p className="concert__info">{certificate.concert_address}</p>
+              ) : null}
             </div>
             {certificate.concert_poster ? (
               <img
@@ -83,12 +86,13 @@ class CertificationCard extends Component {
             <h2 className="cert-body-title" style={{ color: theme.text }}>
               {certificate.title}
             </h2>
-            <h3
+            <div
               className="cert-body-subtitle"
               style={{ color: theme.secondaryText }}
             >
-              {certificate.subtitle}
-            </h3>
+              г. <span>{certificate.concert_city}</span>,{" "}
+              <span>{certificate.concert_hall}</span>
+            </div>
           </div>
         </div>
       </Fade>
