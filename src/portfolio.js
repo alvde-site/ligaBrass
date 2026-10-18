@@ -291,12 +291,7 @@ const certifications = {
   certifications: [
     {
       title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      // subtitle: "- Andrew Ng",
-      // logo_path: "concerts/tutta_forca.jpg",
-      // certificate_link:
-      //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
       alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      // color_code: "#8C151599",
       concert_city: "Пермь",
       concert_hall: "Концертный зал ЦМШ",
       concert_time: "13:00",
@@ -329,7 +324,6 @@ const certifications = {
       // certificate_link:
       //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
       alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      // color_code: "#8C151599",
       concert_city: "Пермь",
       concert_hall: "Концертный зал ЦМШ",
       concert_time: "13:00",

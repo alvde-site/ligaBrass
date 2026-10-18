@@ -10,11 +10,7 @@ class CertificationCard extends Component {
       <Fade bottom duration={2000} distance="20px">
         <div className="cert-card">
           <div className="cert-card__content content">
-            {/* <div className="content-overlay"></div> */}
-            <div
-              className="cert-header"
-              // style={{ backgroundColor: certificate.color_code }}
-            >
+            <div className="cert-header">
               <div class="cert-header__toolbar">
                 <time class="cert-header__date" datetime="2026-10-17">
                   17.10
@@ -27,18 +23,7 @@ class CertificationCard extends Component {
                   </time>
                 </div>
               </div>
-
-              {/* <img
-                  className="logo_img"
-                  src={require(`../../assets/images/${certificate.logo_path}`)}
-                  alt={certificate.alt_name}
-                /> */}
             </div>
-            {/* <div className="content-details fadeIn-top">
-              <h3 className="content-title" style={{ color: theme.body }}>
-                Certificate
-              </h3>
-            </div> */}
           </div>
           <div className="cert-card__concert concert">
             <div class="concert__content">
