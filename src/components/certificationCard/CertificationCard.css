@@ -1,31 +1,27 @@
 .cert-card {
   display: grid;
-  grid-template-rows: auto 0fr auto;
   text-align: center;
   border: 1px solid #d9dbdf;
   border-radius: 5px;
   box-shadow: 5px 5px 5px #d9dbdf;
-  transition: 0.3s;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card.active {
+  background: #ffffff;
+  box-shadow: 5px 5px 15px #c2c4c9;
 }
 
 .cert-card > :nth-of-type(2) {
   overflow: hidden;
   min-height: 0;
   align-content: start;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 .cert-card:hover,
 .cert-card:active {
   background: #fff;
   grid-template-rows: auto 1fr auto;
-}
-
-.cert-card:hover > :nth-of-type(2),
-.cert-card:active > :nth-of-type(2) {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .cert-card .content {
@@ -69,14 +65,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  padding: 20px;
+  padding: 0 20px;
   border-bottom: 1px solid #d9dbdf;
   font-family: "Google Sans Regular";
   color: rgb(0, 28, 85);
   line-height: 1;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease;
 }
 
-.concert__content > *:not(:last-child) {
+.concert__content > * {
   margin-bottom: 20px;
 }
 
@@ -104,6 +103,7 @@
   width: auto;
   height: 300px;
   box-shadow: 0 0 10px 2px #d9dbdf;
+  margin: 20px auto;
 }
 
 .logo_img {
@@ -147,6 +147,15 @@
 
   .concert {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .concert__content > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .concert__content > :last-child {
+    margin-bottom: 0;
   }
 
   .concert__buttons {

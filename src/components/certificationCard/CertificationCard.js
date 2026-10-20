@@ -4,12 +4,23 @@ import { Fade } from "react-reveal";
 import Button from "../button/Button";
 
 class CertificationCard extends Component {
+  constructor(props) {
+    super(props);
+    this.contentRef = React.createRef();
+  }
   render() {
-    const certificate = this.props.certificate;
-    const theme = this.props.theme;
+    const { certificate, theme, isOpen, onToggle } = this.props;
+    const currentHeight =
+      isOpen && this.contentRef.current
+        ? `${this.contentRef.current.scrollHeight}px`
+        : "0px";
     return (
       <Fade bottom duration={2000} distance="20px">
-        <div className="cert-card">
+        <div
+          className={`cert-card ${isOpen ? "active" : ""}`}
+          onClick={onToggle}
+          style={{ cursor: "pointer" }}
+        >
           <div className="cert-card__content content">
             <div className="cert-header">
               <div class="cert-header__toolbar">
@@ -26,7 +37,11 @@ class CertificationCard extends Component {
               </div>
             </div>
           </div>
-          <div className="cert-card__concert concert">
+          <div
+            className="cert-card__concert concert"
+            ref={this.contentRef}
+            style={{ height: currentHeight }}
+          >
             <div class="concert__content">
               {certificate.concert_info ? (
                 <p className="concert__info">{certificate.concert_info}</p>
