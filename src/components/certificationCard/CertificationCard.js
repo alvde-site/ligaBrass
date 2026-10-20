@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./CertificationCard.css";
 import { Fade } from "react-reveal";
+import Button from "../button/Button";
 
 class CertificationCard extends Component {
   render() {
@@ -50,37 +51,44 @@ class CertificationCard extends Component {
                   </ul>
                 </div>
               ) : null}
+              {certificate.concert_address ? (
+                <div>
+                  <h3 className="concert__title">Адрес мероприятия:</h3>
+                  <p className="concert__info">{certificate.concert_address}</p>
+                </div>
+              ) : null}
               {certificate.more_button || certificate.buy_button ? (
                 <div className="concert__buttons">
                   {certificate.more_button ? (
-                    <a
-                      className="concert__button"
+                    <Button
+                      text={"Подробнее"}
+                      className="project-button"
                       href={certificate.more_button}
-                    >
-                      Подробнее
-                    </a>
+                      newTab={true}
+                      theme={this.props.theme}
+                    />
                   ) : null}
                   {certificate.buy_button ? (
-                    <a
-                      className="concert__button"
+                    <Button
+                      text={"Купить билет"}
+                      className="project-button"
                       href={certificate.buy_button}
-                    >
-                      Купить билет
-                    </a>
+                      newTab={true}
+                      theme={this.props.theme}
+                    />
                   ) : null}
                 </div>
               ) : null}
-              {certificate.concert_address ? (
-                <p className="concert__info">{certificate.concert_address}</p>
+            </div>
+            <div className="description__poster-wrap">
+              {certificate.concert_poster ? (
+                <img
+                  className="description__poster"
+                  alt="asdfas"
+                  src={require(`../../assets/images/${certificate.concert_poster}`)}
+                />
               ) : null}
             </div>
-            {certificate.concert_poster ? (
-              <img
-                className="description__poster"
-                alt="asdfas"
-                src={require(`../../assets/images/${certificate.concert_poster}`)}
-              />
-            ) : null}
           </div>
           <div className="cert-body">
             <h2 className="cert-body-title" style={{ color: theme.text }}>
