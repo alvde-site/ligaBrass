@@ -10,7 +10,7 @@ class Education extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="education-main">
+      <div className="education-main page__main">
         <Header theme={this.props.theme} />
 
         <div className="basic-education">

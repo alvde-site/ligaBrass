@@ -80,7 +80,7 @@ export default class ResumePage extends Component {
     const { pageWidth, numPages, currentPage, isLoading, error } = this.state;
 
     return (
-      <div className="resume-main">
+      <div className="resume-main page__main">
         <Header theme={theme} />
         <div className="resume-view">
           <Fade bottom duration={2000} distance="40px">
@@ -188,7 +188,7 @@ export default class ResumePage extends Component {
             </div>
           </Fade>
         </div>
-        <Footer theme={theme} onToggle={this.props.onToggle}/>
+        <Footer theme={theme} onToggle={this.props.onToggle} />
         <TopButton theme={theme} />
       </div>
     );

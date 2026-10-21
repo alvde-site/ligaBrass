@@ -28,7 +28,7 @@ function MusicianPage({ theme }) {
   }
 
   return (
-    <div className="musician-page-main">
+    <div className="musician-page-main page__main">
       <Header theme={theme} />
       <div className="musician-container">
         {/* Левая колонка: Фото и Соцсети */}

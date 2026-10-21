@@ -11,7 +11,7 @@ import "./Opensource.css";
 class Opensource extends Component {
   render() {
     return (
-      <div className="opensource-main">
+      <div className="opensource-main page__main">
         <Header theme={this.props.theme} />
         <Organizations theme={this.props.theme} />
         <OpensourceCharts theme={this.props.theme} />

@@ -13,7 +13,7 @@ class Contact extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="contact-main">
+      <div className="contact-main page__main">
         <Header theme={theme} />
         <div className="basic-contact">
           <Fade bottom duration={1000} distance="40px">
