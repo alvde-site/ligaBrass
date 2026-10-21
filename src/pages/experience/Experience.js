@@ -18,11 +18,11 @@ class Experience extends Component {
             <div className="experience-heading-div">
               {/* Левая часть: Реальное качественное фото вместо абстрактного SVG */}
               <div className="experience-heading-img-div">
-                {/* <img
+                <img
                   src={require(`../../assets/images/${experience["header_image_path"]}`)}
                   alt={experience.title}
                   className="experience-hero-image"
-                /> */}
+                />
               </div>
 
               {/* Правая часть: Лаконичные заголовки без лишнего пафоса */}
