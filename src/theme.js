@@ -1,4 +1,22 @@
 // theme.js
+export const lightTheme = {
+  body:
+    "#1A1F2C" /* АНТРАЦИТОВЫЙ: Мягкий графитовый фон, который полностью убирает мрачность */,
+  text: "#E2E8F0" /* Матовый платиновый — идеальный комфорт для глаз */,
+  secondaryText: "#94A3B8" /* Спокойный серебристый */,
+  headerColor: "#242B3D" /* Светлый графит для плашек меню */,
+  imageHighlight: "#E4A834" /* Наш фирменный латунный */,
+};
+
+// ЕСЛИ вы хотите остаться строго в СВЕТЛОЙ гамме, но убрать бледность, используйте этот вариант:
+export const lightThemeAlternative = {
+  body: "#F4F6F9" /* Плотный, чистый студийный серый фон */,
+  text:
+    "#0F172A" /* Глубокий асфальтовый, почти черный цвет для идеального контраста букв */,
+  secondaryText: "#475569" /* Насыщенный серый для второстепенных текстов */,
+  headerColor: "#FFFFFF" /* Чисто белые подклады */,
+  imageHighlight: "#E4A834",
+};
 export const blueTheme = {
   body: "#EDF9FE",
   text: "#001C55",
@@ -195,4 +213,4 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
-export const chosenTheme = blueTheme;
+export const chosenTheme = lightTheme;

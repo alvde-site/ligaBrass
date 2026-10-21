@@ -1,0 +1,17 @@
+/* Пропишите эти правила в CSS главной страницы */
+.greeting-text-p,
+.subTitle,
+.heading-subText {
+  color: #1d2129 !important; /* Угольный сочный цвет */
+  font-size: 1.25rem !important;
+  line-height: 1.7 !important;
+  font-weight: 500 !important; /* Буквы стали толще и весомее */
+}
+
+.greeting-text,
+.heading-text {
+  font-size: 52px !important;
+  font-weight: 800 !important; /* Заголовки бьют точно в цель */
+  color: #1d2129 !important;
+  letter-spacing: -1px !important;
+}

@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Базовый контейнер карточки
+   ========================================================================== */
 .degree-card {
   display: flex;
   width: 100%;
@@ -5,170 +8,213 @@
   align-items: center;
 }
 
-.card-title {
-  font-family: "Google Sans Medium";
-  font-size: 23px;
-  /* color: #000000; */
-}
-
-.card-subtitle {
-  font-family: "Google Sans Medium";
-  font-size: 18px;
-  /* color: #000000; */
-  margin-top: 7px;
-  margin-bottom: 5px;
-}
-
 /* ==========================================================================
-   ОБНОВЛЕННЫЙ БЛОК ФОТО: Монолитное заполнение круга без белых рамок и полей
+   Круглый блок фотографии музыканта
    ========================================================================== */
 .card-img {
-  width: 180px; /* Оптимальный сбалансированный размер без паддингов */
+  width: 180px;
   height: 180px;
   min-width: 180px;
   border-radius: 50%;
-  padding: 0; /* ПОЛНОСТЬЮ УБРАЛИ БЕЛЫЙ ОТСТУП */
-  border: none; /* УБРАЛИ СЕРУЮ РАМКУ ВОКРУГ ФОТО */
-
-  /* Оставляем только мягкую нейтральную тень, чтобы круг плавно отделялся от фона */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-
+  padding: 0;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Намертво срезает квадратные углы фотографии */
+  overflow: hidden;
 }
 
-/* Стилизация самого изображения внутри круга */
 .card-img img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important; /* Ужимает и центрирует фото 1000px без искажения пропорций */
-  border-radius: 50% !important; /* Намертво скругляет само изображение */
-  transform: scale(
-    1
-  ) !important; /* Сбрасываем уменьшение scale(0.9) из инлайн-стилей шаблона */
+  object-fit: cover !important;
+  border-radius: 50% !important;
 }
-/* ========================================================================== */
 
+/* ==========================================================================
+   Контейнер тела карточки (Плотный матовый антрацитовый стиль)
+   ========================================================================== */
+.card-body {
+  flex: 1;
+  margin: 10px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.card-body:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(228, 168, 52, 0.5); /* Мягкий латунный отблеск */
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   Шапка внутри карточки (Имя, инструмент)
+   ========================================================================== */
 .body-header {
   max-width: inherit;
   display: flex;
-  /* width: 100%; */
-  /* background-color:#6c63ff99; */
-  border-radius: 7px 7px 0px 0px;
-  padding: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 24px 14px 24px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .body-header-title {
-  align-items: flex-start;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.card-title {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 6px;
+  margin-bottom: 0;
 }
 
 .body-header-duration {
-  width: 20%;
-}
-.duration {
-  font-family: "Google Sans Regular";
-  font-size: 16px;
-  /* color: #212121; */
-  padding-right: 10px;
-  float: right;
+  width: 25%;
 }
 
+.duration {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  float: right;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Контентная зона (Текст краткой биографии)
+   ========================================================================== */
 .body-content {
   max-width: inherit;
-  /* width: 100%; */
-  border-radius: 0px 0px 7px 7px;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  /* box-shadow: 5px 5px 5px #d3d3d3; */
+  padding: 20px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-list {
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: "Google Sans Regular";
+  padding: 0;
+  margin: 0 0 12px 0;
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-.card-body {
-  /* background-color: #00FF00; */
-  border-bottom: 1px solid #d9dbdf;
-  border-left: 1px solid #d9dbdf;
-  border-right: 1px solid #d9dbdf;
-  border-radius: 7px;
-  margin: 10px;
-  box-shadow: 5px 5px 5px #d9dbdf;
+/* ==========================================================================
+   ИСПРАВЛЕННЫЙ БЛОК КНОПКИ: Идеальные симметричные отступы
+   ========================================================================== */
+.visit-btn-container {
+  display: flex;
+  justify-content: flex-end; /* Сдвигаем вправо через flex вместо float */
+  width: 100%;
+  margin-top: 12px;
+}
+
+.visit-link-wrapper {
+  text-decoration: none;
 }
 
 .visit-btn {
-  /* background-color: #6c63ff99; */
-  display: inline-block;
-  margin: 0px 10px 10px 0px;
-  padding: 10px;
-  border-radius: 7px;
-  border: 0px;
-  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .visit-btn:hover {
-  /* background-color:#6c63ffcc; */
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(228, 168, 52, 0.4);
 }
 
 .btn {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Google Sans Regular";
-  /* color: #000000; */
+  margin: 0;
+  padding: 0;
+  font-family: "Google Sans Regular", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 1380px) {
-}
-
+/* ==========================================================================
+   📱 Адаптивность для мобильных телефонов (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
   .degree-card {
     flex-direction: column;
+    gap: 16px;
   }
 
-  .body-header {
-    flex-direction: column;
-  }
-
-  .body-header-title {
-    width: 100%;
-  }
-
-  .body-header-duration {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  .duration {
-    padding: 0px;
-    margin: 0px;
-    float: left;
-  }
-
-  /* Адаптивные размеры круга на мобильных без рамок */
   .card-img {
-    width: 150px;
-    height: 150px;
-    min-width: 150px;
-    padding: 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
   }
 
   .card-body {
     width: 100% !important;
+    margin: 10px 0;
+  }
+
+  .body-header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .body-header-title {
+    width: 100%;
+    text-align: center;
   }
 
   .card-title {
-    font-size: 20px;
+    font-size: 21px;
   }
 
   .card-subtitle {
     font-size: 16px;
+  }
+
+  .body-header-duration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .duration {
+    float: none;
+    font-size: 13px;
+  }
+
+  .body-content {
+    padding: 16px;
+  }
+
+  /* На мобильных кнопка аккуратно встает строго по центру блока */
+  .visit-btn-container {
+    justify-content: center;
+    margin-top: 16px;
   }
 }

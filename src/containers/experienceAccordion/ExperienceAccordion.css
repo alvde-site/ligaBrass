@@ -1,13 +1,42 @@
-.experience-accord {
-  margin: 50px;
+/* ==========================================================================
+   УНИВЕРСАЛЬНОЕ ПРОЯВЛЕНИЕ ЛЮБЫХ ЗНАЧКОВ РАСКРЫТИЯ (Крестики, плюсы, SVG)
+   ========================================================================== */
+
+/* 1. Если значок сделан через встроенный тег или кастомный класс (например, плюс/минус/крестик) */
+.accordion__button *,
+.toggle-icon,
+.accordion-icon,
+.experience-accord * {
+  /* Перекрашиваем текстовые символы (например, + или -) в мягкий платиновый */
+  color: #e2e8f0;
 }
 
-.accord-panel {
-  font-family: "Google Sans Regular";
+/* 2. Если внутри кнопки раскрытия используется SVG-графика (иконка-крестик или стрелка) */
+.accordion__button svg,
+.accordion__button svg *,
+.accordion__heading svg,
+.accordion__heading svg * {
+  fill: #e2e8f0 !important; /* Заливка для иконок */
+  stroke: #e2e8f0 !important; /* Контур для иконок */
+  transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .experience-accord {
-    margin: 20px;
-  }
+/* ==========================================================================
+   ИНТЕРАКТИВНЫЙ ХОВЕР: Все значки загораются латунным золотом при наведении
+   ========================================================================== */
+.accordion__button:hover *,
+.accordion__button:hover svg,
+.accordion__button:hover svg * {
+  color: #e4a834 !important;
+  fill: #e4a834 !important;
+  stroke: #e4a834 !important;
+}
+
+/* Состояние ACTIVE: когда аккордеон открыт, значок (крестик или минус) горит золотом */
+.accordion__button[aria-expanded="true"] *,
+.accordion__button[aria-expanded="true"] svg,
+.accordion__button[aria-expanded="true"] svg * {
+  color: #e4a834 !important;
+  fill: #e4a834 !important;
+  stroke: #e4a834 !important;
 }

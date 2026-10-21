@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./DegreeCard.css";
 import { Fade, Flip } from "react-reveal";
+import { Link } from "react-router-dom"; // Быстрые SPA переходы
 
 class DegreeCard extends Component {
   render() {
@@ -12,11 +13,6 @@ class DegreeCard extends Component {
           <Flip left duration={2000}>
             <div className="card-img">
               <img
-                style={{
-                  maxWidth: "100%",
-                  maxHeight: "100%",
-                  transform: "scale(0.9)",
-                }}
                 src={require(`../../assets/images/${degree.logo_path}`)}
                 alt={degree.alt_name}
               />
@@ -28,47 +24,58 @@ class DegreeCard extends Component {
             className="card-body"
             style={{ width: degree.logo_path ? "90%" : "100%" }}
           >
-            <div
-              className="body-header"
-              style={{ backgroundColor: theme.headerColor }}
-            >
+            <div className="body-header">
               <div className="body-header-title">
                 <h2 className="card-title" style={{ color: theme.text }}>
                   {degree.title}
                 </h2>
-                <h3 className="card-subtitle" style={{ color: theme.text }}>
+                <h3
+                  className="card-subtitle"
+                  style={{ color: theme.secondaryText }}
+                >
                   {degree.subtitle}
                 </h3>
               </div>
               <div className="body-header-duration">
-                <h3 className="duration" style={{ color: theme.text }}>
+                <h3
+                  className="duration"
+                  style={{
+                    color: theme.text,
+                    backgroundColor: theme.secondaryText + "15",
+                  }}
+                >
                   {degree.duration}
                 </h3>
               </div>
             </div>
+
             <div className="body-content">
-              {degree.descriptions.map((sentence) => {
+              {degree.descriptions.map((sentence, index) => {
                 return (
-                  <p className="content-list" style={{ color: theme.text }}>
+                  <p
+                    key={index}
+                    className="content-list"
+                    style={{ color: theme.secondaryText }}
+                  >
                     {sentence}
                   </p>
                 );
               })}
+
+              {/* Новый безопасный контейнер кнопки с симметричными отступами */}
               {degree.website_link && (
-                <a
-                  href={degree.website_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="visit-btn"
-                    style={{ backgroundColor: theme.headerColor }}
-                  >
-                    <p className="btn" style={{ color: theme.text }}>
-                      Подробнее
-                    </p>
-                  </div>
-                </a>
+                <div className="visit-btn-container">
+                  <Link to={degree.website_link} className="visit-link-wrapper">
+                    <div
+                      className="visit-btn"
+                      style={{ borderColor: theme.text + "30" }}
+                    >
+                      <p className="btn" style={{ color: theme.text }}>
+                        Подробнее
+                      </p>
+                    </div>
+                  </Link>
+                </div>
               )}
             </div>
           </div>
