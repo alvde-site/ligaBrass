@@ -7,7 +7,7 @@
 }
 
 .basic-education {
-  max-width: 1150px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 40px 20px 0 20px; /* Сохраняем базовые 20px отступов для всей страницы */
 }

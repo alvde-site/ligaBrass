@@ -71,3 +71,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-color) transparent;
 }
+
+#root {
+  width: 100%;
+}

@@ -29,6 +29,11 @@
   color: #868e96;
 }
 
+.page {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 /* Animations */
 @keyframes fade_down {
   0% {

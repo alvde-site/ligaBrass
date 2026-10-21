@@ -10,7 +10,7 @@ function App() {
     <ThemeProvider theme={chosenTheme}>
       <>
         <GlobalStyles />
-        <div>
+        <div className="page">
           <Main theme={chosenTheme} />
         </div>
       </>
