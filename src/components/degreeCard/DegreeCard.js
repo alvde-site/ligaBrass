@@ -65,7 +65,7 @@ class DegreeCard extends Component {
                     style={{ backgroundColor: theme.headerColor }}
                   >
                     <p className="btn" style={{ color: theme.text }}>
-                      Visit Website
+                      Подробнее
                     </p>
                   </div>
                 </a>

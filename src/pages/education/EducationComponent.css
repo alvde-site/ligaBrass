@@ -1,71 +1,113 @@
+/* ==========================================================================
+   Главный контейнер страницы
+   ========================================================================== */
 .education-main {
   width: 100%;
+  overflow: hidden;
 }
 
 .basic-education {
-  margin-left: 5%;
-  margin-right: 5%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 40px 20px 0 20px;
 }
 
+/* ==========================================================================
+   Флекс-контейнер шапки (Картинка + Текст)
+   ========================================================================== */
 .heading-div {
   display: flex;
-}
-
-.heading-div > * {
-  flex: 1;
-}
-
-.heading-img-div {
-  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 60px; /* Фиксированное расстояние между фото и текстом */
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+/* Левый блок с изображением: строго занимает половину контейнера */
+.heading-img-div {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Правый блок с текстом: строго занимает вторую половину контейнера */
+.heading-text-div {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-.heading-text-div {
-  text-align: center;
-}
-
-.heading-img-div > * {
-  max-width: 100%;
+/* ==========================================================================
+   Жесткий контроль размеров фотографии (Чтобы она не раздувалась)
+   ========================================================================== */
+.hero-real-image {
+  width: 100%;
+  max-width: 440px; /* Ограничиваем максимальную ширину фото */
   height: auto;
+  max-height: 320px; /* Ограничиваем максимальную высоту фото */
+  object-fit: cover; /* Красиво вписываем фото в рамки без деформации */
+  border-radius: 12px; /* Мягкое скругление углов под стиль карточек */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Легкая тень */
 }
 
+/* ==========================================================================
+   Текстовые элементы
+   ========================================================================== */
 .heading-text {
-  font-size: 56px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
+}
+
+.heading-subText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
   font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 100px;
 }
 
-.heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-}
-
-@media (max-width: 1380px) {
-  .heading-text {
-    font-size: 50px;
-    margin-top: 80px;
-  }
-  .heading-sub-text {
-    font-size: 25px;
-  }
-}
-
+/* ==========================================================================
+   📱 Адаптивность для мобильных телефонов (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .heading-text {
-    font-size: 30px;
-    margin-top: 20px;
-  }
-
-  .heading-sub-text {
-    font-size: 20px;
-  }
-
   .heading-div {
-    flex-direction: column;
+    flex-direction: column; /* Картинка встает НАД текстом */
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* На мобильных блоки занимают всю ширину */
+  .heading-img-div,
+  .heading-text-div {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .heading-img-div {
+    max-width: 280px; /* Сужаем контейнер фото на телефонах */
+    margin: 0 auto;
+  }
+
+  .hero-real-image {
+    max-height: 200px;
+  }
+
+  .heading-text {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .heading-subText {
+    font-size: 1.05rem;
+    padding: 0 10px;
   }
 }

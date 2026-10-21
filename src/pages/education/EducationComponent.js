@@ -3,10 +3,6 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import Educations from "../../containers/education/Educations";
-import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites";
-import EducationImg from "./EducationImg";
-import { competitiveSites } from "../../portfolio";
-import Skills from "../../containers/skills/Skills";
 import "./EducationComponent.css";
 import { Fade } from "react-reveal";
 
@@ -16,23 +12,38 @@ class Education extends Component {
     return (
       <div className="education-main">
         <Header theme={this.props.theme} />
+
         <div className="basic-education">
-          <Fade bottom duration={2000} distance="40px">
+          <Fade bottom duration={1200} distance="30px">
             <div className="heading-div">
+              {/* Левая часть: Реальное изображение, скачанное по ссылке */}
               <div className="heading-img-div">
-                <EducationImg theme={theme} />
+                <img
+                  src={require("../../assets/images/about-bar.jpg")} // Расширение .jpg
+                  alt="Инструменты брасс-квинтета"
+                  className="hero-real-image"
+                />
               </div>
+
+              {/* Правая часть: Лаконичное описание без лозунгов */}
               <div className="heading-text-div">
                 <h1 className="heading-text" style={{ color: theme.text }}>
                   Знакомство с квинтетом
                 </h1>
-                <CompetitiveSites logos={competitiveSites.competitiveSites} />
+                <p
+                  className="heading-subText"
+                  style={{ color: theme.secondaryText }}
+                >
+                  Ансамбль солистов, представляющий классический состав медных
+                  духовых инструментов и академический музыкальный репертуар.
+                </p>
               </div>
             </div>
           </Fade>
+
           <Educations theme={this.props.theme} />
         </div>
-        {/* <Skills theme={this.props.theme} /> */}
+
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
       </div>
