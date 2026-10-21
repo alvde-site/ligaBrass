@@ -1,3 +1,169 @@
+/* ==========================================================================
+   Главные контейнеры страницы медиа
+   ========================================================================== */
 .opensource-main {
   width: 100%;
+  overflow: hidden;
+}
+
+.media-container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
+}
+
+.media-header-div {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.media-heading-text {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 44px;
+  font-weight: 500; /* Мягкая Medium жирность */
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+  letter-spacing: -1px;
+}
+
+.media-heading-subText {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Секции (Видео / Фото) */
+.media-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.media-section-title {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+/* ==========================================================================
+   Сетка видеоплееров Rutube (Пропорции 16:9)
+   ========================================================================== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Две видеокарточки в ряд на десктопе */
+  gap: 24px;
+  width: 100%;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(228, 168, 52, 0.4); /* Латунный аккуратный отблеск */
+}
+
+/* Хак для резинового удержания пропорций плеера 16:9 */
+.video-responsive-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* Отношение сторон 16:9 */
+  height: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.video-responsive-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-card-title {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 16px 20px;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Адаптивная фотогалерея
+   ========================================================================== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три фото в ряд на десктопе */
+  gap: 20px;
+  width: 100%;
+}
+
+.photo-card {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 4 / 3; /* Фиксированные красивые пропорции фото-карточек */
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: translateY(-2px);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   📱 Мобильная адаптивность (до 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .media-heading-text {
+    font-size: 32px;
+  }
+
+  .media-heading-subText {
+    font-size: 1.1rem;
+  }
+
+  .media-section-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  /* Переводим видео в одну колонку */
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Переводим фото в две колонки на смартфонах */
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* На совсем узких телефонах фото тоже выстраиваем в один столбец */
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
 }

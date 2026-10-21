@@ -654,6 +654,25 @@ const musiciansDetails = {
   },
 };
 
+const mediaPageData = {
+  videoList: [
+    {
+      id:
+        "9bf63737c02b115668e18f2780e9fcb9" /* Живое выступление брасс-ансамбля */,
+      title: "Классический брасс-квинтет — Концертное выступление",
+    },
+    {
+      id: "c9751e04db1402fe0452d0fa0402283e" /* Концерт духовой музыки */,
+      title: "Акадимическая программа духовых инструментов",
+    },
+  ],
+  photoList: [
+    { src: "brass_main.jpg", alt: "Концертное фото квинтета" },
+    { src: "brass_main.jpg", alt: "Репетиционный процесс" },
+    { src: "brass_main.jpg", alt: "Артисты за кулисами" },
+  ],
+};
+
 export {
   settings,
   seo,
@@ -669,4 +688,5 @@ export {
   publications,
   contactPageData,
   musiciansDetails,
+  mediaPageData,
 };
