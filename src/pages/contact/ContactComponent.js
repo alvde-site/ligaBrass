@@ -20,11 +20,11 @@ class Contact extends Component {
             <div className="contact-heading-div">
               {/* Фотография */}
               <div className="contact-heading-img-div">
-                {/* <img
+                <img
                   src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
                   alt={ContactData["title"]}
                   className="contact-profile-img"
-                /> */}
+                />
               </div>
 
               {/* Информационный текстовый блок */}

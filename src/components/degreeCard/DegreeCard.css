@@ -19,16 +19,37 @@
   margin-bottom: 5px;
 }
 
+/* ==========================================================================
+   ОБНОВЛЕННЫЙ БЛОК ФОТО: Монолитное заполнение круга без белых рамок и полей
+   ========================================================================== */
 .card-img {
-  width: 200px;
-  height: auto;
+  width: 180px; /* Оптимальный сбалансированный размер без паддингов */
+  height: 180px;
+  min-width: 180px;
   border-radius: 50%;
-  padding: 10px;
-  border: 1px solid #d9dbdf;
-  /* background-color: #6c63ff; */
-  /* background: transparent; */
-  box-shadow: 5px 5px 5px #d9dbdf;
+  padding: 0; /* ПОЛНОСТЬЮ УБРАЛИ БЕЛЫЙ ОТСТУП */
+  border: none; /* УБРАЛИ СЕРУЮ РАМКУ ВОКРУГ ФОТО */
+
+  /* Оставляем только мягкую нейтральную тень, чтобы круг плавно отделялся от фона */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Намертво срезает квадратные углы фотографии */
 }
+
+/* Стилизация самого изображения внутри круга */
+.card-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Ужимает и центрирует фото 1000px без искажения пропорций */
+  border-radius: 50% !important; /* Намертво скругляет само изображение */
+  transform: scale(
+    1
+  ) !important; /* Сбрасываем уменьшение scale(0.9) из инлайн-стилей шаблона */
+}
+/* ========================================================================== */
 
 .body-header {
   max-width: inherit;
@@ -130,8 +151,13 @@
     float: left;
   }
 
+  /* Адаптивные размеры круга на мобильных без рамок */
   .card-img {
-    width: 200px;
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    padding: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   }
 
   .card-body {

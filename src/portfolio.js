@@ -256,8 +256,7 @@ const degrees = {
         "Задает темп, собирает всех на репетиции и следит, чтобы всё звучало идеально.",
       ],
       website_link: "/musicians/bakharev",
-      logo_path: "iiitk_logo.png",
-      // logo_path: "bakharev_trumpet.png",
+      logo_path: "musicians/bakharev_trumpet.jpg",
     },
     {
       title: "Георгий Гринемайер",
@@ -268,8 +267,7 @@ const degrees = {
         "Мастер точных вступлений и деликатного интонирования.",
       ],
       website_link: "/musicians/grinemayer",
-      logo_path: "iiitk_logo.png",
-      // logo_path: "grinemayer_trumpet.png",
+      logo_path: "musicians/grinemayer_trumpet.jpg",
     },
     {
       title: "Дмитрий Береговский",
@@ -280,8 +278,7 @@ const degrees = {
         "Связующее звено между трубами и низкими духовыми.",
       ],
       website_link: "/musicians/beregovsky",
-      logo_path: "iiitk_logo.png",
-      // logo_path: "beregovsky_horn.png",
+      logo_path: "musicians/beregovsky_horn.jpg",
     },
     {
       title: "Александр Демиденко",
@@ -292,8 +289,7 @@ const degrees = {
         "Взял на себя всю бумажную работу и готовится взять под контроль будущие бюджеты квинтета.",
       ],
       website_link: "/musicians/demidenko",
-      logo_path: "iiitk_logo.png",
-      // logo_path: "demidenko_trombone.png",
+      logo_path: "musicians/demidenko_trombone.jpg",
     },
     {
       title: "Вильнур Самигуллин",
@@ -305,8 +301,7 @@ const degrees = {
         "Пока остальные музыканты думают о высоком, Вильнур находит лучшие ракурсы для фото и продвигает группу во внешнем мире.",
       ],
       website_link: "/musicians/samigullin",
-      logo_path: "iiitk_logo.png", // Ваша заглушка или фото
-      // logo_path: "samigullin_tuba.png",
+      logo_path: "musicians/samigullin_tuba.jpg",
     },
   ],
 };
@@ -682,7 +677,7 @@ const contactPageData = {
     title: "Контакты",
     description:
       "По вопросам согласования концертных программ, репертуара и участия в фестивалях вы можете связаться напрямую с Вильнуром Самигуллиным.",
-    profile_image_path: "samigullin_contact.png", // Фото Вильнура в assets/images/
+    profile_image_path: "musicians/samigullin_tuba.jpg", // Фото Вильнура в assets/images/
     phone_title: "Телефон для связи",
     phone_number: "+7 (999) 123-45-67", // Актуальный телефон
   },
@@ -692,8 +687,7 @@ const musiciansDetails = {
   bakharev: {
     name: "Александр Бахарев",
     instrument: "Первая труба / Солист",
-    // photo: "bakharev_full.jpg",
-    photo: "artists/artist.png",
+    photo: "musicians/bakharev_trumpet.jpg",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -704,8 +698,7 @@ const musiciansDetails = {
   grinemayer: {
     name: "Георгий Гринемайер",
     instrument: "Вторая труба",
-    // photo: "grinemayer_full.jpg",
-    photo: "artists/artist.png",
+    photo: "musicians/grinemayer_trumpet.jpg",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -716,8 +709,7 @@ const musiciansDetails = {
   beregovsky: {
     name: "Дмитрий Береговский",
     instrument: "Валторна",
-    // photo: "beregovsky_full.jpg",
-    photo: "artists/artist.png",
+    photo: "musicians/beregovsky_horn.jpg",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -728,8 +720,7 @@ const musiciansDetails = {
   demidenko: {
     name: "Александр Демиденко",
     instrument: "Тромбон",
-    // photo: "demidenko_full.jpg",
-    photo: "artists/artist.png",
+    photo: "musicians/demidenko_trombone.jpg",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -740,8 +731,7 @@ const musiciansDetails = {
   samigullin: {
     name: "Вильнур Самигуллин",
     instrument: "Туба",
-    // photo: "samigullin_full.jpg",
-    photo: "artists/artist.png",
+    photo: "musicians/samigullin_tuba.jpg",
     vk: "https://vk.com",
     telegram: "",
     bio: [
