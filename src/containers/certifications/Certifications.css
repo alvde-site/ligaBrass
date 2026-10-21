@@ -1,33 +1,117 @@
-.certs-header {
-  font-size: 40px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
+/* ==========================================================================
+   Главный контейнер секции афиши
+   ========================================================================== */
+.certs-main-section {
+  max-width: 1150px;
+  margin: 60px auto;
+  padding: 60px 40px 80px 40px;
+  border-radius: 24px;
+
+  /* Контрастный фоновый подклад: делает блок глубже основного фона сайта */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(228, 168, 52, 0.02) 100%
+  );
+
+  /* Аккуратная тонкая рамка, очерчивающая всю зону концертов */
+  border: 1px solid rgba(155, 161, 172, 0.15);
+
+  /* Сложная мягкая тень для отделения всего блока от подложки сайта */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 20px 50px rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================================================
+   Шапка секции
+   ========================================================================== */
+.certs-header-div {
+  margin-bottom: 45px;
+  position: relative;
   text-align: center;
 }
 
+.certs-header {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+/* Элегантная латунная полоса-подчеркивание под заголовком */
+.certs-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #e4a834;
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   Лента с карточками
+   ========================================================================== */
 .certs-body-div {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 24px; /* Четкий фиксированный шаг между карточками выступлений */
 }
 
-.certs-body-div .cert-card:not(:last-of-type) {
-  margin-bottom: 30px;
+/* Гарантируем идеальную посадку карточек внутри контейнера */
+.certs-body-div > div,
+.certs-body-div .cert-card {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 0 !important; /* Перевели управление отступами на gap */
 }
 
-@media (max-width: 1380px) {
+/* ==========================================================================
+   📱 Адаптивность для планшетов (до 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
   .certs-header {
-    font-size: 35px;
+    font-size: 34px;
+  }
+
+  .certs-main-section {
+    margin: 40px 20px;
+    padding: 40px 24px 60px 24px;
+    border-radius: 16px;
   }
 }
 
+/* ==========================================================================
+   📱 Адаптивность для мобильных телефонов (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .certs-body-div {
-    flex-direction: column;
+  .certs-header {
+    font-size: 28px;
+    padding-bottom: 12px;
   }
 
-  .certs-header {
-    font-size: 30px;
+  .certs-header::after {
+    width: 45px;
+    height: 2px;
+  }
+
+  .certs-main-section {
+    margin: 30px 12px;
+    padding: 30px 16px 40px 16px;
+    background: transparent; /* Облегчаем мобильный вид, убирая подклад */
+    border: none;
+    box-shadow: none;
+  }
+
+  .certs-body-div {
+    gap: 16px;
   }
 }

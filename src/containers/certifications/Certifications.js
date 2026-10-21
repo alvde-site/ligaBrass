@@ -17,17 +17,19 @@ class Certifications extends Component {
       activeCardId: prevState.activeCardId === cardId ? null : cardId,
     }));
   };
+
   render() {
     const theme = this.props.theme;
     const { activeCardId } = this.state;
 
     return (
-      <div className="main" id="certs">
+      <div className="certs-main-section" id="certs">
         <div className="certs-header-div">
           <Fade bottom duration={2000} distance="20px">
-            <h1 className="certs-header" style={{ color: theme.text }}>
-              Наши ближайшие концерты
-            </h1>
+            {/* Заменили h1 на h2 для идеальной SEO-структуры страницы */}
+            <h2 className="certs-header" style={{ color: theme.text }}>
+              Ближайшие выступления
+            </h2>
           </Fade>
         </div>
         <div className="certs-body-div">

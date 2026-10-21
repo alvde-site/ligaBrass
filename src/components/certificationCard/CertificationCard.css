@@ -1,167 +1,309 @@
+/* ==========================================================================
+   Базовый контейнер карточки (Чистый премиальный стиль)
+   ========================================================================== */
 .cert-card {
-  display: grid;
-  text-align: center;
-  border: 1px solid #9ba1ac;
-  border-radius: 5px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.24);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cert-card > :nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* Уверенная контрастная рамка по всему периметру без выступов */
+  border: 1px solid rgba(155, 161, 172, 0.3);
+  border-radius: 12px;
+  /* По умолчанию задаем легкий полупрозрачный фон, чтобы было куда осветлять */
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Аккуратная тень для объема */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease,
+    border-color 0.3s ease, background-color 0.3s ease;
   overflow: hidden;
-  min-height: 0;
-  align-content: start;
+  width: 100%;
 }
 
-.cert-card:hover,
-.cert-card:active {
-  background: #fff;
-  border: 1px solid #616773;
-  box-shadow: 0 0 28px rgba(0, 0, 0, 0.3);
-  grid-template-rows: auto 1fr auto;
+/* ==========================================================================
+   Интерактивные стили: HOVER (Наведение)
+   ========================================================================== */
+.cert-card:hover {
+  transform: translateY(-3px);
+  /* Глубокая благородная тень */
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+  /* Рамка становится четче при наведении */
+  border-color: rgba(97, 103, 115, 0.5);
+  /* ЭФФЕКТ ОСВЕТЛЕНИЯ: фон становится абсолютно чистым, белым и непрозрачным */
+  background-color: #ffffff !important;
 }
 
+/* ==========================================================================
+   Интерактивные стили: ACTIVE (Раскрытая карточка)
+   ========================================================================== */
 .cert-card.active {
-  background-color: #ffffff;
-  border-color: #4a4f5a;
-  box-shadow: 0 0 32px rgba(0, 0, 0, 0.35);
+  transform: translateY(0);
+  /* Максимальный объем для раскрытого концерта */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+  /* Контрастная рамка фиксирует открытый блок */
+  border-color: rgba(74, 79, 90, 0.6);
+  /* ФОН ОСТАЕТСЯ ИДЕАЛЬНО БЕЛЫМ И ПОДСВЕЧЕННЫМ */
+  background-color: #ffffff !important;
 }
 
-.cert-card .content {
-  text-decoration: none;
-  font-family: "Google Sans Regular";
-  color: rgb(0, 28, 85);
-  line-height: 1;
-  border-bottom: 1px solid #d9dbdf;
-}
-
-.cert-header__date {
-  font-size: 40px;
-}
-
-.cert-header__time-wrapper {
-  font-size: 28px;
+/* ==========================================================================
+   Верхняя строчка: Дата и Время (Повышенная читаемость)
+   ========================================================================== */
+.content {
+  width: 100%;
+  border-bottom: 1px solid rgba(155, 161, 172, 0.2);
 }
 
 .cert-header {
-  margin: 0px;
-  padding: 20px;
-  border-radius: 5px 5px 0px 0px;
+  padding: 24px 24px 12px 24px;
 }
 
 .cert-header__toolbar {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cert-header__date {
-  text-align: left;
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .cert-header__time-wrapper {
   text-align: right;
   display: flex;
   flex-direction: column;
+  line-height: 1.3;
 }
 
-.concert {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 0 20px;
-  border-bottom: 1px solid #d9dbdf;
-  font-family: "Google Sans Regular";
-  color: rgb(0, 28, 85);
-  line-height: 1;
-  overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease;
+.cert-header__day {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
 }
 
-.concert__content > * {
-  margin-bottom: 20px;
+.cert-header__time {
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
-.concert ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.concert h3 {
-  margin: 0 0 10px;
-}
-
-.concert__buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.concert__buttons * {
-  margin: 0;
-}
-
-.description__poster {
-  width: auto;
-  height: 300px;
-  box-shadow: 0 0 10px 2px #d9dbdf;
-  margin: 20px auto;
-}
-
-.logo_img {
-  margin: 3px;
-  width: auto;
-  height: 100px;
-}
-
+/* ==========================================================================
+   Тело карточки: Название концерта и Зал
+   ========================================================================== */
 .cert-body {
-  padding: 20px;
-  margin: 0px;
+  padding: 16px 24px 24px 24px;
 }
 
 .cert-body-title {
-  font-family: "Google Sans Regular";
-  font-size: 20px;
-  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 8px 0;
 }
 
 .cert-body-subtitle {
-  font-family: "Google Sans Regular";
-  font-size: 18px;
-  color: #808080;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   Раскрывающийся блок аккордеона
+   ========================================================================== */
+.concert {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  /* Легкий, едва заметный контрастный подклад для раскрытой информации */
+  background-color: rgba(155, 161, 172, 0.02);
+}
+
+/* Контейнер-донор для плавного расчета scrollHeight */
+.concert__inner-padding {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  padding: 28px 24px;
+  border-top: 1px solid rgba(155, 161, 172, 0.15);
+}
+
+.concert__content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.concert__content > * {
+  margin-bottom: 0 !important;
+}
+
+.concert__section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.concert__title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
   margin: 0;
 }
 
-.content {
+.concert__info {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Кастомные списки произведений и участников */
+.concert__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.concert__list li {
+  font-size: 1.05rem;
+  line-height: 1.5;
   position: relative;
+  padding-left: 16px;
+}
+
+/* Изящный золотой маркер квинтета */
+.concert__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #e4a834;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   Блок кнопок
+   ========================================================================== */
+.concert__buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px !important;
+  margin-top: 6px !important;
   width: 100%;
-  margin: auto;
-  overflow: hidden;
 }
 
-@media (max-width: 1380px) {
+.concert__buttons > * {
+  margin: 0 !important;
+  flex: 1 1 auto;
+  max-width: max-content;
 }
 
+/* ==========================================================================
+   Афиша / Постер концерта
+   ========================================================================== */
+.description__poster-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.description__poster {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+.description__poster-placeholder {
+  width: 100%;
+  max-width: 280px;
+  height: 380px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+/* ==========================================================================
+   📱 Адаптивность для планшетов и мобильных устройств (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .cert-card {
-    width: 100%;
+  .cert-header {
+    padding: 20px 20px 8px 20px;
   }
 
-  .concert {
+  .cert-header__date {
+    font-size: 30px;
+  }
+
+  .cert-header__time {
+    font-size: 1.4rem;
+  }
+
+  .cert-body {
+    padding: 8px 20px 20px 20px;
+  }
+
+  .cert-body-title {
+    font-size: 1.3rem;
+  }
+
+  .concert__inner-padding {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 20px;
+    padding: 20px;
   }
 
-  .concert__content > *:not(:last-child) {
-    margin-bottom: 20px;
+  .description__poster-wrap {
+    order: -1;
+    margin-bottom: 8px;
   }
 
-  .concert__content > :last-child {
-    margin-bottom: 0;
+  .description__poster {
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  .concert__content {
+    gap: 14px;
   }
 
   .concert__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px !important;
+    margin-top: 6px !important;
+  }
+
+  .concert__buttons > * {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   📱 Адаптивность для ОЧЕНЬ узких экранов (до 430px)
+   ========================================================================== */
+@media (max-width: 430px) {
+  .concert__buttons {
     flex-direction: column;
+    align-items: stretch;
+    gap: 8px !important;
+  }
+
+  .concert__buttons > * {
+    width: 100% !important;
+    text-align: center;
   }
 }
