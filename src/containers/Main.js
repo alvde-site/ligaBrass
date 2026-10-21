@@ -10,6 +10,7 @@ import Projects from "../pages/projects/Projects";
 import { settings } from "../portfolio.js";
 import Error404 from "../pages/errors/error404/Error";
 import ResumePage from "../pages/resume/Resume.js";
+// import MusicianPage from "../pages/musician/MusicianPage.js";
 
 export default class Main extends Component {
   componentDidMount() {
@@ -86,8 +87,16 @@ export default class Main extends Component {
           />
           <Route
             path="/resume"
-            render={(props) => <ResumePage {...props} theme={this.props.theme} />}
+            render={(props) => (
+              <ResumePage {...props} theme={this.props.theme} />
+            )}
           />
+          {/* <Route
+            path="/musicians/:id"
+            render={(props) => (
+              <MusicianPage {...props} theme={this.props.theme} />
+            )}
+          /> */}
           <Route
             path="*"
             render={(props) => <Error404 {...props} theme={this.props.theme} />}

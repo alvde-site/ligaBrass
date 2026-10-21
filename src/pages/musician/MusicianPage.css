@@ -1,0 +1,98 @@
+.musician-container {
+  display: flex;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  gap: 50px;
+}
+
+.musician-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musician-photo {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px; /* Мягкие скругленные углы вместо круга для больших фото */
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.musician-socials {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.social-btn {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #e4a834;
+  color: #e4a834;
+}
+
+.social-btn:hover {
+  background-color: #e4a834;
+  color: #fff;
+}
+
+.musician-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.musician-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.musician-name {
+  font-size: 2.8rem;
+  margin: 0 0 25px 0;
+  font-weight: 700;
+}
+
+.musician-bio p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.back-to-team {
+  margin-top: 30px;
+  align-self: flex-start;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
+}
+
+.back-to-team:hover {
+  opacity: 0.7;
+}
+
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 768px) {
+  .musician-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .musician-name {
+    font-size: 2.2rem;
+  }
+}
