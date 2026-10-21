@@ -1,20 +1,10 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
-import PublicationCard from "../../components/publicationsCard/PublicationCard";
-import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
-import {
-  greeting,
-  projectsHeader,
-  publicationsHeader,
-  publications,
-} from "../../portfolio.js";
-import ProjectsData from "../../shared/opensource/projects.json";
+import { projectsHeader } from "../../portfolio.js";
 import "./Projects.css";
-import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
@@ -22,16 +12,21 @@ class Projects extends Component {
     return (
       <div className="projects-main page__main">
         <Header theme={theme} />
+
         <div className="basic-projects">
-          <Fade bottom duration={2000} distance="40px">
+          {/* Шапка страницы */}
+          <Fade bottom duration={1200} distance="30px">
             <div className="projects-heading-div">
+              {/* Левая часть: Реальное фото вместо IT-векторов */}
               <div className="projects-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
-											alt=""
-										/> */}
-                <ProjectsImg theme={theme} />
+                <img
+                  src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
+                  alt={projectsHeader.title}
+                  className="projects-hero-image"
+                />
               </div>
+
+              {/* Правая часть: Лаконичный текст */}
               <div className="projects-heading-text-div">
                 <h1
                   className="projects-heading-text"
@@ -48,48 +43,48 @@ class Projects extends Component {
               </div>
             </div>
           </Fade>
-        </div>
-        <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
-          })}
-        </div>
-        <Button
-          text={"More Projects"}
-          className="project-button"
-          href={greeting.githubProfile}
-          newTab={true}
-          theme={theme}
-        />
 
-        {/* Publications  */}
-        {publications.data.length > 0 ? (
-          <div className="basic-projects">
-            <Fade bottom duration={2000} distance="40px">
-              <div className="publications-heading-div">
-                <div className="publications-heading-text-div">
-                  <h1
-                    className="publications-heading-text"
-                    style={{ color: theme.text }}
+          {/* СЕКЦИЯ КАРТОЧЕК ПРОГРАММ */}
+          <Fade bottom duration={1400} distance="40px">
+            <div className="programs-grid-div">
+              {projectsHeader.programs.map((program, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="program-spec-card"
+                    style={{
+                      backgroundColor: "rgba(255, 255, 255, 0.04)",
+                      borderColor: theme.secondaryText + "18",
+                    }}
                   >
-                    {publicationsHeader.title}
-                  </h1>
-                  <p
-                    className="projects-header-detail-text subTitle"
-                    style={{ color: theme.secondaryText }}
-                  >
-                    {publicationsHeader["description"]}
-                  </p>
-                </div>
-              </div>
-            </Fade>
-          </div>
-        ) : null}
-
-        <div className="repo-cards-div-main">
-          {publications.data.map((pub) => {
-            return <PublicationCard pub={pub} theme={theme} />;
-          })}
+                    <div className="program-card-header">
+                      <h2
+                        className="program-card-title"
+                        style={{ color: theme.text }}
+                      >
+                        {program.title}
+                      </h2>
+                      <span
+                        className="program-card-duration"
+                        style={{
+                          color: theme.text,
+                          backgroundColor: theme.secondaryText + "15",
+                        }}
+                      >
+                        {program.duration}
+                      </span>
+                    </div>
+                    <p
+                      className="program-card-desc"
+                      style={{ color: theme.secondaryText }}
+                    >
+                      {program.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </Fade>
         </div>
 
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />

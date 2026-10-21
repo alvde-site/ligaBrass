@@ -1,117 +1,186 @@
+/* ==========================================================================
+   Главные контейнеры
+   ========================================================================== */
 .projects-main {
   width: 100%;
-  text-align: center;
+  overflow: hidden;
 }
 
 .basic-projects {
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 95%;
+  margin: 0 auto;
+  padding: 40px 0 60px 0;
 }
 
+/* ==========================================================================
+   Флекс-контейнер шапки (Картинка + Текст)
+   ========================================================================== */
 .projects-heading-div {
   display: flex;
-}
-
-.projects-heading-div > * {
-  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+  width: 100%;
 }
 
 .projects-heading-img-div {
+  flex: 1 1 50%;
+  max-width: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Жесткий контроль размеров фото в стиле остальных страниц */
+.projects-hero-image {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .projects-heading-text-div {
-  text-align: center;
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left; /* Академическое строгое выравнивание по левому краю */
 }
 
-.projects-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
+/* ==========================================================================
+   Текстовые элементы
+   ========================================================================== */
 .projects-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 80px;
-}
-
-.projects-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 44px;
+  font-weight: 500; /* Убрали агрессивный bold, поставили легкий Medium */
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
 }
 
 .projects-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-.publications-heading-text-div {
-  text-align: center;
-  font-family: "Google Sans Regular";
-  margin-top: 70px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
-.publications-heading-text {
-  font-size: 56px;
-  font-weight: 600;
+/* ==========================================================================
+   Сетка карточек репертуарных программ
+   ========================================================================== */
+.programs-grid-div {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Умная адаптивная сетка */
+  gap: 24px;
+  width: 100%;
+  margin-top: 20px;
 }
-.repo-cards-div-main {
+
+.program-spec-card {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem 1rem;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top: 60px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: left;
 }
 
-@media (max-width: 1380px) {
-  .projects-heading-text {
-    font-size: 50px;
-    margin-top: 80px;
-  }
-  .projects-heading-sub-text {
-    font-size: 25px;
-  }
+.program-spec-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+  border-color: rgba(228, 168, 52, 0.4); /* Наш фирменный латунный отблеск */
 }
 
+.program-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+}
+
+.program-card-title {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.program-card-duration {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.program-card-desc {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   📱 Адаптивность для мобильных телефонов (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .projects-heading-text,
-  .publications-heading-text {
-    font-size: 30px;
-    margin-top: 20px;
-  }
-
-  .projects-heading-sub-text {
-    font-size: 20px;
-  }
-
   .projects-heading-div {
-    flex-direction: column;
+    flex-direction: column; /* Картинка встает НАД текстом */
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 30px;
   }
 
-  .projects-header-detail-text {
-    font-size: 16px;
-    margin-right: 0px;
-    margin-left: 0px;
-    line-height: normal;
+  .projects-heading-img-div,
+  .projects-heading-text-div {
+    max-width: 100%;
+    flex: 1 1 100%;
+    align-items: center;
     text-align: center;
   }
 
-  .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 30px;
+  .projects-heading-img-div {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .projects-hero-image {
+    max-height: 200px;
+  }
+
+  .projects-heading-text {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .projects-header-detail-text {
+    font-size: 1.1rem;
+  }
+
+  .programs-grid-div {
+    grid-template-columns: 1fr; /* В одну колонку на смартфонах */
+    gap: 16px;
+  }
+
+  .program-spec-card {
+    padding: 20px;
   }
 }
