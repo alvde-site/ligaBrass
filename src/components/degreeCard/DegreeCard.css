@@ -71,10 +71,11 @@
   width: 75%;
 }
 
+/* ИСПРАВЛЕНИЕ: Заменили bold (700) на изящный полужирный Medium (500) */
 .card-title {
   font-family: "Google Sans Medium", sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.3px;
   margin: 0;
 }
@@ -82,7 +83,7 @@
 .card-subtitle {
   font-family: "Google Sans Medium", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 500; /* Инструмент теперь тоже в легком изящном стиле */
   margin-top: 6px;
   margin-bottom: 0;
 }
@@ -111,20 +112,22 @@
   flex-direction: column;
 }
 
+/* Обычный текст биографии — строго на легкой базовой плотности (400) */
 .content-list {
   padding: 0;
   margin: 0 0 12px 0;
   font-family: "Google Sans Regular", sans-serif;
   font-size: 1.05rem;
   line-height: 1.6;
+  font-weight: 400;
 }
 
 /* ==========================================================================
-   ИСПРАВЛЕННЫЙ БЛОК КНОПКИ: Идеальные симметричные отступы
+   Блок кнопки «Подробнее»
    ========================================================================== */
 .visit-btn-container {
   display: flex;
-  justify-content: flex-end; /* Сдвигаем вправо через flex вместо float */
+  justify-content: flex-end;
   width: 100%;
   margin-top: 12px;
 }
@@ -153,7 +156,7 @@
   margin: 0;
   padding: 0;
   font-family: "Google Sans Regular", sans-serif;
-  font-weight: 500;
+  font-weight: 500; /* Кнопка аккуратная и не перегруженная */
   font-size: 0.95rem;
 }
 
@@ -212,7 +215,6 @@
     padding: 16px;
   }
 
-  /* На мобильных кнопка аккуратно встает строго по центру блока */
   .visit-btn-container {
     justify-content: center;
     margin-top: 16px;

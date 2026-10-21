@@ -1,8 +1,9 @@
-/* header */
-
+/* ==========================================================================
+   Главный контейнер шапки (Header)
+   ========================================================================== */
 .header {
   display: block;
-  max-width: 90%;
+  max-width: 90%; /* Ограничение под ваши 1920px */
   padding: 20px 10px;
   margin: 0px auto;
 }
@@ -12,24 +13,11 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  /* background-color: #fff; */
-}
-.grey-color {
-  color: #868e96;
 }
 
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  /* color: black; */
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  /* background-color: #A6E1FA; */
-}
-
+/* ==========================================================================
+   Логотип коллектива (Блок слева)
+   ========================================================================== */
 .header .logo {
   display: block;
   float: left;
@@ -37,17 +25,25 @@
   text-decoration: none;
   line-height: normal;
 }
+
+/* Избавились от раздутого bold, поставили Medium 500 */
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
+  font-family: "Agustina Regular", sans-serif;
+  font-weight: 500;
   padding: 0 10px;
-  /* color: #55198b; */
+  transition: color 0.3s ease;
 }
 
-/* menu */
+/* При наведении логотип мягко отдает нашей фирменной латунью */
+.header .logo:hover .logo-name {
+  color: #e4a834 !important;
+}
 
+/* ==========================================================================
+   Ссылки навигационного меню
+   ========================================================================== */
 .menu {
-  font-family: "Google Sans Regular";
+  font-family: "Google Sans Medium", "Google Sans Regular", sans-serif;
 }
 
 .header .menu {
@@ -56,8 +52,48 @@
   transition: max-height 0.2s ease-out;
 }
 
-/* menu icon */
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500; /* Комфортная для глаз средняя плотность букв */
+  position: relative;
+  transition: color 0.3s ease;
+}
 
+/* Изящное латунное подчеркивание ссылок при наведении (ТОЛЬКО ДЛЯ ДЕСКТОПА) */
+@media (min-width: 69em) {
+  .header li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 12px;
+    left: 20px;
+    background-color: #e4a834;
+    visibility: hidden;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .header li a:hover {
+    color: #e4a834 !important;
+  }
+
+  .header li a:hover::before {
+    visibility: visible;
+    width: calc(100% - 40px);
+  }
+}
+
+/* Старый серый цвет из айти-шаблона заменили на мягкий серебристый */
+.grey-color {
+  color: #94a3b8;
+}
+
+/* ==========================================================================
+   📱 ИКОНКА МОБИЛЬНОГО МЕНЮ (ПРОЯВЛЕНИЕ БУРГЕРА В ТЕМНОЙ ТЕМЕ)
+   ========================================================================== */
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
@@ -65,10 +101,12 @@
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  z-index: 110;
 }
 
+/* Перевели цвет линий «бургера» в матовый платиновый (#E2E8F0) */
 .header .menu-icon .navicon {
-  background: #333;
+  background: #e2e8f0;
   display: block;
   height: 2px;
   position: relative;
@@ -78,7 +116,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #e2e8f0; /* Все три линии видны на антраците */
   content: "";
   display: block;
   height: 100%;
@@ -95,8 +133,14 @@
   top: -5px;
 }
 
-/* menu btn */
+/* При ховере на мобильный бургер иконка плавно подсвечивается латунью */
+.header .menu-icon:hover .navicon,
+.header .menu-icon:hover .navicon:before,
+.header .menu-icon:hover .navicon:after {
+  background: #e4a834;
+}
 
+/* Поведение скрытого чекбокса бургер-меню */
 .header .menu-btn {
   display: none;
 }
@@ -105,25 +149,37 @@
   max-height: 370px;
 }
 
+/* АНИМАЦИЯ КРЕСТИКА (Изолировали правила через жесткие селекторы, чтобы ничего не ломалось) */
 .header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
+  background: transparent !important; /* Центральная линия исчезает */
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) !important;
+  top: 0 !important;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
+  transform: rotate(45deg) !important;
+  top: 0 !important;
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
+/* Дополнительная защита анимации при ховере в состоянии checked */
+.header .menu-btn:checked ~ .menu-icon:hover .navicon {
+  background: transparent !important;
+}
+.header .menu-btn:checked ~ .menu-icon:hover .navicon:before {
+  transform: rotate(-45deg) !important;
+  background: #e4a834 !important;
+}
+.header .menu-btn:checked ~ .menu-icon:hover .navicon:after {
+  transform: rotate(45deg) !important;
+  background: #e4a834 !important;
 }
 
-/* 69em = 1104px */
-
+/* ==========================================================================
+   🖥️ ДЕСКТОПНАЯ СЕТКА (Широкие экраны от 1104px)
+   ========================================================================== */
 @media (min-width: 69em) {
   .header li {
     float: left;

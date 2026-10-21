@@ -1,17 +1,17 @@
 /* ==========================================================================
-   Базовый контейнер карточки (Чистый премиальный стиль)
+   Базовый контейнер карточки (Плотный матовый графитовый стиль)
    ========================================================================== */
 .cert-card {
   display: flex;
   flex-direction: column;
   text-align: left;
-  /* Уверенная контрастная рамка по всему периметру без выступов */
-  border: 1px solid rgba(155, 161, 172, 0.3);
+  /* Уверенная контрастная рамка для четких границ */
+  border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 12px;
-  /* По умолчанию задаем легкий полупрозрачный фон, чтобы было куда осветлять */
-  background-color: rgba(255, 255, 255, 0.6);
-  /* Аккуратная тень для объема */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  /* Мягкий полупрозрачный фон в тон нашей новой антрацитовой теме */
+  background-color: rgba(255, 255, 255, 0.04);
+  /* Аккуратная глубокая тень */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease,
     border-color 0.3s ease, background-color 0.3s ease;
   overflow: hidden;
@@ -23,12 +23,11 @@
    ========================================================================== */
 .cert-card:hover {
   transform: translateY(-3px);
-  /* Глубокая благородная тень */
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
-  /* Рамка становится четче при наведении */
-  border-color: rgba(97, 103, 115, 0.5);
-  /* ЭФФЕКТ ОСВЕТЛЕНИЯ: фон становится абсолютно чистым, белым и непрозрачным */
-  background-color: #ffffff !important;
+  /* Насыщенная тень */
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.25);
+  /* ЭФФЕКТ СВЕЧЕНИЯ: плашка становится чуть светлее, проявляя текстуру, а рамка загорается латунью */
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(228, 168, 52, 0.5);
 }
 
 /* ==========================================================================
@@ -36,20 +35,20 @@
    ========================================================================== */
 .cert-card.active {
   transform: translateY(0);
-  /* Максимальный объем для раскрытого концерта */
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
-  /* Контрастная рамка фиксирует открытый блок */
-  border-color: rgba(74, 79, 90, 0.6);
-  /* ФОН ОСТАЕТСЯ ИДЕАЛЬНО БЕЛЫМ И ПОДСВЕЧЕННЫМ */
-  background-color: #ffffff !important;
+  /* Максимальный объем для выделения открытого концерта */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+  /* Латунный контур фиксирует раскрытый блок */
+  border-color: rgba(228, 168, 52, 0.6);
+  /* Фиксируем красивый, плотный графитовый фон внутри аккордеона */
+  background-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 /* ==========================================================================
-   Верхняя строчка: Дата и Время (Повышенная читаемость)
+   Верхняя строчка: Дата и Время (Повышенная комфортная читаемость)
    ========================================================================== */
 .content {
   width: 100%;
-  border-bottom: 1px solid rgba(155, 161, 172, 0.2);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .cert-header {
@@ -62,9 +61,10 @@
   align-items: center;
 }
 
+/* ИСПРАВЛЕНИЕ: Снизили агрессивную жирность с 800 до Medium (500/600) */
 .cert-header__date {
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -1px;
 }
 
@@ -79,12 +79,12 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .cert-header__time {
   font-size: 1.7rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -94,9 +94,10 @@
   padding: 16px 24px 24px 24px;
 }
 
+/* ИСПРАВЛЕНИЕ: Снизили плотность заголовка до благородного Medium (600) */
 .cert-body-title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.35;
   margin: 0 0 8px 0;
 }
@@ -114,8 +115,12 @@
   overflow: hidden;
   height: 0;
   transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-  /* Легкий, едва заметный контрастный подклад для раскрытой информации */
-  background-color: rgba(155, 161, 172, 0.02);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Темная бархатная подложка для контента */
 }
 
 /* Контейнер-донор для плавного расчета scrollHeight */
@@ -124,7 +129,7 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 32px;
   padding: 28px 24px;
-  border-top: 1px solid rgba(155, 161, 172, 0.15);
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .concert__content {
@@ -143,18 +148,21 @@
   gap: 6px;
 }
 
+/* Заголовки внутренних списков */
 .concert__title {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
 }
 
+/* Тексты описания программ на базовой плотности (400) */
 .concert__info {
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;
+  font-weight: 400;
 }
 
 /* Кастомные списки произведений и участников */
@@ -172,6 +180,7 @@
   line-height: 1.5;
   position: relative;
   padding-left: 16px;
+  font-weight: 400;
 }
 
 /* Изящный золотой маркер квинтета */
@@ -219,7 +228,7 @@
   max-width: 280px;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   object-fit: cover;
 }
 
@@ -255,7 +264,7 @@
   }
 
   .cert-body-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .concert__inner-padding {
