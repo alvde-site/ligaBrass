@@ -1,194 +1,120 @@
 .contact-main {
   width: 100%;
+  overflow: hidden;
 }
 
 .basic-contact {
-  margin-left: 5%;
-  margin-right: 5%;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .contact-heading-div {
   display: flex;
-}
-
-.blog-heading-div {
-  display: flex;
-}
-
-.address-heading-div {
-  display: flex;
-  margin-top: 80px;
-}
-
-.blog-heading-div > * {
-  flex: 1;
-}
-
-.contact-heading-div > * {
-  flex: 1;
-}
-
-.address-heading-div > * {
-  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
 .contact-heading-img-div {
+  flex: 1 1 45%;
+  max-width: 45%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.blog-heading-img-div {
-  align-items: center;
-  justify-content: center;
+.contact-profile-img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 }
 
 .contact-heading-text-div {
-  text-align: center;
-}
-
-.blog-heading-text-div {
-  text-align: center;
-}
-
-.address-heading-text-div {
-  text-align: center;
-}
-
-.contact-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.blog-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
+  flex: 1 1 55%;
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .contact-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.blog-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.address-heading-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
 }
 
 .contact-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
 }
 
-.blog-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-.resume-btn-div {
-  width: 100%;
+.contact-phone-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 25px;
 }
 
-.blogsite-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.contact-phone-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin: 0;
 }
 
-.address-btn-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
+.contact-phone-link {
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
-@media (max-width: 1380px) {
-  .contact-heading-text {
-    font-size: 50px;
-    margin-top: 60px;
-  }
+.contact-phone-link:hover {
+  opacity: 0.7;
+}
 
-  .blog-heading-text {
-    font-size: 50px;
-    margin-top: 40px;
-  }
+.contact-social-wrap {
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
-  .contact-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .blog-heading-text {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .address-heading-text {
-    font-size: 20px;
-  }
-
-  .blog-heading-div {
-    flex-direction: column-reverse;
-    margin-top: 60px;
-  }
-
-  .address-heading-div {
-    flex-direction: column;
-    margin-top: 60px;
-  }
-
-  .blog-heading-text-div {
-    margin-top: 40px;
-  }
-
-  .address-heading-text-div {
-    margin-top: 40px;
-  }
-
   .contact-heading-div {
     flex-direction: column;
+    gap: 32px;
+  }
+
+  .contact-heading-img-div,
+  .contact-heading-text-div {
+    max-width: 100%;
+    flex: 1 1 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-profile-img {
+    max-width: 260px;
+  }
+
+  .contact-heading-text {
+    font-size: 34px;
+    margin-bottom: 16px;
   }
 
   .contact-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
   }
 
-  .blog-header-detail-text {
-    font-size: 16px;
-    margin-left: 0px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
+  .contact-phone-link {
+    font-size: 1.65rem;
   }
 }
