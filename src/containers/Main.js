@@ -33,7 +33,7 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <BrowserRouter basename="/">
+      <BrowserRouter>
         <Switch>
           <Route
             path="/"

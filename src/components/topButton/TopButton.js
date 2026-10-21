@@ -1,63 +1,61 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./TopButton.css";
 
 export default function TopButton({ theme }) {
-  function GoUpEvent() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
+  // Хук для управления видимостью кнопки наверх
+  const [isVisible, setIsVisible] = useState(false);
 
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 30 ||
-      document.documentElement.scrollTop > 30
-    ) {
-      document.getElementById("topButton").style.visibility = "visible";
-    } else {
-      document.getElementById("topButton").style.visibility = "hidden";
-    }
-  }
+  // Хуки для безопасного управления ховером без document.getElementById
+  const [isHovered, setIsHovered] = useState(false);
 
-  window.onscroll = function () {
-    scrollFunction();
+  // Плавный скролл наверх
+  const goUpEvent = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Сделали скролл наверх премиальным и плавным
+    });
   };
 
-  const onMouseEnter = (color, bgColor) => {
-    /* For the button */
-    const topButton = document.getElementById("topButton");
-    topButton.style.color = color;
-    topButton.style.backgroundColor = bgColor;
+  useEffect(() => {
+    const scrollFunction = () => {
+      if (
+        document.body.scrollTop > 30 ||
+        document.documentElement.scrollTop > 30
+      ) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-    /* For arrow icon */
-    const arrow = document.getElementById("arrow");
-    arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
-  };
+    // Вешаем событие скролла при монтировании страницы
+    window.addEventListener("scroll", scrollFunction);
 
-  const onMouseLeave = (color, bgColor) => {
-    /* For the button */
-    const topButton = document.getElementById("topButton");
-    topButton.style.color = color;
-    topButton.style.backgroundColor = bgColor;
+    // КРИТИЧЕСКИ ВАЖНО: Удаляем событие из памяти браузера, когда уходим со страницы!
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, []);
 
-    /* For arrow icon */
-    const arrow = document.getElementById("arrow");
-    arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
+  // Динамические стили для кнопки в зависимости от темы и ховера
+  const buttonStyle = {
+    color: isHovered ? theme.text : theme.body,
+    backgroundColor: isHovered ? theme.body : theme.text,
+    border: `solid 1px ${theme.text}`,
+    visibility: isVisible ? "visible" : "hidden",
+    opacity: isVisible ? 1 : 0,
+    transition: "all 0.3s ease", // Плавное появление кнопки и ховера
+    cursor: "pointer",
   };
 
   return (
     <div
-      onClick={GoUpEvent}
+      onClick={goUpEvent}
       id="topButton"
-      style={{
-        color: theme.body,
-        backgroundColor: theme.text,
-        border: `solid 1px ${theme.text}`,
-      }}
-      title="Go up"
-      onMouseEnter={() => onMouseEnter(theme.text, theme.body)}
-      onMouseLeave={() => onMouseLeave(theme.body, theme.text)}
+      style={buttonStyle}
+      title="Наверх"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <i className="fas fa-arrow-up" id="arrow" aria-hidden="true" />
     </div>
