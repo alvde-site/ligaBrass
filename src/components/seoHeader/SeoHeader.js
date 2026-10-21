@@ -4,69 +4,59 @@ import {
   greeting,
   seo,
   socialMediaLinks,
-  experience,
   contactPageData,
-  certifications,
 } from "../../portfolio.js";
 
 function SeoHeader() {
+  // Безопасный сбор ссылок на социальные сети
   let sameAs = [];
-  socialMediaLinks
-    .filter(
-      (media) =>
-        !(media.link.startsWith("tel") || media.link.startsWith("mailto"))
-    )
-    .forEach((media) => {
-      sameAs.push(media.link);
-    });
+  if (socialMediaLinks && Array.isArray(socialMediaLinks)) {
+    socialMediaLinks
+      .filter(
+        (media) =>
+          media?.link &&
+          !(media.link.startsWith("tel") || media.link.startsWith("mailto"))
+      )
+      .forEach((media) => {
+        sameAs.push(media.link);
+      });
+  }
 
-  let mail = socialMediaLinks
-    .find((media) => media.link.startsWith("mailto"))
-    .link.substring("mailto:".length);
-  let job = experience.sections
-    ?.find((section) => section.work)
-    ?.experiences?.at(0);
+  // Безопасный поиск почты
+  let mail = "";
+  if (socialMediaLinks && Array.isArray(socialMediaLinks)) {
+    const mailMedia = socialMediaLinks.find((media) =>
+      media?.link?.startsWith("mailto")
+    );
+    if (mailMedia) {
+      mail = mailMedia.link.substring("mailto:".length);
+    }
+  }
 
-  let credentials = [];
-  certifications.certifications.forEach((certification) => {
-    credentials.push({
-      "@context": "https://schema.org",
-      "@type": "EducationalOccupationalCredential",
-      url: certification.certificate_link,
-      name: certification.title,
-      description: certification.subtitle,
-    });
-  });
+  // Безопасный поиск телефона из нашей новой чистой структуры контактов
+  let phone = contactPageData?.contactSection?.phone_number || "";
+
+  // Формируем правильные поисковые данные Schema.org для Музыкальной Группы
   const data = {
     "@context": "https://schema.org/",
-    "@type": "Person",
-    name: greeting.title,
-    url: seo?.og?.url,
+    "@type": "MusicGroup",
+    name: greeting?.title || "Брасс-квинтет солистов",
+    url: seo?.og?.url || "",
     email: mail,
-    telephone: contactPageData.phoneSection?.subtitle,
+    telephone: phone,
     sameAs: sameAs,
-    jobTitle: job.title,
-    worksFor: {
-      "@type": "Organization",
-      name: job.company,
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: contactPageData.addressSection?.locality,
-      addressRegion: contactPageData.addressSection?.region,
-      addressCountry: contactPageData.addressSection?.country,
-      postalCode: contactPageData.addressSection?.postalCode,
-      streetAddress: contactPageData.addressSection?.streetAddress,
-    },
-    hasCredential: credentials,
+    description: seo?.description || "",
   };
+
   return (
     <Helmet>
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <meta property="og:title" content={seo?.og?.title} />
-      <meta property="og:type" content={seo?.og?.type} />
-      <meta property="og:url" content={seo?.og?.url} />
+      <title>{seo?.title || "Брасс-квинтет"}</title>
+      {seo?.description && (
+        <meta name="description" content={seo.description} />
+      )}
+      {seo?.og?.title && <meta property="og:title" content={seo.og.title} />}
+      {seo?.og?.type && <meta property="og:type" content={seo.og.type} />}
+      {seo?.og?.url && <meta property="og:url" content={seo.og.url} />}
       <script type="application/ld+json">{JSON.stringify(data)}</script>
     </Helmet>
   );

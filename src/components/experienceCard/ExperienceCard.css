@@ -1,345 +1,182 @@
-.experience-main {
-  width: 100%;
-}
-
-.basic-experience {
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.experience-heading-div {
-  display: flex;
-}
-
-.experience-heading-div > * {
-  flex: 1;
-}
-
-.experience-heading-img-div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.experience-heading-text-div {
-  text-align: center;
-}
-
-.experience-heading-img-div > * {
-  max-width: 100%;
-  height: auto;
-}
-
-.experience-heading-text {
-  font-size: 56px;
-  font-weight: 400;
-  font-family: "Google Sans Medium";
-  line-height: 1.1;
-  text-align: center;
-  margin-top: 80px;
-}
-
-.experience-heading-sub-text {
-  font-size: 30px;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.experience-header-detail-text {
-  font-size: 20px;
-  line-height: 30px;
-  margin-top: 0px;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: "Google Sans Medium";
-}
-
-@media (max-width: 1380px) {
-  .experience-heading-text {
-    font-size: 50px;
-    margin-top: 80px;
-  }
-  .experience-heading-sub-text {
-    font-size: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-heading-text {
-    font-size: 30px;
-    margin-top: 20px;
-  }
-
-  .experience-heading-sub-text {
-    font-size: 20px;
-  }
-
-  .experience-heading-div {
-    flex-direction: column;
-  }
-
-  .experience-header-detail-text {
-    font-size: 16px;
-    margin-right: 0px;
-    line-height: normal;
-    text-align: center;
-  }
-}
-
-.experience-card {
-  min-width: 275px;
-  /* height: 170px; */
-  margin-bottom: 20px;
-  border-radius:10px;
-  display: flex;
-  flex-direction:column;
-  padding: 10px;
-  margin-left: 10px;
-  -webkit-box-shadow: 4px 3px 20px -2px grey;
-  -moz-box-shadow: 4px 3px 20px -2px grey;
-  box-shadow: 4px 3px 20px -2px grey;
-}
-
-.arrow-left {
-  width: 0;
-  height: 0;
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: -10px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  z-index: 100;
-}
-
-.experience-card-logo-div {
-  margin: 10px;
-  margin-top: -10px;
-}
-
-.experience-card-stepper {
-  display: flex;
-  flex-direction:row;
-  position: relative;
-  align-items: center; 
-  flex-direction: column; 
-  margin-top: -40px
-}
-
-.experience-card-body-div {
-  width: 100%;
-}
-
-.experience-card-header-div {
-  display: flex;
-  flex-direction: row;
-}
-
-.experience-card-logo {
-  width: 100px;
-  height: 100px;
-  -webkit-box-shadow: 4px 3px 20px -2px grey;
-  -moz-box-shadow: 4px 3px 20px -2px grey;
-  box-shadow: 4px 3px 20px -2px grey;
-  border-radius: 50px;
-}
-
-.experience-card-title {
-  font-family: "Google Sans Regular";
-  margin-top: 10px;
-  margin-bottom: 2px;
-  margin-left: 0px;
-  margin-right: 7px;
-  text-align: left;
-}
-
-.experience-card-company {
-  font-family: "Google Sans Regular";
-  margin: 0;
-  text-align: left;
-}
-
-.experience-card-duration {
-  font-family: "Google Sans Regular";
-  margin-top: 10px;
-  margin-bottom: 2px;
-  margin-left: 0px;
-  margin-right: 0px;
-  text-align: right;
-  color: #868e96;
-}
-
-.experience-card-heading-left {
-  float: left;
-  margin-left: 10px;
-  margin-right: auto;
-}
-
-.experience-card-heading-right {
-  float: right;
-  margin-left: auto;
-  margin-right: 10px;
-}
-
-.experience-card-location {
-  font-family: "Google Sans Regular";
-  margin: 0;
-  text-align: right;
-  color: #868e96;
-}
-
-.experience-card-description {
-  margin-top: 5px;
-  margin-left: 10px;
-  text-align: justify;
-  margin-right: 20px;
-  font-family: "Google Sans Regular";
-}
-
-
-.experience-card-company > a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
-}
-
-.experience-card-company > a:hover {
-  color: #000;
-} 
-
-.experience-card-company > a:hover:before {
-visibility: visible;
--webkit-transform: scaleX(1);
-transform: scaleX(1);
-}
-
-.experience-card-company > a:before {
-content: "";
-position: absolute;
-width: 100%;
-height: 1px;
-bottom: 0;
-left: 0;
-background-color: #000;
-visibility: hidden;
--webkit-transform: scaleX(0);
-transform: scaleX(0);
--webkit-transition: all 0.3s ease-in-out 0s;
-transition: all 0.3s ease-in-out 0s;
-} 
-
+/* ==========================================================================
+   Главный элемент списка
+   ========================================================================== */
 .experience-list-item {
   display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.experience-list-item:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Контейнер карточки (Чистый современный стиль без стрелок и степперов)
+   ========================================================================== */
+.news-card-container {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid rgba(155, 161, 172, 0.25);
+  border-radius: 12px;
+  background-color: transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Аккуратный интерактив при наведении на новость или программу */
+.news-card-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+  border-color: rgba(155, 161, 172, 0.4);
+}
+
+/* ==========================================================================
+   Левый блок: Обложка/Постер новости
+   ========================================================================== */
+.news-card-img-wrap {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: row;
+  overflow: hidden;
+  border-radius: 8px; /* Стильные прямоугольные обложки вместо кругов */
+  border: 1px solid rgba(155, 161, 172, 0.15);
 }
 
-/* .dot:before{
-  content:' ';
-  position: absolute;
-  z-index:2;
-  left:0;
-  top:0;
-  width:20px;
-  height:20px; 
-  background-color: #ff4200;
-  border-radius: 50%;
+.news-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Фото монолитно заполняет блок без искажений */
 }
 
-.dot:after {
-  content:' ';
-  position: absolute;
-  z-index:1;
-  width:20px;
-  height:20px; 
-  background-color: #ff4200;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0,0,0,.3) inset;
-  -webkit-animation-name:'ripple';
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-} */
-
-@keyframes ripple {
-   0% {
-    left:5px;
-    top:5px;
-    opcity:75;
-    width:0;
-    height:0;
-  }
-  100% {
-    left:-20px;
-    top:-20px;
-    opacity: 0;
-    width:50px;
-    height:50px;
-  }
+/* ==========================================================================
+   Правый блок: Текстовая зона
+   ========================================================================== */
+.news-card-content-zone {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
 }
 
+/* Верхняя строчка (Заголовки и Мета-данные) */
+.news-card-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.news-card-title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.news-card-main-title {
+  font-family: "Google Sans Medium";
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.news-card-company-sub {
+  font-family: "Google Sans Regular";
+  font-size: 1rem;
+  margin: 0;
+}
+
+.news-card-company-sub a {
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.news-card-company-sub a:hover {
+  opacity: 0.8;
+}
+
+/* Блок даты / локации */
+.news-card-meta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  min-width: max-content;
+}
+
+/* Тег длительности / даты (бывший стаж работы) */
+.news-card-duration-tag {
+  font-family: "Google Sans Regular";
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.news-card-location-text {
+  font-family: "Google Sans Regular";
+  font-size: 0.9rem;
+}
+
+/* Основной текст новости */
+.news-card-body-text {
+  font-family: "Google Sans Regular";
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0;
+}
+
+/* ==========================================================================
+   📱 Адаптивность для мобильных телефонов (до 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
-  .experience-card{
-      /* margin-bottom:10px; */
-      flex-direction:column;
-      text-align: center;
-  }
-
-  .arrow-left {
-      display: none;
-  }
-
-  .experience-card-stepper {
-      display: none;
-  }
-
   .experience-list-item {
-      flex-direction: column;
+    padding: 0 10px; /* Боковые отступы, чтобы карточки не прилипали к экрану */
   }
 
-  .experience-card-logo {
-      width: 100px;
+  /* Перестраиваем карточку в вертикальный аккуратный стек */
+  .news-card-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
   }
 
-  .experience-card-heading-left {
-      float: center;
-      margin-left: auto;
-      margin-right: auto;
+  .news-card-img-wrap {
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
   }
 
-  .experience-card-heading-right {
-      float: center;
-      margin-left: auto;
-      margin-right: auto;
+  .news-card-content-zone {
+    width: 100%;
+    align-items: center;
   }
 
-  .experience-card-title {
-      /* text-align: center; */
+  .news-card-header-line {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 
-  .experience-card-company {
-      /* text-align: center; */
+  .news-card-meta-block {
+    align-items: center;
   }
 
-  .experience-card-duration {
-      /* margin-top: 2px; */
-      /* text-align: center; */
-  }
-
-  .experience-card-location{
-      /* text-align: left; */
-      /* text-align: center; */
-  }
-
-  .experience-card-header-div {
-      flex-direction: column;
-  }
-
-  .experience-card-description {
-      margin-left: 14px;
-      margin-right: 14px;
-      text-align: justify;
+  .news-card-body-text {
+    text-align: center; /* Центрируем текст новости на мобилках */
   }
 }
