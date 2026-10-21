@@ -721,7 +721,8 @@ const musiciansDetails = {
   bakharev: {
     name: "Александр Бахарев",
     instrument: "Первая труба / Солист",
-    photo: "bakharev_full.jpg",
+    // photo: "bakharev_full.jpg",
+    photo: "artists/artist.png",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -732,7 +733,8 @@ const musiciansDetails = {
   grinemayer: {
     name: "Георгий Гринемайер",
     instrument: "Вторая труба",
-    photo: "grinemayer_full.jpg",
+    // photo: "grinemayer_full.jpg",
+    photo: "artists/artist.png",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -743,7 +745,8 @@ const musiciansDetails = {
   beregovsky: {
     name: "Дмитрий Береговский",
     instrument: "Валторна",
-    photo: "beregovsky_full.jpg",
+    // photo: "beregovsky_full.jpg",
+    photo: "artists/artist.png",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -754,7 +757,8 @@ const musiciansDetails = {
   demidenko: {
     name: "Александр Демиденко",
     instrument: "Тромбон",
-    photo: "demidenko_full.jpg",
+    // photo: "demidenko_full.jpg",
+    photo: "artists/artist.png",
     vk: "https://vk.com",
     telegram: "",
     bio: [
@@ -765,7 +769,8 @@ const musiciansDetails = {
   samigullin: {
     name: "Вильнур Самигуллин",
     instrument: "Туба",
-    photo: "samigullin_full.jpg",
+    // photo: "samigullin_full.jpg",
+    photo: "artists/artist.png",
     vk: "https://vk.com",
     telegram: "",
     bio: [

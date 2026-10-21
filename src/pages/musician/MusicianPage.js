@@ -7,6 +7,7 @@ import "./MusicianPage.css"; // Стили создадим ниже
 
 function MusicianPage({ theme }) {
   const { id } = useParams(); // Получаем 'bakharev', 'grinemayer' и т.д. из URL
+  console.log(id);
   const artist = musiciansDetails[id];
 
   if (!artist) {
@@ -33,7 +34,7 @@ function MusicianPage({ theme }) {
         {/* Левая колонка: Фото и Соцсети */}
         <div className="musician-left">
           <img
-            src={require(`../../assests/images/${artist.photo}`)}
+            src={require(`../../assets/images/${artist.photo}`)}
             alt={artist.name}
             className="musician-photo"
           />
