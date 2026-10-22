@@ -3,8 +3,9 @@
    ========================================================================== */
 .header {
   display: block;
-  max-width: 90%; /* Ограничение под ваши 1920px */
-  padding: 20px 10px;
+  max-width: 100%;
+  width: 95%;
+  padding: 20px 0;
   margin: 0px auto;
 }
 
@@ -194,5 +195,12 @@
   }
   .header .menu-icon {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 95%;
+    padding: 20px 0;
   }
 }

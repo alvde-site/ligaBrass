@@ -1,19 +1,19 @@
 .main {
-  width: 90%;
-  padding: 20px 10px;
+  width: 100%;
+  padding: 20px 0;
   margin: 0px auto;
   margin-top: 4rem;
 }
 .greet-main {
-  width: 90%;
-  padding: 20px 10px;
+  width: 95%;
+  padding: 20px 0;
   margin: 0px auto;
   margin-top: 2rem;
 }
 
 .gretting-main {
-  width: 90%;
-  padding: 20px 10px;
+  width: 95%;
+  padding: 20px 0;
   margin: 0px auto;
 }
 

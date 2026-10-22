@@ -2,9 +2,9 @@
    Главный контейнер секции афиши
    ========================================================================== */
 .certs-main-section {
-  max-width: 1150px;
+  width: min(95%, 1150px);
   margin: 60px auto;
-  padding: 60px 40px 80px 40px;
+  padding: 60px 0 80px;
   border-radius: 24px;
 
   /* Контрастный фоновый подклад: делает блок глубже основного фона сайта */
@@ -64,6 +64,7 @@
   align-items: center;
   width: 100%;
   gap: 24px; /* Четкий фиксированный шаг между карточками выступлений */
+  padding: 0 16px;
 }
 
 /* Гарантируем идеальную посадку карточек внутри контейнера */
@@ -84,7 +85,7 @@
 
   .certs-main-section {
     margin: 40px 20px;
-    padding: 40px 24px 60px 24px;
+    padding: 40px 0 60px;
     border-radius: 16px;
   }
 }
@@ -104,8 +105,8 @@
   }
 
   .certs-main-section {
-    margin: 30px 12px;
-    padding: 30px 16px 40px 16px;
+    margin: 30px auto;
+    padding: 30px 0 40px;
     background: transparent; /* Облегчаем мобильный вид, убирая подклад */
     border: none;
     box-shadow: none;
@@ -113,5 +114,6 @@
 
   .certs-body-div {
     gap: 16px;
+    padding: 0;
   }
 }
