@@ -36,7 +36,7 @@
 /* Жесткий контроль размеров фото в стиле остальных страниц */
 .projects-hero-image {
   width: 100%;
-  max-width: 440px;
+  /* max-width: 440px; */
   height: auto;
   max-height: 320px;
   object-fit: cover;
@@ -142,6 +142,12 @@
    📱 Адаптивность для мобильных телефонов (до 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+  .basic-projects {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
+
   .projects-heading-div {
     flex-direction: column; /* Картинка встает НАД текстом */
     text-align: center;
@@ -158,12 +164,12 @@
   }
 
   .projects-heading-img-div {
-    max-width: 280px;
+    /* max-width: 280px; */
     margin: 0 auto;
   }
 
   .projects-hero-image {
-    max-height: 200px;
+    max-height: none;
   }
 
   .projects-heading-text {
