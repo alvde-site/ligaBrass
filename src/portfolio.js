@@ -17,6 +17,66 @@ const seo = {
   },
 };
 
+const certifications = {
+  certifications: [
+    {
+      concert_date: "24.10",
+      concert_day: "суббота",
+      concert_time: "23:00",
+      title: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
+      // subtitle: "- Andrew Ng",
+      // logo_path: "concerts/tutta_forca.jpg",
+      // certificate_link:
+      //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
+      alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
+      concert_city: "Пермь",
+      concert_hall: "Колонный зал",
+      concert_time: "13:00",
+      concert_date: "25.10",
+      concert_day: "воскресенье",
+      concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
+      concert_info: "Приглашаем на наш замечательный концерт!",
+      concert_workslist: [
+        "Л.Бернстайн: Вестсайдская история",
+        "Э.Мариконе: Сюита",
+        "Ж.Родриго",
+        "Р.Роджерс и др.",
+      ],
+      concert_artists: [
+        "Александр Бахарев",
+        "Георгий Гринимайер",
+        "Дмитрий Береговский",
+        "Александр Демиденко",
+        "Вильнур Самигуллин",
+      ],
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/25.10perm.jpg",
+    },
+  ],
+};
+
 //Home Page
 const greeting = {
   title: "ЛИГА БРАСС-КВИНТЕТ",
@@ -303,170 +363,6 @@ const degrees = {
       website_link: "/musicians/samigullin",
       logo_path: "musicians/samigullin_tuba.jpg",
     },
-  ],
-};
-
-const certifications = {
-  certifications: [
-    {
-      concert_date: "25.10",
-      concert_day: "воскресенье",
-      concert_time: "13:00",
-      title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      concert_city: "Пермь",
-      concert_hall: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
-      concert_info: "Приглашаем на наш замечательный концерт!",
-      concert_workslist: [
-        "Л.Бернстайн: Вестсайдская история",
-        "Э.Мариконе: Сюита",
-        "Ж.Родриго",
-        "Р.Роджерс и др.",
-      ],
-      concert_artists: [
-        "Александр Бахарев",
-        "Георгий Гринимайер",
-        "Дмитрий Береговский",
-        "Александр Демиденко",
-        "Вильнур Самигуллин",
-      ],
-      concert_address: 'ул. Газеты "Звезда", д. 18',
-      more_button: "https://www.google.com/",
-      buy_button:
-        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
-      concert_poster: "concerts/25.10perm.jpg",
-    },
-    {
-      title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      // subtitle: "- Andrew Ng",
-      // logo_path: "concerts/tutta_forca.jpg",
-      // certificate_link:
-      //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      concert_city: "Пермь",
-      concert_hall: "Концертный зал ЦМШ",
-      concert_time: "13:00",
-      concert_date: "25.10",
-      concert_day: "воскресенье",
-      concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
-      concert_info: "Приглашаем на наш замечательный концерт!",
-      concert_workslist: [
-        "Л.Бернстайн: Вестсайдская история",
-        "Э.Мариконе: Сюита",
-        "Ж.Родриго",
-        "Р.Роджерс и др.",
-      ],
-      concert_artists: [
-        "Александр Бахарев",
-        "Георгий Гринимайер",
-        "Дмитрий Береговский",
-        "Александр Демиденко",
-        "Вильнур Самигуллин",
-      ],
-      more_button: "https://www.google.com/",
-      buy_button:
-        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
-      concert_poster: "concerts/25.10perm.jpg",
-    },
-    // {
-    //   title: "Deep Learning",
-    //   subtitle: "- Andrew Ng",
-    //   logo_path: "deeplearning_ai_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
-    //   alt_name: "deeplearning.ai",
-    //   color_code: "#00000099",
-    // },
-    // {
-    //   title: "ML on GCP",
-    //   subtitle: "- GCP Training",
-    //   logo_path: "google_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/specialization/EB4VJARK8647",
-    //   alt_name: "Google",
-    //   color_code: "#0C9D5899",
-    // },
-    // {
-    //   title: "Data Science",
-    //   subtitle: "- Alex Aklson",
-    //   logo_path: "ibm_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/specialization/PLEAPCSJBZT5",
-    //   alt_name: "IBM",
-    //   color_code: "#1F70C199",
-    // },
-    // {
-    //   title: "Big Data",
-    //   subtitle: "- Kim Akers",
-    //   logo_path: "microsoft_logo.png",
-    //   certificate_link:
-    //     "https://drive.google.com/file/d/164zKCFOsI4vGqokc-Qj-e_D00kLDHIrG/view",
-    //   alt_name: "Microsoft",
-    //   color_code: "#D83B0199",
-    // },
-    // {
-    //   title: "Advanced Data Science",
-    //   subtitle: "- Romeo Kienzler",
-    //   logo_path: "ibm_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/verify/BH2T9BRU87BH",
-    //   alt_name: "IBM",
-    //   color_code: "#1F70C199",
-    // },
-    // {
-    //   title: "Advanced ML on GCP",
-    //   subtitle: "- GCP Training",
-    //   logo_path: "google_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/verify/5JZZM7TNQ2AV",
-    //   alt_name: "Google",
-    //   color_code: "#0C9D5899",
-    // },
-    // {
-    //   title: "DL on Tensorflow",
-    //   subtitle: "- Laurence Moroney",
-    //   logo_path: "deeplearning_ai_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/verify/6T4DCUGNK8J8",
-    //   alt_name: "deeplearning.ai",
-    //   color_code: "#00000099",
-    // },
-    // {
-    //   title: "Fullstack Development",
-    //   subtitle: "- Jogesh Muppala",
-    //   logo_path: "coursera_logo.png",
-    //   certificate_link:
-    //     "https://www.coursera.org/account/accomplishments/certificate/NRANJA66Y2YA",
-    //   alt_name: "Coursera",
-    //   color_code: "#2A73CC",
-    // },
-    // {
-    //   title: "Kuberenetes on GCP",
-    //   subtitle: "- Qwiklabs",
-    //   logo_path: "gcp_logo.png",
-    //   certificate_link:
-    //     "https://google.qwiklabs.com/public_profiles/e4d5a92b-faf6-4679-a70b-a9047c0cd750",
-    //   alt_name: "GCP",
-    //   color_code: "#4285F499",
-    // },
-    // {
-    //   title: "Cryptography",
-    //   subtitle: "- Saurabh Mukhopadhyay",
-    //   logo_path: "nptel_logo.png",
-    //   certificate_link:
-    //     "https://drive.google.com/open?id=1z5ExD_QJVdU0slLkp8CBqSF3-C3g-ro_",
-    //   alt_name: "NPTEL",
-    //   color_code: "#FFBB0099",
-    // },
-    // {
-    //   title: "Cloud Architecture",
-    //   subtitle: "- Qwiklabs",
-    //   logo_path: "gcp_logo.png",
-    //   certificate_link:
-    //     "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
-    //   alt_name: "GCP",
-    //   color_code: "#4285F499",
-    // },
   ],
 };
 
