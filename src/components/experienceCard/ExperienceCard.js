@@ -1,104 +1,88 @@
 import React, { Component } from "react";
 import "./ExperienceCard.css";
 import { Fade } from "react-reveal";
+import { Link } from "react-router-dom"; // Импортируем Link для SPA-переходов
 
 class ExperienceCard extends Component {
   render() {
     const experience = this.props.experience;
     const theme = this.props.theme;
 
-    // Безопасная проверка: если объект данных не передали, не рендерим ничего
-    if (!experience) {
-      return null;
-    }
-
     return (
       <div className="experience-list-item">
         <Fade bottom duration={1000} distance="20px">
-          <div
-            className="news-card-container"
-            style={{ borderColor: theme.secondaryText + "20" }}
+          {/* Оборачиваем всю карточку в Link. Путь ведет на /archive/id-карточки */}
+          <Link
+            to={"/archive/" + experience.id}
+            className="news-card-link-wrapper"
           >
-            {/* 1. Левая часть: Изображение/Обложка новости (С защитой от отсутствия картинки) */}
-            {experience.logo_path ? (
-              <div className="news-card-img-wrap">
-                {/* <img
-                  className="news-card-image"
-                  src={require(`../../assets/images/${experience.logo_path}`)}
-                  alt={experience.title || "Новость"}
-                /> */}
-              </div>
-            ) : null}
+            <div
+              className="news-card-container"
+              style={{ borderColor: theme.secondaryText + "20" }}
+            >
+              {/* Изображение/Обложка */}
+              {experience["logo_path"] && (
+                <div className="news-card-img-wrap">
+                  <img
+                    className="news-card-image"
+                    src={require(`../../assets/images/${experience["logo_path"]}`)}
+                    alt={experience["title"]}
+                  />
+                </div>
+              )}
 
-            {/* 2. Правая часть: Контентная зона */}
-            <div className="news-card-content-zone">
-              {/* Верхняя строчка: Название и Мета-данные */}
-              <div className="news-card-header-line">
-                <div className="news-card-title-block">
-                  {experience.title && (
+              {/* Контентная зона */}
+              <div className="news-card-content-zone">
+                <div className="news-card-header-line">
+                  <div className="news-card-title-block">
                     <h3
                       className="news-card-main-title"
                       style={{ color: theme.text }}
                     >
-                      {experience.title}
+                      {experience["title"]}
                     </h3>
-                  )}
+                    {experience["company"] && (
+                      <p
+                        className="news-card-company-sub"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        {experience["company"]}
+                      </p>
+                    )}
+                  </div>
 
-                  {experience.company && (
-                    <p className="news-card-company-sub">
-                      {experience.company_url ? (
-                        <a
-                          href={experience.company_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ color: "#E4A834" }}
-                        >
-                          {experience.company}
-                        </a>
-                      ) : (
-                        <span style={{ color: theme.secondaryText }}>
-                          {experience.company}
-                        </span>
-                      )}
-                    </p>
-                  )}
+                  <div className="news-card-meta-block">
+                    {experience["duration"] && (
+                      <span
+                        className="news-card-duration-tag"
+                        style={{
+                          color: theme.text,
+                          backgroundColor: theme.secondaryText + "15",
+                        }}
+                      >
+                        {experience["duration"]}
+                      </span>
+                    )}
+                    {experience["location"] && (
+                      <span
+                        className="news-card-location-text"
+                        style={{ color: theme.secondaryText }}
+                      >
+                        📍 {experience["location"]}
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                {/* Дата, длительность или локация события (Безопасный вывод) */}
-                <div className="news-card-meta-block">
-                  {experience.duration && (
-                    <span
-                      className="news-card-duration-tag"
-                      style={{
-                        color: theme.text,
-                        backgroundColor: theme.secondaryText + "15",
-                      }}
-                    >
-                      {experience.duration}
-                    </span>
-                  )}
-                  {experience.location && (
-                    <span
-                      className="news-card-location-text"
-                      style={{ color: theme.secondaryText }}
-                    >
-                      📍 {experience.location}
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Описание события / Текст новости */}
-              {experience.description && (
                 <div
                   className="news-card-body-text"
                   style={{ color: theme.secondaryText }}
                 >
-                  {experience.description}
+                  {experience["description"]}
                 </div>
-              )}
+              </div>
             </div>
-          </div>
+          </Link>
         </Fade>
       </div>
     );

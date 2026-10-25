@@ -80,7 +80,7 @@ class Header extends Component {
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
-                  Афиша и Новости
+                  Хроника и новости
                 </NavLink>
               </li>
               <li>

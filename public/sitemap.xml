@@ -14,7 +14,7 @@
     <priority>0.9</priority>
   </url>
   
-  <!-- Афиша и новости (Творческий архив) -->
+  <!-- Хроника и новости (Творческий архив) -->
   <url>
     <loc>https://ligabrass.ruexperience</loc>
     <changefreq>weekly</changefreq>

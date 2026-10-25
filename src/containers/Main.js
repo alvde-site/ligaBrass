@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import CookieConsent from "../components/cookieConsent/CookieConsent";
+import ArchiveDetails from "../pages/archive/ArchiveDetails";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Education from "../pages/education/EducationComponent";
@@ -96,6 +97,12 @@ export default class Main extends Component {
             path="/musicians/:id"
             render={(props) => (
               <MusicianPage {...props} theme={this.props.theme} />
+            )}
+          />
+          <Route
+            path="/archive/:id"
+            render={(props) => (
+              <ArchiveDetails {...props} theme={this.props.theme} />
             )}
           />
           <Route
