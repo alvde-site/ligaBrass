@@ -1,0 +1,92 @@
+.gallery-album-main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.album-container {
+  width: 95%;
+  max-width: 1150px;
+  margin: 40px auto 80px auto;
+}
+
+.album-inner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 40px;
+  gap: 12px;
+}
+
+.album-nav-back {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.album-inner-title {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.album-inner-desc {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 750px;
+}
+
+/* Сетка фотографий внутри альбома (3 в ряд на десктопе) */
+.album-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.album-photo-card {
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 4 / 3; /* Классические альбомные пропорции карточек */
+  transition: transform 0.3s ease;
+}
+
+.album-photo-card:hover {
+  transform: translateY(-2px);
+}
+
+.album-inner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-error-container {
+  text-align: center;
+  padding: 120px 20px;
+  font-family: "Google Sans Medium", sans-serif;
+}
+
+/* 📱 Мобильная адаптивность внутренней фотосетки */
+@media (max-width: 768px) {
+  .album-inner-title {
+    font-size: 1.75rem;
+  }
+
+  .album-photos-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 в ряд на планшетах */
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-photos-grid {
+    grid-template-columns: 1fr; /* Вертикальная лента на смартфонах */
+  }
+}

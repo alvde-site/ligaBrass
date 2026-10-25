@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import CookieConsent from "../components/cookieConsent/CookieConsent";
 import ArchiveDetails from "../pages/archive/ArchiveDetails";
+import GalleryAlbum from "../pages/opensource/GalleryAlbum";
 import Home from "../pages/home/HomeComponent";
 import Splash from "../pages/splash/Splash";
 import Education from "../pages/education/EducationComponent";
@@ -103,6 +104,12 @@ export default class Main extends Component {
             path="/archive/:id"
             render={(props) => (
               <ArchiveDetails {...props} theme={this.props.theme} />
+            )}
+          />
+          <Route
+            path="/gallery/:id"
+            render={(props) => (
+              <GalleryAlbum {...props} theme={this.props.theme} />
             )}
           />
           <Route

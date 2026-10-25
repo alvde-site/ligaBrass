@@ -3,13 +3,14 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
+import { Link } from "react-router-dom"; // Импортируем Link для переходов без перезагрузки
 import "./Opensource.css";
 import { mediaPageData } from "../../portfolio.js";
 
 class Opensource extends Component {
   render() {
     const theme = this.props.theme;
-    const { videoList, photoList } = mediaPageData;
+    const { videoList, albumList } = mediaPageData;
 
     return (
       <div className="opensource-main page__main">
@@ -26,13 +27,13 @@ class Opensource extends Component {
                 className="media-heading-subText"
                 style={{ color: theme.secondaryText }}
               >
-                Живые записи с выступлений, репортажи за кулисами и моменты
-                творческой жизни квинтета.
+                Живые записи с выступлений, репортажи из-за кулис и тематические
+                фотоальбомы квинтета.
               </p>
             </div>
           </Fade>
 
-          {/* СЕКЦИЯ КОНЦЕРТНЫХ ВИДЕО (Плееры Rutube) */}
+          {/* СЕКЦИЯ КОНЦЕРТНЫХ ВИДЕО */}
           <Fade bottom duration={1100} distance="30px">
             <div className="media-section">
               <h2 className="media-section-title" style={{ color: theme.text }}>
@@ -49,9 +50,8 @@ class Opensource extends Component {
                     }}
                   >
                     <div className="video-responsive-wrap">
-                      {/* Правильный, безопасный адрес встраивания плеера */}
                       <iframe
-                        src={"https://rutube.ru/play/embed/" + video.id}
+                        src={"https://rutube.ru" + video.id}
                         frameBorder="0"
                         allow="clipboard-write; autoplay; encrypted-media; fullscreen; picture-in-picture"
                         allowFullScreen
@@ -70,25 +70,55 @@ class Opensource extends Component {
             </div>
           </Fade>
 
-          {/* СЕКЦИЯ ФОТОГАЛЕРЕИ */}
+          {/* СЕКЦИЯ ТЕМАТИЧЕСКИХ АЛЬБОМОВ */}
           <Fade bottom duration={1200} distance="30px">
             <div className="media-section" style={{ marginTop: "60px" }}>
               <h2 className="media-section-title" style={{ color: theme.text }}>
-                Фотогалерея
+                Фотоальбомы
               </h2>
-              <div className="photo-grid">
-                {photoList.map((photo, index) => (
-                  <div
+              <div className="album-grid">
+                {albumList.map((album, index) => (
+                  <Link
                     key={index}
-                    className="photo-card"
-                    style={{ borderColor: theme.secondaryText + "15" }}
+                    to={"/gallery/" + album.id}
+                    className="album-card-link"
                   >
-                    <img
-                      src={require(`../../assets/images/${photo.src}`)}
-                      alt={photo.alt}
-                      className="gallery-img"
-                    />
-                  </div>
+                    <div
+                      className="album-spec-card"
+                      style={{
+                        backgroundColor: "rgba(255, 255, 255, 0.04)",
+                        borderColor: theme.secondaryText + "18",
+                      }}
+                    >
+                      <div className="album-cover-wrap">
+                        <img
+                          src={require(`../../assets/images/${album.cover}`)}
+                          alt={album.title}
+                          className="album-cover-img"
+                        />
+                        <div
+                          className="album-overlay-badge"
+                          style={{ backgroundColor: theme.body }}
+                        >
+                          Открыть альбом →
+                        </div>
+                      </div>
+                      <div className="album-card-body">
+                        <h3
+                          className="album-card-title"
+                          style={{ color: theme.text }}
+                        >
+                          {album.title}
+                        </h3>
+                        <p
+                          className="album-card-desc"
+                          style={{ color: theme.secondaryText }}
+                        >
+                          {album.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>
