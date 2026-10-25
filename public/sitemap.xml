@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
   <url>
-    <loc>https://ashutoshhathidara.com/</loc>
-    <changefreq>yearly</changefreq>
+    <loc>https://ligabrass.ru</loc> <!-- ЗАМЕНИТЕ на ваш реальный домен, когда купите его -->
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- О квинтете (Состав и афиша) -->
   <url>
-    <loc>https://ashutoshhathidara.com/experience</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://ashutoshhathidara.com/education</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ashutoshhathidara.com/contact</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://ashutoshhathidara.com/projects</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://ligabrass.ruabout</loc>
+    <changefreq>weekly</changefreq> <!-- Роботы будут чаще заглядывать проверять новые концерты -->
     <priority>0.9</priority>
   </url>
+  
+  <!-- Афиша и новости (Творческий архив) -->
   <url>
-    <loc>https://ashutoshhathidara.com/opensource</loc>
+    <loc>https://ligabrass.ruexperience</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  
+  <!-- Концертные программы (Репертуар) -->
+  <url>
+    <loc>https://ligabrass.ruprojects</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Галерея и видео (Медиатека) -->
+  <url>
+    <loc>https://nforbrass.ruopensource</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
+  
+  <!-- Контакты -->
   <url>
-    <loc>https://ashutoshhathidara.com/resume</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://nforbrass.rucontact</loc>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
