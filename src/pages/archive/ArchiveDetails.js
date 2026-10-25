@@ -1,21 +1,42 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { experience } from "../../portfolio";
+// Импортируем оба источника данных для сквозного поиска
+import { experience, projectsHeader } from "../../portfolio";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
 import "./ArchiveDetails.css";
 
-function ArchiveDetails({ theme }) {
+// ИСПРАВЛЕНИЕ: Добавили деструктуризацию onToggle прямо в аргументы функции
+function ArchiveDetails({ theme, onToggle }) {
   const { id } = useParams();
 
   let item = null;
-  experience.sections.forEach((section) => {
-    const found = section.experiences.find((x) => x.id === id);
-    if (found) item = found;
-  });
 
+  // 1. Поиск в разделах Хроники и Новостей (по ID или по закодированному названию)
+  if (experience && experience.sections) {
+    experience.sections.forEach((section) => {
+      const found = section.experiences.find(
+        (x) => x.id === id || encodeURIComponent(x.title) === id
+      );
+      if (found) {
+        item = found;
+      }
+    });
+  }
+
+  // 2. Если в Хронике ничего нет — ищем в Концертных программах (бывший Projects)
+  if (!item && projectsHeader && projectsHeader.programs) {
+    const foundProgram = projectsHeader.programs.find(
+      (x) => x.id === id || encodeURIComponent(x.title) === id
+    );
+    if (foundProgram) {
+      item = { ...foundProgram, type: "program" }; // Фиксируем тип для рендеринга репертуара
+    }
+  }
+
+  // Защитный экран: если материала с таким ID не существует
   if (!item) {
     return (
       <div className="archive-details-main">
@@ -23,13 +44,13 @@ function ArchiveDetails({ theme }) {
         <div className="archive-error-container" style={{ color: theme.text }}>
           <h2>Материал не найден</h2>
           <Link
-            to="/experience"
+            to="/projects" // Исправили: при ошибке возвращаем на программы по умолчанию
             style={{ color: "#E4A834", textDecoration: "none" }}
           >
-            ← Вернуться к хронике и новостям
+            ← Вернуться к концертным программам
           </Link>
         </div>
-        <Footer theme={theme} />
+        <Footer theme={theme} onToggle={onToggle} />
       </div>
     );
   }
@@ -63,12 +84,14 @@ function ArchiveDetails({ theme }) {
                 >
                   {item.duration}
                 </span>
-                <span
-                  className="article-tag-location"
-                  style={{ color: theme.secondaryText }}
-                >
-                  📍 {item.location}
-                </span>
+                {item.location && (
+                  <span
+                    className="article-tag-location"
+                    style={{ color: theme.secondaryText }}
+                  >
+                    📍 {item.location}
+                  </span>
+                )}
               </div>
 
               <h1 className="article-title">{item.title}</h1>
@@ -99,7 +122,7 @@ function ArchiveDetails({ theme }) {
                 </div>
               )}
 
-              {/* 📰 АДАПТИВНЫЙ БЛОК II: Новости и медиа (Абзацы текста) */}
+              {/* 📰 АДАПТИВНЫЙ БЛОК II: Творческий дневник / Новости (Абзацы текста) */}
               {item.type === "news" && item.fullStory && (
                 <div className="article-special-section">
                   {item.fullStory.map((paragraph, idx) => (
@@ -143,18 +166,22 @@ function ArchiveDetails({ theme }) {
                 </div>
               )}
 
+              {/* Кнопка адаптивного возврата */}
               <Link
-                to="/experience"
+                to={item.type === "program" ? "/projects" : "/experience"}
                 className="article-back-button"
                 style={{ color: theme.text, borderColor: theme.text + "30" }}
               >
-                ← Назад к хронике и новостям
+                {item.type === "program"
+                  ? "← К концертным программам"
+                  : "← Назад к хронике"}
               </Link>
             </div>
           </div>
         </Fade>
       </div>
-      <Footer theme={theme} />
+      {/* Передаем onToggle напрямую, без ключевого слова this */}
+      <Footer theme={theme} onToggle={onToggle} />
       <TopButton theme={theme} />
     </div>
   );

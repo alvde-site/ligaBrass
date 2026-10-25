@@ -1,4 +1,14 @@
 /* ==========================================================================
+   Чистые ссылки-обертки (Возвращают блочный контекст без деформаций)
+   ========================================================================== */
+.program-card-link-wrap {
+  text-decoration: none !important; /* Убираем синее подчеркивание */
+  color: inherit !important; /* Наследуем платиновые цвета темы */
+  display: block;
+  width: 100%;
+}
+
+/* ==========================================================================
    Главные контейнеры
    ========================================================================== */
 .projects-main {
@@ -33,15 +43,13 @@
   overflow: hidden;
 }
 
-/* Жесткий контроль размеров фото в стиле остальных страниц */
 .projects-hero-image {
   width: 100%;
-  /* max-width: 440px; */
   height: auto;
   max-height: 320px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .projects-heading-text-div {
@@ -51,7 +59,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  text-align: left; /* Академическое строгое выравнивание по левому краю */
+  text-align: left;
 }
 
 /* ==========================================================================
@@ -60,7 +68,7 @@
 .projects-heading-text {
   font-family: "Google Sans Medium", sans-serif;
   font-size: 44px;
-  font-weight: 500; /* Убрали агрессивный bold, поставили легкий Medium */
+  font-weight: 500;
   line-height: 1.2;
   margin: 0 0 20px 0;
   letter-spacing: -1px;
@@ -73,14 +81,14 @@
 }
 
 /* ==========================================================================
-   Сетка карточек репертуарных программ
+   Сетка карточек репертуарных программ (ВАША СТАБИЛЬНАЯ ГЕОМЕТРИЯ)
    ========================================================================== */
 .programs-grid-div {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(320px, 1fr)
-  ); /* Умная адаптивная сетка */
+  ); /* Сохранили вашу сетку */
   gap: 24px;
   width: 100%;
   margin-top: 20px;
@@ -91,17 +99,25 @@
   flex-direction: column;
   gap: 16px;
   padding: 24px;
-  border: 1px solid transparent;
+  border: 1px solid transparent; /* Оставили прозрачную рамку по умолчанию */
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
   text-align: left;
 }
 
+/* Плавная латунная вспышка границ при наведении */
 .program-spec-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
-  border-color: rgba(228, 168, 52, 0.4); /* Наш фирменный латунный отблеск */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(
+    228,
+    168,
+    52,
+    0.5
+  ) !important; /* Наш фирменный латунный отблеск */
+  background-color: rgba(255, 255, 255, 0.07) !important;
 }
 
 .program-card-header {
@@ -149,7 +165,7 @@
   }
 
   .projects-heading-div {
-    flex-direction: column; /* Картинка встает НАД текстом */
+    flex-direction: column;
     text-align: center;
     gap: 24px;
     margin-bottom: 30px;
@@ -164,7 +180,6 @@
   }
 
   .projects-heading-img-div {
-    /* max-width: 280px; */
     margin: 0 auto;
   }
 
@@ -182,7 +197,7 @@
   }
 
   .programs-grid-div {
-    grid-template-columns: 1fr; /* В одну колонку на смартфонах */
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
