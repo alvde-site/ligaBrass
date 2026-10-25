@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Полупрозрачное уведомление о Cookie (Эффект матового стекла)
+   ========================================================================== */
+
+.cookie-banner-root {
+  position: fixed;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99999; /* Поверх остальных элементов */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+
+  /* КРИТИЧЕСКИ ВАЖНО: Пропускает любые клики и скролл сквозь пустую зону,
+     если пользователь решит не закрывать плашку */
+  pointer-events: none;
+}
+
+.cookie-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 800px; /* Сделали чуть компактнее */
+  padding: 14px 20px;
+
+  /* Мягкий полупрозрачный фон, сливающийся с нашей антрацитовой темой */
+  background-color: rgba(26, 31, 44, 0.65) !important;
+
+  /* Элегантный эффект размытия заднего плана (Frosted Glass) */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Тонкая, едва заметная платиновая рамка */
+  border: 1px solid rgba(148, 163, 184, 0.12) !important;
+  border-radius: 12px;
+
+  /* Легкая дымчатая тень для отделения от бездны фона */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  /* Возвращает кликабельность только для текста и кнопки внутри плашки */
+  pointer-events: auto;
+
+  /* Плавный выезд снизу */
+  animation: cookieSlideUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.cookie-text-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cookie-emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  opacity: 0.8; /* Приглушили яркость эмодзи */
+}
+
+/* Приглушенный матовый текст, не бьющий по глазам */
+.cookie-description {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin: 0;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: -0.1px;
+}
+
+/* Компактная аккуратная кнопка */
+.cookie-accept-btn {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500; /* Убрали жирный bold для легкости */
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+/* Мягкое проявление при наведении */
+.cookie-accept-btn:hover {
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.cookie-accept-btn:active {
+  transform: translateY(0);
+}
+
+@keyframes cookieSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   📱 Мобильная адаптивность (до 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .cookie-banner-root {
+    bottom: 16px;
+    padding: 0 16px;
+  }
+
+  .cookie-banner-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .cookie-text-block {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cookie-description {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .cookie-accept-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
