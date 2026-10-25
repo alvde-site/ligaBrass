@@ -1,71 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
+    <!-- Базовый URL для абсолютного роутинга глубоких страниц музыкантов -->
     <base href="/" />
     <meta charset="utf-8" />
-    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon1.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="title" content="Брасс-квинтет — Ансамбль медных духовых инструментов" />
-    <meta name="description" content="Официальный сайт брасс-квинтета. Ансамбль солистов, представляющий классический состав медных духовых инструментов и академический музыкальный репертуар." />
-    <meta name="keywords" content="брасс квинтет, медные духовые инструменты, ансамбль солистов, духовой квинтет, академическая музыка, концертные программы, труба, тромбон, валторна, туба, живая музыка на концерт" />
-    <meta name="author" content="Брасс-квинтет" />
-    <meta name="application-name" content="Брасс-квинтет" />
+    <!-- Основные метатеги поисковой оптимизации (SEO) -->
+    <meta name="title" content="Лига Брасс — Ансамбль медных духовых инструментов" />
+    <meta name="description" content="Официальный сайт творческого коллектива Лига Брасс. Ансамбль солистов, представляющий классический состав медных духовых инструментов и академический музыкальный репертуар." />
+    <meta name="keywords" content="лига брасс, брасс квинтет, медные духовые инструменты, ансамбль солистов, духовой квинтет, академическая музыка, концертные программы, труба, тромбон, валторна, туба, живая музыка на концерт" />
+    <meta name="author" content="Лига Брасс" />
+    <meta name="application-name" content="Лига Брасс" />
 
-    <meta property="og:title" content="Брасс-квинтет — Ансамбль медных духовых инструментов" />
+    <!-- Глобальная разметка Open Graph (OG) для красивого превью ссылок в Telegram, WhatsApp и VK -->
+    <meta property="og:title" content="Лига Брасс — Ансамбль медных духовых инструментов" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Официальный сайт брасс-квинтета. Хроника событий, архив прошедших концертов, репертуарные программы и творческая жизнь коллектива." />
+    <meta property="og:description" content="Официальный сайт творческого коллектива. Хроника событий, архив концертов, репертуарные программы и медиагалерея." />
     <meta property="og:image" content="%PUBLIC_URL%/icons/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:site_name" content="Брасс-квинтет" />
+    <meta property="og:site_name" content="Лига Брасс" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="%PUBLIC_URL%/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="%PUBLIC_URL%/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/icons/favicon-16x16.png">
-
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <!-- Современный пакет иконок для всех устройств (адаптирован под папку /icons/) -->
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/icons/favicon.svg" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Лига Брасс" />
+    <link rel="manifest" href="%PUBLIC_URL%/icons/site.webmanifest" />
+    
+    <!-- Веб-манифест PWA-приложения -->
+    <link rel="manifest" href="%PUBLIC_URL%/icons/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#1A1F2C">
     <meta name="msapplication-TileImage" content="%PUBLIC_URL%/icons/ms-icon-144x144.png">
 
-     <!-- Тонирование строки браузера в цвет нашей новой антрацитовой темы -->
+    <!-- Тонирование строки мобильного браузера в цвет нашей антрацитовой темы -->
     <meta name="theme-color" content="#1A1F2C">
-    <!--Adsense Advertisement-->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-8856447829714090",
-        enable_page_level_ads: true
-      });
-    </script>
 
-    <!-- Global site tag (gtag.js) - Google Ads: 825508380 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-825508380"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-825508380'); </script>
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158726526-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-158726526-1');
-    </script>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
+    <!-- Внешние библиотеки стилей, шрифтов и анимаций -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -74,27 +47,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
     
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!-- Название вкладки сайта -->
+    <title>Лига Брасс</title>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Ashutosh's Portfolio</title>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
+      // Single Page Apps for GitHub Pages [1.22]
+      // MIT License [1.22]
+      // https://github.com/rafgraph/spa-github-pages [1.22]
       (function (l) {
         if (l.search[1] === "/") {
           var decoded = l.search
@@ -114,17 +73,7 @@
     </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Для работы этого приложения необходимо включить JavaScript.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
