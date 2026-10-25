@@ -51,7 +51,7 @@ class Opensource extends Component {
                   >
                     <div className="video-responsive-wrap">
                       <iframe
-                        src={"https://rutube.ru" + video.id}
+                        src={"https://rutube.ru/play/embed/" + video.id}
                         frameBorder="0"
                         allow="clipboard-write; autoplay; encrypted-media; fullscreen; picture-in-picture"
                         allowFullScreen
