@@ -228,7 +228,34 @@ const greeting = {
   resumeLink: "https://google.com", // Ссылка на PDF-презентацию или репертуарный лист
 };
 
-const socialMediaLinks = [
+const homeSocials = [
+  {
+    name: "VK",
+    link: "https://vk.ru/vilnur_tuba", // Ссылка на ваше сообщество ВК
+    fontAwesomeIcon: "fa-vk",
+    backgroundColor: "#0077FF",
+  },
+  {
+    name: "Telegram",
+    link: "https://t.me/+79323251050", // Ссылка на ваш канал или контакт администратора
+    fontAwesomeIcon: "fa-telegram",
+    backgroundColor: "#24A1DE",
+  },
+  {
+    name: "Gmail",
+    link: "mailto:vilnur.tubist1@gmail.com", // Почта для коммерческих предложений и заказов
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
+  },
+  // {
+  //   name: "YouTube",
+  //   link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
+  //   fontAwesomeIcon: "fa-youtube",
+  //   backgroundColor: "#FF0000",
+  // },
+];
+
+const contactSocials = [
   {
     name: "VK",
     link: "https://vk.ru/vilnur_tuba", // Ссылка на ваше сообщество ВК
@@ -833,7 +860,8 @@ export {
   settings,
   seo,
   greeting,
-  socialMediaLinks,
+  homeSocials,
+  contactSocials,
   skills,
   competitiveSites,
   degrees,

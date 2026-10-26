@@ -6,6 +6,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData } from "../../portfolio.js";
+import { contactSocials } from "../../portfolio";
 
 const ContactData = contactPageData.contactSection;
 
@@ -64,7 +65,7 @@ class Contact extends Component {
 
                 {/* Социальные сети */}
                 <div className="contact-social-wrap">
-                  <SocialMedia theme={theme} />
+                  <SocialMedia links={contactSocials} theme={theme} />
                 </div>
               </div>
             </div>

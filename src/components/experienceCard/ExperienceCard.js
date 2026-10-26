@@ -10,7 +10,8 @@ class ExperienceCard extends Component {
 
     return (
       <div className="experience-list-item">
-        <Fade bottom duration={1000} distance="20px">
+        {/* ИСПРАВЛЕНИЕ: Принудительно заставили анимационный оберточный тег занять 100% ширины */}
+        <Fade bottom duration={1000} distance="20px" style={{ width: "100%" }}>
           {/* Оборачиваем всю карточку в Link. Путь ведет на /archive/id-карточки */}
           <Link
             to={"/archive/" + experience.id}

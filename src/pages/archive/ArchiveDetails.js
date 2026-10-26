@@ -14,11 +14,20 @@ function ArchiveDetails({ theme, onToggle }) {
 
   let item = null;
 
-  // 1. Поиск в разделах Хроники и Новостей (по ID или по закодированному названию)
+  // Вспомогательная функция для очистки строк от дефисов и регистра (защита от рассинхронизации)
+  const cleanStr = (str) =>
+    str ? str.toLowerCase().replace(/[-_]/g, "").trim() : "";
+
+  const targetId = cleanStr(id);
+
+  // 1. Поиск в разделах Хроники и Новостей
   if (experience && experience.sections) {
     experience.sections.forEach((section) => {
       const found = section.experiences.find(
-        (x) => x.id === id || encodeURIComponent(x.title) === id
+        (x) =>
+          cleanStr(x.id) === targetId ||
+          cleanStr(x.title) === targetId ||
+          cleanStr(encodeURIComponent(x.title)) === targetId
       );
       if (found) {
         item = found;
@@ -29,7 +38,10 @@ function ArchiveDetails({ theme, onToggle }) {
   // 2. Если в Хронике ничего нет — ищем в Концертных программах (бывший Projects)
   if (!item && projectsHeader && projectsHeader.programs) {
     const foundProgram = projectsHeader.programs.find(
-      (x) => x.id === id || encodeURIComponent(x.title) === id
+      (x) =>
+        cleanStr(x.id) === targetId ||
+        cleanStr(x.title) === targetId ||
+        cleanStr(encodeURIComponent(x.title)) === targetId
     );
     if (foundProgram) {
       item = { ...foundProgram, type: "program" }; // Фиксируем тип для рендеринга репертуара
@@ -44,7 +56,7 @@ function ArchiveDetails({ theme, onToggle }) {
         <div className="archive-error-container" style={{ color: theme.text }}>
           <h2>Материал не найден</h2>
           <Link
-            to="/projects" // Исправили: при ошибке возвращаем на программы по умолчанию
+            to="/projects" // При ошибке возвращаем на программы по умолчанию
             style={{ color: "#E4A834", textDecoration: "none" }}
           >
             ← Вернуться к концертным программам
@@ -130,8 +142,9 @@ function ArchiveDetails({ theme, onToggle }) {
                 </div>
               )}
 
-              {/* 📰 АДАПТИВНЫЙ БЛОК II: Творческий дневник / Новости (Абзацы текста) */}
-              {item.type === "news" && item.fullStory && (
+              {/* 📰 АДАПТИВНЫЙ БЛОК II: Текстовые статьи / Новости / Развернутые описания */}
+              {/* ИСПРАВЛЕНИЕ: Полностью убрали привязку к типу 'news'. Теперь fullStory выведется для любой карточки, если он заполнен */}
+              {item.fullStory && (
                 <div className="article-special-section">
                   {item.fullStory.map((paragraph, idx) => (
                     <p
@@ -188,7 +201,6 @@ function ArchiveDetails({ theme, onToggle }) {
           </div>
         </Fade>
       </div>
-      {/* Передаем onToggle напрямую, без ключевого слова this */}
       <Footer theme={theme} onToggle={onToggle} />
       <TopButton theme={theme} />
     </div>

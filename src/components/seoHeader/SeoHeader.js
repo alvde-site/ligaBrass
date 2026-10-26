@@ -3,15 +3,14 @@ import { Helmet } from "react-helmet";
 import {
   greeting,
   seo,
-  socialMediaLinks,
-  contactPageData,
+  contactSocials, // Используем ваш существующий массив
 } from "../../portfolio.js";
 
 function SeoHeader() {
-  // Безопасный сбор ссылок на социальные сети
+  // Безопасный сбор ссылок на социальные сети (VK, Telegram)
   let sameAs = [];
-  if (socialMediaLinks && Array.isArray(socialMediaLinks)) {
-    socialMediaLinks
+  if (contactSocials && Array.isArray(contactSocials)) {
+    contactSocials
       .filter(
         (media) =>
           media?.link &&
@@ -22,35 +21,45 @@ function SeoHeader() {
       });
   }
 
-  // Безопасный поиск почты
+  // Автоматический поиск почты прямо внутри вашего массива contactSocials
   let mail = "";
-  if (socialMediaLinks && Array.isArray(socialMediaLinks)) {
-    const mailMedia = socialMediaLinks.find((media) =>
-      media?.link?.startsWith("mailto")
+  if (contactSocials && Array.isArray(contactSocials)) {
+    const mailMedia = contactSocials.find((media) =>
+      media?.link?.startsWith("mailto:")
     );
     if (mailMedia) {
       mail = mailMedia.link.substring("mailto:".length);
     }
   }
 
-  // Безопасный поиск телефона из нашей новой чистой структуры контактов
-  let phone = contactPageData?.contactSection?.phone_number || "";
+  // Автоматическое извлечение телефона из ссылки Telegram (+79323251050)
+  let phone = "";
+  if (contactSocials && Array.isArray(contactSocials)) {
+    const tgMedia = contactSocials.find((media) =>
+      media?.link?.includes("t.me/")
+    );
+    if (tgMedia) {
+      // Вытаскиваем цифры номера из ссылки Telegram
+      const match = tgMedia.link.match(/\+\d+/);
+      if (match) phone = match[0];
+    }
+  }
 
   // Формируем правильные поисковые данные Schema.org для Музыкальной Группы
   const data = {
-    "@context": "https://schema.org/",
+    "@context": "https://schema.org",
     "@type": "MusicGroup",
-    name: greeting?.title || "Брасс-квинтет солистов",
+    name: greeting?.title || "Лига Брасс",
     url: seo?.og?.url || "",
-    email: mail,
-    telephone: phone,
+    email: mail || "vilnur.tubist1@gmail.com",
+    telephone: phone || "+79323251050", //
     sameAs: sameAs,
     description: seo?.description || "",
   };
 
   return (
     <Helmet>
-      <title>{seo?.title || "Брасс-квинтет"}</title>
+      <title>{seo?.title || "Лига Брасс"}</title>
       {seo?.description && (
         <meta name="description" content={seo.description} />
       )}

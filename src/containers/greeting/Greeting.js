@@ -5,6 +5,7 @@ import Button from "../../components/button/Button";
 import { greeting } from "../../portfolio";
 import { Fade } from "react-reveal";
 import FeelingProud from "./FeelingProud";
+import { homeSocials } from "../../portfolio";
 
 export default function Greeting(props) {
   const theme = props.theme;
@@ -28,7 +29,7 @@ export default function Greeting(props) {
               >
                 {greeting.subTitle}
               </p>
-              <SocialMedia theme={theme} />
+              <SocialMedia links={homeSocials} theme={theme} />
               {/* <div className="portfolio-repo-btn-div">
                 <Button
                   text="⭐ Star Me On Github"
