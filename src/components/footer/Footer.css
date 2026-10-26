@@ -1,10 +1,63 @@
-.footer-text {
-  text-align: center;
-  /* color: #868e96; */
-  font-weight: bold;
-  font-family: "Google Sans Regular";
+/* ==========================================================================
+   Главный контейнер подвала
+   ========================================================================== */
+.footer-div {
+  width: 100%;
+  padding: 32px 0;
+  margin-top: auto; /* Намертво прижимает футер к низу на коротких страницах */
+  border-top: 1px solid rgba(148, 163, 184, 0.06); /* Едва заметная разделительная линия */
 }
 
-.footer-div {
-  margin-top: auto;
+.footer-content-wrap {
+  width: 95%;
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Текстовые элементы
+   ========================================================================== */
+.footer-text {
+  font-family: "Google Sans Medium", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500; /* Утонченная средняя плотность вместо тяжелого bold */
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+/* Зона переключателя тем */
+.footer-switch-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9); /* Сделали тумблер чуть компактнее для аккуратности */
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-switch-zone:hover {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   📱 Мобильная адаптивность (до 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .footer-div {
+    padding: 24px 0;
+  }
+
+  .footer-content-wrap {
+    gap: 12px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
 }

@@ -1,17 +1,19 @@
 import React from "react";
 import "./Footer.css";
 import { Fade } from "react-reveal";
-import { greeting } from "../../portfolio.js";
-/* eslint-disable jsx-a11y/accessible-emoji */
 
 export default function Footer(props) {
+  const theme = props.theme;
+
   return (
     <div className="footer-div">
-      <Fade>
-        <p className="footer-text" style={{ color: props.theme.secondaryText }}>
-          Сделано с <span role="img">❤️</span> {greeting.title}
-        </p>
-        {/* <ToggleSwitch theme={props.theme} onToggle={props.onToggle}/> */}
+      <Fade bottom duration={1000} distance="10px">
+        <div className="footer-content-wrap">
+          {/* Чистый, породистый филармонический копирайт без лишних SASS-ошибок */}
+          <p className="footer-text" style={{ color: theme.secondaryText }}>
+            © 2026 Лига Брасс. Все права защищены.
+          </p>
+        </div>
       </Fade>
     </div>
   );
