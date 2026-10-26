@@ -231,28 +231,28 @@ const greeting = {
 const socialMediaLinks = [
   {
     name: "VK",
-    link: "https://vk.com", // Ссылка на ваше сообщество ВК
+    link: "https://vk.ru/vilnur_tuba", // Ссылка на ваше сообщество ВК
     fontAwesomeIcon: "fa-vk",
     backgroundColor: "#0077FF",
   },
   {
     name: "Telegram",
-    link: "https://t.me", // Ссылка на ваш канал или контакт администратора
+    link: "https://t.me/+79323251050", // Ссылка на ваш канал или контакт администратора
     fontAwesomeIcon: "fa-telegram",
     backgroundColor: "#24A1DE",
   },
-  {
-    name: "YouTube",
-    link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
-    fontAwesomeIcon: "fa-youtube",
-    backgroundColor: "#FF0000",
-  },
-  {
-    name: "Gmail",
-    link: "mailto:yourbrassquintet@gmail.com", // Почта для коммерческих предложений и заказов
-    fontAwesomeIcon: "fa-google",
-    backgroundColor: "#D14836",
-  },
+  // {
+  //   name: "YouTube",
+  //   link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
+  //   fontAwesomeIcon: "fa-youtube",
+  //   backgroundColor: "#FF0000",
+  // },
+  // {
+  //   name: "Gmail",
+  //   link: "mailto:yourbrassquintet@gmail.com", // Почта для коммерческих предложений и заказов
+  //   fontAwesomeIcon: "fa-google",
+  //   backgroundColor: "#D14836",
+  // },
 ];
 
 const skills = {
@@ -667,7 +667,7 @@ const contactPageData = {
       "По вопросам согласования концертных программ, репертуара и участия в фестивалях вы можете связаться напрямую с Вильнуром Самигуллиным.",
     profile_image_path: "musicians/samigullin_tuba.jpg", // Фото Вильнура в assets/images/
     phone_title: "Телефон для связи",
-    phone_number: "+7 (999) 123-45-67", // Актуальный телефон
+    phone_number: "+7 (932) 325-10-50", // Актуальный телефон
   },
 };
 
