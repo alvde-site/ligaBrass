@@ -21,6 +21,7 @@ const certifications = {
   certifications: [
     {
       concert_date: "24.10",
+      concert_year: "2026", // Новое техническое поле для JS
       concert_day: "суббота",
       concert_time: "23:00",
       title: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
@@ -44,15 +45,12 @@ const certifications = {
     },
     {
       title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-      // subtitle: "- Andrew Ng",
-      // logo_path: "concerts/tutta_forca.jpg",
-      // certificate_link:
-      //   "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
       alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
       concert_city: "Пермь",
       concert_hall: "Колонный зал",
       concert_time: "13:00",
       concert_date: "25.10",
+      concert_year: "2026", // Новое техническое поле для JS
       concert_day: "воскресенье",
       concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
       concert_info: "Приглашаем на наш замечательный концерт!",
@@ -73,6 +71,150 @@ const certifications = {
       buy_button:
         "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
       concert_poster: "concerts/25.10perm.jpg",
+    },
+    {
+      concert_date: "26.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "12:17",
+      title: "Концерт 26.10.2026 12:17 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      concert_date: "26.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "12:30",
+      title: "Концерт 26.10.2026 12:30 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      concert_date: "26.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "23:00",
+      title: "Концерт 26.10.2026 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      concert_date: "27.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "23:00",
+      title: "Концерт 27.10.2026 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      concert_date: "28.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "19:00",
+      title: "Концерт 28.10.2026 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
+    },
+    {
+      concert_date: "30.10",
+      concert_year: "2026", // Новое техническое поле для JS
+      concert_day: "суббота",
+      concert_time: "14:00",
+      title: "Концерт 30.10.2026 для тестирования",
+      alt_name: "от бродвея до джаза ВЕСТСАЙДСКАЯ ИСТОРИЯ",
+      concert_city: "Пермь",
+      concert_hall: "LEMON TREE",
+      concert_info: "Концерт при свечах в особнаяке XIX века 12+",
+      concert_workslist: [],
+      concert_artists: [
+        "Александр Бахарев - труба",
+        "Георгий Гринимайер - труба",
+        "Дмитрий Береговский - валторна",
+        "Александр Демиденко - тромбон",
+        "Вильнур Самигуллин - туба",
+      ],
+      concert_address: "ул. 25 Октября, д. 47, 2 этаж",
+      more_button: "https://www.google.com/",
+      buy_button:
+        "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
+      concert_poster: "concerts/late_night_concert.jpg",
     },
   ],
 };

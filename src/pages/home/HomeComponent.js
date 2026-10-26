@@ -8,15 +8,37 @@ import { certifications } from "../../portfolio";
 
 class Home extends Component {
   render() {
+    const theme = this.props.theme;
+    const now = new Date();
+
+    // Сквозная проверка дат перед выводом компонента на Главной
+    const hasActiveConcerts = certifications.certifications.some((cert) => {
+      const [day, month] = cert.concert_date.split(".").map(Number);
+      // Исправленный тернарный оператор с дефолтным временем 23:59
+      const [hours, minutes] = cert.concert_time
+        ? cert.concert_time.split(":").map(Number)
+        : [23, 59];
+      const year = cert.concert_year
+        ? Number(cert.concert_year)
+        : now.getFullYear();
+
+      const concertDateTime = new Date(year, month - 1, day, hours, minutes);
+      return concertDateTime >= now;
+    });
+
     return (
       <div>
-        <Header theme={this.props.theme} />
-        <Greeting theme={this.props.theme} />
-        {certifications.certifications.length > 0 ? (
-          <Certifications theme={this.props.theme} />
+        <Header theme={theme} />
+        <Greeting theme={theme} />
+
+        {/* Рендерим блок только если в массиве есть хотя бы один актуальный концерт */}
+        {certifications.certifications.length > 0 && hasActiveConcerts ? (
+          <Certifications theme={theme} />
         ) : null}
-        <Footer theme={this.props.theme} />
-        <TopButton theme={this.props.theme} />
+
+        {/* Исправили передачу onToggle от родителя к Footer */}
+        <Footer theme={theme} onToggle={this.props.onToggle} />
+        <TopButton theme={theme} />
       </div>
     );
   }
