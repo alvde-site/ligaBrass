@@ -8,7 +8,7 @@ function MainLogo(props) {
       xmlns="http://w3.org"
       viewBox="40 170 290 95"
       width={props.size || "120px"}
-      height={props.size || "45px"}
+      height={"45px"}
       fill="none"
       style={{ height: props.size ? "auto" : "45px", ...props.style }}
       className={props.className}
