@@ -130,9 +130,8 @@ function ArchiveDetails({ theme, onToggle }) {
                 </div>
               )}
 
-              {/* 📰 АДАПТИВНЫЙ БЛОК II: Текстовые статьи / Новости / Развернутые описания */}
-              {/* ИСПРАВЛЕНИЕ: Убрали жесткую привязку к типу 'news', теперь выводим fullStory для любого типа, если он есть */}
-              {item.fullStory && (
+              {/* 📰 АДАПТИВНЫЙ БЛОК II: Творческий дневник / Новости (Абзацы текста) */}
+              {item.type === "news" && item.fullStory && (
                 <div className="article-special-section">
                   {item.fullStory.map((paragraph, idx) => (
                     <p
@@ -189,6 +188,7 @@ function ArchiveDetails({ theme, onToggle }) {
           </div>
         </Fade>
       </div>
+      {/* Передаем onToggle напрямую, без ключевого слова this */}
       <Footer theme={theme} onToggle={onToggle} />
       <TopButton theme={theme} />
     </div>
