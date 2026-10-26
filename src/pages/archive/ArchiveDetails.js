@@ -101,7 +101,10 @@ function ArchiveDetails({ theme, onToggle }) {
                     className="article-tag-date"
                     style={{ color: theme.secondaryText }}
                   >
-                    📅 {item.news_date}
+                    <span role="img" aria-label="Календарь">
+                      📅
+                    </span>{" "}
+                    {item.news_date}
                   </span>
                 )}
                 {item.location && (
@@ -109,7 +112,10 @@ function ArchiveDetails({ theme, onToggle }) {
                     className="article-tag-location"
                     style={{ color: theme.secondaryText }}
                   >
-                    📍 {item.location}
+                    <span role="img" aria-label="Локация">
+                      📍
+                    </span>{" "}
+                    {item.location}
                   </span>
                 )}
               </div>

@@ -170,7 +170,12 @@ class CertificationCard extends Component {
                     className="description__poster-placeholder"
                     style={{ backgroundColor: theme.secondaryText + "10" }}
                   >
-                    🎺
+                    <span
+                      role="img"
+                      aria-label="Иконка труба (музыкальный инструмент)"
+                    >
+                      🎺
+                    </span>
                   </div>
                 )}
               </div>

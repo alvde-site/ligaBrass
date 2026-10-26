@@ -69,7 +69,10 @@ class ExperienceCard extends Component {
                         className="news-card-location-text"
                         style={{ color: theme.secondaryText }}
                       >
-                        📍 {experience["location"]}
+                        <span role="img" aria-label="Локация">
+                          📍
+                        </span>{" "}
+                        {experience["location"]}
                       </span>
                     )}
                   </div>

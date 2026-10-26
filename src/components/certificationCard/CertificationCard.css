@@ -220,7 +220,7 @@
 .description__poster-wrap {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .description__poster {
