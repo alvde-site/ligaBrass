@@ -84,6 +84,14 @@ function ArchiveDetails({ theme, onToggle }) {
                 >
                   {item.duration}
                 </span>
+                {item.news_date && (
+                  <span
+                    className="article-tag-date"
+                    style={{ color: theme.secondaryText }}
+                  >
+                    📅 {item.news_date}
+                  </span>
+                )}
                 {item.location && (
                   <span
                     className="article-tag-location"

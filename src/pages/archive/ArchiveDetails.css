@@ -60,6 +60,14 @@
   border-radius: 20px;
 }
 
+.article-tag-date {
+  font-family: "Google Sans Regular", sans-serif;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .article-tag-location {
   font-family: "Google Sans Regular", sans-serif;
   font-size: 0.95rem;
