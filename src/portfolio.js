@@ -64,7 +64,7 @@ const greeting = {
 const homeSocials = [
   {
     name: "VK",
-    link: "https://vk.ru/vilnur_tuba", // Ссылка на ваше сообщество ВК
+    link: "https://vk.ru/ligabrass", // Ссылка на ваше сообщество ВК
     fontAwesomeIcon: "fa-vk",
     backgroundColor: "#0077FF",
   },
