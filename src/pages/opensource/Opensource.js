@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
+import UniversalPlayer from "../../components/universalPlayer/UniversalPlayer";
 import { Fade } from "react-reveal";
 import { Link } from "react-router-dom"; // Импортируем Link для переходов без перезагрузки
 import "./Opensource.css";
@@ -41,30 +42,12 @@ class Opensource extends Component {
               </h2>
               <div className="video-grid">
                 {videoList.map((video, index) => (
-                  <div
+                  <UniversalPlayer
                     key={index}
-                    className="video-card"
-                    style={{
-                      backgroundColor: "rgba(255,255,255,0.04)",
-                      borderColor: theme.secondaryText + "18",
-                    }}
-                  >
-                    <div className="video-responsive-wrap">
-                      <iframe
-                        src={"https://rutube.ru/play/embed/" + video.id}
-                        frameBorder="0"
-                        allow="clipboard-write; autoplay; encrypted-media; fullscreen; picture-in-picture"
-                        allowFullScreen
-                        title={video.title}
-                      ></iframe>
-                    </div>
-                    <p
-                      className="video-card-title"
-                      style={{ color: theme.text }}
-                    >
-                      {video.title}
-                    </p>
-                  </div>
+                    theme={theme}
+                    title={video.title}
+                    videoUrl={video.url}
+                  />
                 ))}
               </div>
             </div>
