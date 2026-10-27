@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import CookieConsent from "../components/cookieConsent/CookieConsent";
 import ArchiveDetails from "../pages/archive/ArchiveDetails";
 import GalleryAlbum from "../pages/opensource/GalleryAlbum";
@@ -36,7 +36,7 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route
             path="/"
@@ -121,7 +121,7 @@ export default class Main extends Component {
           />
         </Switch>
         <CookieConsent theme={this.props.theme} />
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

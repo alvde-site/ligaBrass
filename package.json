@@ -2,7 +2,7 @@
   "private": true,
   "name": "ligaBrass",
   "version": "0.1.0",
-  "homepage": "https://github.com/alvde-site/ligaBrass",
+  "homepage": "https://github.io",
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
