@@ -92,7 +92,7 @@ class Header extends Component {
                   Программы
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <NavLink
                   to="/opensource"
                   tag={Link}
@@ -103,7 +103,7 @@ class Header extends Component {
                 >
                   Медиа
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
                   to="/contact"
