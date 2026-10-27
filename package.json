@@ -2,7 +2,7 @@
   "private": true,
   "name": "ligaBrass",
   "version": "0.1.0",
-  "homepage": "ligabrass.ru",
+  "homepage": ".",
   "scripts": {
     "build": "react-scripts --openssl-legacy-provider build",
     "predeploy": "npm run build",
