@@ -39,7 +39,7 @@ const homeSocials = [
   },
   {
     name: "Telegram",
-    link: "https://t.me/+79323251050",
+    link: "https://t.me/ligabrass",
     fontAwesomeIcon: "fa-telegram",
     backgroundColor: "#24A1DE",
   },
