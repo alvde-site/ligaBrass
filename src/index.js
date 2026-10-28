@@ -13,7 +13,7 @@ import "./assets/font-awesome/css/all.css";
 const engine = new Styletron();
 
 // Укажите здесь ваш точный 8-9 значный номер счетчика из личного кабинета Метрики
-const YM_COUNTER_ID = 12345678;
+const YM_COUNTER_ID = 113839839;
 
 ReactDOM.render(
   <StyletronProvider value={engine}>
