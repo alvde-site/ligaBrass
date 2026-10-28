@@ -13,43 +13,12 @@ const seo = {
   og: {
     title: "Брасс-квинтет Лига Брасс | От классики до джаза",
     type: "website",
-    url: "https://ligabrass.ru", // Замените на реальный адрес вашего сайта
+    url: "https://ligabrass.ru",
   },
 };
 
 const certifications = {
-  certifications: [
-    // -----------------   ШАБЛОН АФИШИ НА ГЛАВНОЙ    ---------- НЕ УДАЛЯТЬ
-    // {
-    //   title: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-    //   alt_name: "КОНЦЕРТ: БРАСС-КВИНТЕТА",
-    //   concert_city: "Пермь",
-    //   concert_hall: "Колонный зал",
-    //   concert_time: "13:00",
-    //   concert_date: "25.10",
-    //   concert_year: "2026", // Новое техническое поле для JS
-    //   concert_day: "воскресенье",
-    //   concert_place: "ПЕРМСКИЙ ГОСУДАРСТВЕННЫЙ ИНСТИТУТ КУЛЬТУРЫ",
-    //   concert_info: "Приглашаем на наш замечательный концерт!",
-    //   concert_workslist: [
-    //     "Л.Бернстайн: Вестсайдская история",
-    //     "Э.Мариконе: Сюита",
-    //     "Ж.Родриго",
-    //     "Р.Роджерс и др.",
-    //   ],
-    //   concert_artists: [
-    //     "Александр Бахарев",
-    //     "Георгий Гринимайер",
-    //     "Дмитрий Береговский",
-    //     "Александр Демиденко",
-    //     "Вильнур Самигуллин",
-    //   ],
-    //   more_button: "https://www.google.com/",
-    //   buy_button:
-    //     "https://intickets.ru/afisha/moscow/concert/novogodnij-cajkovskij-straus-gala/168767",
-    //   concert_poster: "concerts/25.10perm.jpg",
-    // },
-  ],
+  certifications: [],
 };
 
 //Home Page
@@ -58,254 +27,50 @@ const greeting = {
   logo_name: "LigaBrassQuintet",
   subTitle:
     "Яркий и виртуозный брасс-квинтет, меняющий представление о возможностях медных духовых. В наших программах — элегантная классика, культовые джазовые стандарты и современные хиты в эксклюзивных аранжировках",
-  resumeLink: "https://google.com", // Ссылка на PDF-презентацию или репертуарный лист
+  resumeLink: "https://google.com",
 };
 
 const homeSocials = [
   {
     name: "VK",
-    link: "https://vk.ru/ligabrass", // Ссылка на ваше сообщество ВК
+    link: "https://vk.ru/ligabrass",
     fontAwesomeIcon: "fa-vk",
     backgroundColor: "#0077FF",
   },
   {
     name: "Telegram",
-    link: "https://t.me/+79323251050", // Ссылка на ваш канал или контакт администратора
+    link: "https://t.me/+79323251050",
     fontAwesomeIcon: "fa-telegram",
     backgroundColor: "#24A1DE",
   },
   {
     name: "Gmail",
-    link: "mailto:vilnur.tubist1@gmail.com", // Почта для коммерческих предложений и заказов
+    link: "mailto:vilnur.tubist1@gmail.com",
     fontAwesomeIcon: "fa-google",
     backgroundColor: "#D14836",
   },
-  // {
-  //   name: "YouTube",
-  //   link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
-  //   fontAwesomeIcon: "fa-youtube",
-  //   backgroundColor: "#FF0000",
-  // },
 ];
 
 const contactSocials = [
   {
     name: "VK",
-    link: "https://vk.ru/vilnur_tuba", // Ссылка на ваше сообщество ВК
+    link: "https://vk.ru/vilnur_tuba",
     fontAwesomeIcon: "fa-vk",
     backgroundColor: "#0077FF",
   },
   {
     name: "Telegram",
-    link: "https://t.me/+79323251050", // Ссылка на ваш канал или контакт администратора
+    link: "https://t.me/+79323251050",
     fontAwesomeIcon: "fa-telegram",
     backgroundColor: "#24A1DE",
   },
   {
     name: "Gmail",
-    link: "mailto:vilnur.tubist1@gmail.com", // Почта для коммерческих предложений и заказов
+    link: "mailto:vilnur.tubist1@gmail.com",
     fontAwesomeIcon: "fa-google",
     backgroundColor: "#D14836",
   },
-  // {
-  //   name: "YouTube",
-  //   link: "https://youtube.com", // Ссылка на ваш YouTube с выступлениями
-  //   fontAwesomeIcon: "fa-youtube",
-  //   backgroundColor: "#FF0000",
-  // },
 ];
-
-const skills = {
-  data: [
-    {
-      title: "Состав и инструменты",
-      fileName: "DataScienceImg",
-      skills: [
-        "Две трубы — ведут основные мелодические линии, отвечая за яркие, парящие пассажи и торжественные фанфары.",
-        "Валторна — добавляет мягкий, глубокий и бархатистый романтический тембр, который гармонично связывает весь ансамбль.",
-        "Тромбон — привносит плотность, мощный пронзительный звук и эффектные джазовые глиссандо.",
-        "Туба — надежный фундамент коллектива, уверенно заменяющий собой целую басовую линию и ритм-секцию.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Труба I",
-          fontAwesomeClassname: "🎺",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Труба II",
-          fontAwesomeClassname: "🎺",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Валторна",
-          fontAwesomeClassname: "📯",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Тромбон",
-          fontAwesomeClassname: "🎵",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Туба",
-          fontAwesomeClassname: "🔊",
-          style: { color: "#E4A834" },
-        },
-      ],
-    },
-    {
-      title: "Форматы выступлений",
-      fileName: "FullStackImg",
-      skills: [
-        "Официальные события — аккуратно озвучиваем церемонии, добавляем статусности награждениям и встречаем гостей в Welcome-зоне.",
-        "Открытые площадки — уверенно звучим на городских фестивалях и праздниках, полностью собирая внимание аудитории.",
-        "Частные мероприятия — составляем динамичные сеты для свадеб и юбилеев, включая интерактивы и музыкальные сюрпризы.",
-        "Концертные залы — предлагаем полноценные тематические программы для филармоний, музеев и арт-пространств.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Welcome",
-          fontAwesomeClassname: "🥂",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Концерты",
-          fontAwesomeClassname: "🏛️",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Праздники",
-          fontAwesomeClassname: "🎉",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Церемонии",
-          fontAwesomeClassname: "📜",
-          style: { color: "#E4A834" },
-        },
-      ],
-    },
-    {
-      title: "Музыкальные жанры",
-      fileName: "CloudInfraImg",
-      skills: [
-        "Академическая классика — благородные и величественные произведения Баха, Моцарта, Чайковского и других композиторов.",
-        "Джаз и свинг — легкие, ритмичные стандарты в духе Луи Армстронга, Фрэнка Синатры и эпохи диксиленда.",
-        "Современные каверы — популярные радио-хиты, поп-музыка и классика рока в наших эксклюзивных аранжировках.",
-        "Торжественные марши — парадный репертуар для знаковых, патриотических и праздничных дат.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Классика",
-          fontAwesomeClassname: "🎼",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Джаз",
-          fontAwesomeClassname: "🎷",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Каверы",
-          fontAwesomeClassname: "🎸",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Марши",
-          fontAwesomeClassname: "🥁",
-          style: { color: "#E4A834" },
-        },
-      ],
-    },
-    {
-      title: "Условия и комфорт",
-      fileName: "DesignImg",
-      skills: [
-        "Честный живой звук — играем исключительно вживую, без использования фонограмм, плейбеков или «минусовок».",
-        "Полная мобильность — легко выступаем в движении, на воде, в парках и на площадках, где нет точек питания.",
-        "Соответствие дресс-коду — заранее подбираем образы под ваше событие: от строгих смокингов до ярких сценических костюмов.",
-        "Простой райдер — не требуем сложного звукового оборудования, для выступления нам нужны лишь пять стульев и гримерная комната.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "100% Live",
-          fontAwesomeClassname: "🔌",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Автономность",
-          fontAwesomeClassname: "🔋",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Смокинги",
-          fontAwesomeClassname: "🤵",
-          style: { color: "#E4A834" },
-        },
-        {
-          skillName: "Легкий быт",
-          fontAwesomeClassname: "📋",
-          style: { color: "#E4A834" },
-        },
-      ],
-    },
-  ],
-};
-
-// Education Page
-const competitiveSites = {
-  competitiveSites: [
-    {
-      siteName: "LeetCode",
-      iconifyClassname: "simple-icons:leetcode",
-      style: {
-        color: "#F79F1B",
-      },
-      profileLink: "https://leetcode.com/layman_brother/",
-    },
-    {
-      siteName: "HackerRank",
-      iconifyClassname: "simple-icons:hackerrank",
-      style: {
-        color: "#2EC866",
-      },
-      profileLink: "https://www.hackerrank.com/layman_brother",
-    },
-    {
-      siteName: "Codechef",
-      iconifyClassname: "simple-icons:codechef",
-      style: {
-        color: "#5B4638",
-      },
-      profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    },
-    {
-      siteName: "Codeforces",
-      iconifyClassname: "simple-icons:codeforces",
-      style: {
-        color: "#1F8ACB",
-      },
-      profileLink: "http://codeforces.com/profile/layman_brother",
-    },
-    {
-      siteName: "Hackerearth",
-      iconifyClassname: "simple-icons:hackerearth",
-      style: {
-        color: "#323754",
-      },
-      profileLink: "https://www.hackerearth.com/@ashutosh391",
-    },
-    {
-      siteName: "Kaggle",
-      iconifyClassname: "simple-icons:kaggle",
-      style: {
-        color: "#20BEFF",
-      },
-      profileLink: "https://www.kaggle.com/laymanbrother",
-    },
-  ],
-};
 
 const degrees = {
   degrees: [
@@ -369,7 +134,6 @@ const degrees = {
 };
 
 // Experience Page
-// Обновленный блок Хроники в src/portfolio.js
 const experience = {
   title: "Хроника и новости",
   subtitle: "Архив выступлений и творческий дневник коллектива",
@@ -549,32 +313,6 @@ const publicationsHeader = {
   avatar_image_path: "projects_image.svg",
 };
 
-const publications = {
-  data: [
-    {
-      id: "neuro-symbolic-sudoku-solver",
-      name: "Neuro-Symbolic Sudoku Solver",
-      createdAt: "2023-07-02T00:00:00Z",
-      description: "Paper published in KDD KiML 2023",
-      url: "https://arxiv.org/abs/2307.00653",
-    },
-    {
-      id: "mdp-diffusion",
-      name: "MDP-Diffusion",
-      createdAt: "2023-09-19T00:00:00Z",
-      description: "Blog published in Paperspace",
-      url: "https://blog.paperspace.com/mdp-diffusion/",
-    },
-    {
-      id: "consistency-models",
-      name: "Consistency Models",
-      createdAt: "2023-10-12T00:00:00Z",
-      description: "Blog published in Paperspace",
-      url: "https://blog.paperspace.com/consistency-models/",
-    },
-  ],
-};
-
 // Contact Page
 const contactPageData = {
   contactSection: {
@@ -646,20 +384,7 @@ const musiciansDetails = {
 };
 
 const mediaPageData = {
-  // Список рабочих видеороликов Rutube
   videoList: [
-    // ШАБЛОН ВИДЕО VK И RUTUBE НА СТРАНИЦУ МЕДИА
-    // {
-    //   url:
-    //     "https://rutube.ru/play/embed/60f3536d3531867da0a6ad9201c11129" /* Концерт духовой музыки */,
-    //   title:
-    //     "видео из rutube тест Акадимическая программа духовых инструментов",
-    // },
-    // {
-    //   url:
-    //     "https://vkvideo.ru/video_ext.php?oid=-192371408&id=456240815&hash=9caa5a3cb8aa0185&hd=3" /* Концерт духовой музыки */,
-    //   title: "Из VkVideo для теста",
-    // },
     {
       url:
         "https://vkvideo.ru/video_ext.php?oid=-2021308&id=456241255&hash=b5a8b6b7a97d2d13&hd=4" /* Концерт духовой музыки */,
@@ -667,27 +392,13 @@ const mediaPageData = {
         "Творческая мечта «Лига Брасс» — сыграть эту пьесу вместе с нашим другом",
     },
   ],
-  // ТЕМАТИЧЕСКИЕ ФОТОАЛЬБОМЫ: при клике проваливаемся внутрь
   albumList: [
-    // ШАБЛОН ДЛЯ ФОТО АЛЬБОМА
-    // {
-    //   id: "concert-рейды",
-    //   title: "Концертные рейды",
-    //   description:
-    //     "Живые кадры со сцены, филармонические залы и выступления на открытых площадках.",
-    //   cover: "brass_main.jpg", // Обложка альбома в assets/images/
-    //   photos: [
-    //     { src: "brass_main.jpg", alt: "Выступление на Красной площади" },
-    //     { src: "brass_main.jpg", alt: "Большой зал филармонии" },
-    //     { src: "brass_main.jpg", alt: "Солисты на сцене" },
-    //   ],
-    // },
     {
-      id: "our-days", // Породистый лаконичный ID для адресной строки
+      id: "our-days",
       title: "Наши будни",
       description:
         "Концерты, репетиции, дорожные хроники и живые эмоции коллектива вне строгих филармонических рамок.",
-      cover: "everyday_life.jpg", // Ваша обложка для этой плитки
+      cover: "everyday_life.jpg",
       photos: [
         { src: "25.10_01.jpg", alt: "Концерт в Колонном" },
         { src: "25.10_02.jpg", alt: "Концерт в Колонном" },
@@ -703,14 +414,11 @@ export {
   greeting,
   homeSocials,
   contactSocials,
-  skills,
-  competitiveSites,
   degrees,
   certifications,
   experience,
   projectsHeader,
   publicationsHeader,
-  publications,
   contactPageData,
   musiciansDetails,
   mediaPageData,
