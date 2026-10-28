@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
+import ym from "react-yandex-metrika";
 import CookieConsent from "../components/cookieConsent/CookieConsent";
 import ArchiveDetails from "../pages/archive/ArchiveDetails";
 import GalleryAlbum from "../pages/opensource/GalleryAlbum";
@@ -20,7 +21,15 @@ export default class Main extends Component {
       "--scrollbar-color",
       this.props.theme.imageHighlight
     );
+
+    // Подключаем автоматическую фиксацию просмотров при SPA-кликах по меню
+    if (this.props.history) {
+      this.unlisten = this.props.history.listen((location) => {
+        ym("hit", location.pathname + location.search);
+      });
+    }
   }
+
   componentDidUpdate(prevProps) {
     if (
       prevProps.theme &&
@@ -33,6 +42,14 @@ export default class Main extends Component {
       );
     }
   }
+
+  componentWillUnmount() {
+    // Чистим слушатель истории при демонтировании компонента для защиты от утечек памяти
+    if (this.unlisten) {
+      this.unlisten();
+    }
+  }
+
   render() {
     return (
       <BrowserRouter>
